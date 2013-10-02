@@ -26,9 +26,11 @@
       <nav>
         <ul>
           <li><a href="#repositories">Repositories</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#architecture">Architecture</a></li>
-          <li><a href="#technology">Technology</a></li>
+          <li><a href="#basics">API Basics</a></li>
+          <li><a href="#calls">API Calls</a></li>
+          <li><a href="#language">Query Language</a></li>
+          <li><a href="#formats">Data Formats</a></li>
+          <li><a href="#reference">Field Reference</a></li>
           <li><a href="#open-source">Open Source Contributing</a></li>
         </ul>
       </nav>
@@ -36,7 +38,7 @@
 
     <section class="main-content" role="main">
 
-      <p>The <a href="http://www.consumerfinance.gov/" target="CFPB Home">Consumer Financial Protection Bureau</a> chose to use the Home Mortgage Disclosure Act (HMDA) as the first datasets to publish using Qu, an in-progress data platform created to serve public data. This page explains how to use the platform's API. You can see what our team has built so far for HMDA <a href="http://www.consumerfinance.gov/hmda/" target="Home Mortgage Disclosure Act Homepage">here</a>.</p>
+      <p>The <a href="http://www.consumerfinance.gov/" target="CFPB Home">Consumer Financial Protection Bureau</a> chose the Home Mortgage Disclosure Act (HMDA) as the first data to publish using Qu, an in-progress data platform created to serve public data. This page explains how to use the platform's API. You can see what our team has built so far for HMDA <a href="http://www.consumerfinance.gov/hmda/" target="Home Mortgage Disclosure Act Homepage">here</a>.</p>
 
       <section id="repositories">
       <h2>Repositories</h2>
@@ -45,159 +47,52 @@
           <p class="image-wrap"><img src="static/img/octocat.png" width="25px" title="Github"></p>
         </li>
         <li>
-          <a href="https://github.com/cfpb/regulations-parser">
-            <h4>regulations-parser</h4> 
-            <p>Parse regulations</p>
+          <a href="https://github.com/cfpb/">
+            <h4>qu</h4> 
+            <p>The software that runs the platform</p>
           </a>
         </li>
 
-        <li>
-          <a href="https://github.com/eregs/regulations-core">
-            <h4>regulations-core</h4>
-            <p>Regulations API</p>
-          </a>
-        </li>
-
-        <li>
-          <a href="https://github.com/eregs/regulations-site">
-            <h4>regulations-site</h4>
-            <p>Display the regulations</p>
-          </a>
-        </li>
-      </ul>
     </section>
 
-    <section id="features">
-    <h2>Features</h2>
+    <section id="basics">
+    <h2>API Basics</h2>
 
-    <p>Some of the main features of the tool are:</p>
+    <p>Lorem ipsum...</p>
+        </section> <!-- /#basics-->
 
-    <ul>
 
-      <li>
-        <h4>Navigability.</h4>
-        <p>While regulations are traditionally represented as 
-        monolithic blocks of text, they contain a great deal of embedded structure. 
-        eRegulations teases out that structure and uses it to present the text in a clean, 
-        readable form.</p>
-      </li>
 
-      <li> 
-        <h4> Inline Interpretations.</h4>
-        <p>Many regulation paragraphs have official
-        interpretations that have traditionally been displayed at the end of the
-        regulation, forcing readers to swap back and forth between the regulation
-        content and interpretation at the end. eRegulations parses the
-        interpretations for each paragraph, and displays them right under the
-        paragraph/section being interpreted.</p>
-      </li>
+  <section id="calls">
+  <h2>API calls</h2>
 
-      <li> 
-        <h4>Definitions.</h4>
-        <p>We highlight words that have been defined in the regulation,
-        and the user can click on the word and see it's definition without
-        scrolling to the part of the regulation that defines that word.</p>
-      </li>
+    <p>Lorem ipsum...</p>
+  </section> <!-- /#calls-->
 
-      <li>
-        <h4>Bookmarks.</h4>
-        <p>Each paragraph of a regulation can be
-        bookmarked and retrieved individually. This allows users to pass these
-        bookmarks around, sharing parts of the regulations. </p>
-      </li>
+  <section id="language">
+    <h2>API Language</h2>
 
-      <li>
-        <h4>Internal and external citations.</h4> 
-        <p>The parser parses out
-        all internal and external citations in the regulation, and we display
-        them as clickable links allowing easy navigation within a regulation, 
-        and externally to statutes, acts and other relevant material. </p>
-      </li>
+    <p>Lorem ipsum...</p>
+  </section> <!--/#language-->
+        
+        
+   <section id="formats">
+    <h2>Data Formats</h2>
 
-      <li>
-        <h4>Search.</h4>
-        <p>We provide the ability to search for phrases across various versions of
-        a regulation. </p>
-      </li>
+    <p>Lorem ipsum...</p>
+  </section> <!--/#formats-->       
+        
+   <section id="reference">
+    <h2>Field Reference</h2>
 
-      <li>
-        <h4>Alternate versions of the regulations.</h4>
-        <p>Regulations are evolving documents and are often displayed as changes
-        to the base text. We present whole versions of regulations for each set
-        of changes (We combine Final Rules that have a common effective date
-        into a version). </p>
-      </li>
-
-      <li>
-        <h4>Effective regulation.</h4>
-        <p>A user can also enter in a date,
-        and retrieve the version of the regulation effective at that point in time. </p>
-      </li>
-
-      <li>
-        <h4>Section-by-section analysis.</h4> 
-        <p>The notices that compose a
-        version of the regulation contain relevant analyses of the altered sections.
-        We automatically pull that information out and make it accessible while
-        reading the regulation text.</p>
-      </li>
-
-      <li>
-        <h4>Responsive Design.</h4> <p>The application design is
-        responsive, adjusting to the device and screen size of the user.</p>
-      </li>
-
-    </ul>
-  </section> <!-- /#features -->
-
-  <section id="architecture">
-  <h2>Architecture</h2>
-
-    <p>
-      There are three parts to the eRegulations application: a parser that
-      converts regulation text into data (<a
-      href="http://github.com/CFPB/regulations-parser">regulations-parser</a>),
-      an API that hosts this data (<a
-      href="http://github.com/eregs/regulations-core">regulations-core</a>), and
-      a webapp which uses the data from the API to construct
-      beautiful and usable regulations (<a 
-      href="http://github.com/eregs/regulations-site">regulations-site</a>).
-    </p>
-
-    <p> One would typically run the parser against a regulation once (for each
-    version) to populate the API with all the necessary data. regulations-site
-    would then use regulations-core to as necessary to display regulations.  </p>
-  </section> <!-- /#architecture-->
-
-  <section id="technology">
-    <h2>Technology</h2>
-
-    <p>regulations-parser is written in Python.</p>
-
-    <p>regulations-core is a Django and Haystack application.</p>
-
-    <p>
-    The regulations-site front-end is a Backbone.js application nested within AMD
-    modules using Require.js. We also use a Grunt-based build system with Jasmine
-    for unit testing. On the back-end regulations-site is a Django application.
-    </p>
-  </section> <!--/#technology-->
+    <p>Lorem ipsum...</p>
+  </section> <!--/#reference-->      
+        
 
   <section id="open-source">
     <h2>Open Source and Contributing</h2>
 
-    <p>We invite contributions to any part of the application. The project is in the
-    public domain, and all contributions to it will be released as such. By
-    submitting a pull request, you are agreeing to comply with the following
-    contributor agreement:</p>
-
-    <p class="license">
-    I dedicate any and all copyright interest in this software to the public
-    domain. I make this dedication for the benefit of the public at large and to
-    the detriment of my heirs and successors. I intend this dedication to be an
-    overt act of relinquishment in perpetuity of all present and future rights to
-    this software under copyright law.
-    </p>
+    <p>Lorem ipsum...</p>
   </section> <!--/#open-source-->
 
   </section> <!-- /#main-content-->
