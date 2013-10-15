@@ -1,112 +1,62 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>The Public Data Platform API brought to you by the Qu Team</title>
-    <link rel="stylesheet" href="static/css/normalize.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <header>
-      <div class="wrap">
-        <a href="http://consumerfinance.gov"><img class="logo" src="static/img/logo.png" alt="Consumer Financial Protection Bureau"></a>
-        <h1>Public Data Platform</h1>
-      </div>
-    </header>
+---
+layout: default
+---
+<p>The <a href="http://www.consumerfinance.gov/" target="CFPB Home">Consumer Financial Protection Bureau</a> chose the Home Mortgage Disclosure Act (HMDA) as the first data to publish using Qu, an in-progress data platform created to serve public data. This page explains how to use the platform's API. You can see what our team has built so far for HMDA <a href="http://www.consumerfinance.gov/hmda/" target="Home Mortgage Disclosure Act Homepage">here</a>.</p>
 
-  <div class="wrap content">
+<section id="repositories">
+<h2>Repositories</h2>
+<ul class="repo-list">
+  <li class="list-icon">
+    <p class="image-wrap"><img src="static/img/octocat.png" width="25px" title="Github"></p>
+  </li>
+  <li>
+    <a href="https://github.com/cfpb/">
+      <h4>qu</h4> 
+      <p>The software that runs the platform</p>
+    </a>
+  </li>
 
-    <aside>
-      <p class="intro">Make it easy to access and get the data you want.</p>
-      <nav>
-        <ul>
-          <li><a href="#repositories">Repositories</a></li>
-          <li><a href="api-basics.html">API Basics</a></li>
-          <li><a href="#calls">API Calls</a></li>
-          <li><a href="#language">Query Language</a></li>
-          <li><a href="#reference">Field Reference</a></li>
-          <li><a href="#open-source">Open Source Contributing</a></li>
-        </ul>
-      </nav>
-    </aside>
+</section>
 
-    <section class="main-content" role="main">
+<section id="basics">
+  <h2>API Basics</h2>
+  <ul>
+    <li>Datasets</li>
+    <li>Slices</li>
+    <li>Concepts</li>
+  </ul>
 
-      <p>The <a href="http://www.consumerfinance.gov/" target="CFPB Home">Consumer Financial Protection Bureau</a> chose the Home Mortgage Disclosure Act (HMDA) as the first data to publish using Qu, an in-progress data platform created to serve public data. This page explains how to use the platform's API. You can see what our team has built so far for HMDA <a href="http://www.consumerfinance.gov/hmda/" target="Home Mortgage Disclosure Act Homepage">here</a>.</p>
+  <h3>Specifying content type</h3>
+  <p>You can use a file extension to specify content type. For example, to specify for JSON, you would use: <code>/data/hmda/slice/incomes.json</code>.</p>
 
-      <section id="repositories">
-      <h2>Repositories</h2>
-      <ul class="repo-list">
-        <li class="list-icon">
-          <p class="image-wrap"><img src="static/img/octocat.png" width="25px" title="Github"></p>
-        </li>
-        <li>
-          <a href="https://github.com/cfpb/">
-            <h4>qu</h4> 
-            <p>The software that runs the platform</p>
-          </a>
-        </li>
-
-    </section>
-
-    <section id="basics">
-    <h2>API Basics</h2>
-      <ul>
-        <li>Datasets</li>
-        <li>Slices</li>
-        <li>Concepts</li>
-      </ul>
-
-    <h3>Specifying content type</h3>
-    <p>You can use a file extension to specify content type. For example, to specify for JSON, you would use: <code>/data/hmda/slice/incomes.json</code>.</p>
-
-    <h3>Response format</h3>
-      <p>We support HTML, XML, and JSON data formats...</p>
-        </section> <!-- /#basics-->
+  <h3>Response format</h3>
+  <p>We support HTML, XML, and JSON data formats...</p>
+</section> <!-- /#basics-->
 
 
 
-  <section id="calls">
+<section id="calls">
   <h2>API calls</h2>
 
-    <p>Lorem ipsum...</p>
-  </section> <!-- /#calls-->
+  <p>Lorem ipsum...</p>
+</section> <!-- /#calls-->
 
-  <section id="language">
-    <h2>Query Language</h2>
+<section id="language">
+  <h2>Query Language</h2>
 
-    <p>Lorem ipsum...</p>
-  </section> <!--/#language-->
-        
-   <section id="reference">
-    <h2>Field Reference</h2>
+  <p>Lorem ipsum...</p>
+</section> <!--/#language-->
 
-    <p>Lorem ipsum...</p>
-  </section> <!--/#reference-->      
-        
+<section id="reference">
+  <h2>Field Reference</h2>
 
-  <section id="open-source">
-    <h2>Open Source and Contributing</h2>
+  <p>Lorem ipsum...</p>
+</section> <!--/#reference-->      
 
-    <p>Lorem ipsum...</p>
-  </section> <!--/#open-source-->
 
-  </section> <!-- /#main-content-->
+<section id="open-source">
+  <h2>Open Source and Contributing</h2>
 
-  <footer>
-    <p>This project is maintained by <a href="https://github.com/CFPB"><br />The Consumer Financial Protection Bureau.</a></p>
+  <p>Lorem ipsum...</p>
+</section> <!--/#open-source-->
 
-    <p>Hosted on Github Pages</p>
-  </footer>
-
-  </div> <!--./wrap-->
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="static/js/script.js"></script>
-  </body>
-</html>
