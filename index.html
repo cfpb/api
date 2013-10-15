@@ -1,62 +1,47 @@
 ---
+published: true
 layout: default
----
-<p>The <a href="http://www.consumerfinance.gov/" target="CFPB Home">Consumer Financial Protection Bureau</a> chose the Home Mortgage Disclosure Act (HMDA) as the first data to publish using Qu, an in-progress data platform created to serve public data. This page explains how to use the platform's API. You can see what our team has built so far for HMDA <a href="http://www.consumerfinance.gov/hmda/" target="Home Mortgage Disclosure Act Homepage">here</a>.</p>
 
-<section id="repositories">
-<h2>Repositories</h2>
+---
+
+<p>Each year thousands of banks and other financial institutions report data about mortgages to the public as part of the <a href="http://www.consumerfinance.gov/hmda/">Home Mortgage Disclosure Act (HMDA)</a>. This data is important because:</p>
+
+<ul>
+  <li>It helps show whether lenders are serving the housing needs of their communities;</li>
+  <li>It gives public officials insight that helps them make informed decisions about policies; and</li>
+  <li>It sheds light on lending patterns that could be discriminatory</li>
+</ul>
+
+<p>HMDA is true big data, with about 15 to 20 million records per year. The CFPB plans to offer every HMDA dataset since 2007, and we think that you could build something really cool with it.</p>
+
+<p>Just want the data, and not interested in programming? Visit our <a href="http://www.consumerfinance.gov/hmda/explore">HMDA site</p>, where you can create custom data sets for download.</p>
+
+<h2>Get Started</h2>
+<p>We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized these docs into three major areas.</p>
+
+<ul>
+  <li><strong>API Basics</strong> introduces you to the operations offered by the API. As we release other dataset APIs in the future, these will remain basically consistent.<li>
+  <li><strong>API Calls</strong> gives you a hands-on experience with the operations through an interactive console based on <a href="http://wordnik.swagger.com">Swagger</a>.</li>
+  <li><strong>Query Language</strong> and <strong>Field Reference</strong> contain a comprehensive listing of all the API's types, functions, and enumerations.</li>
+</ul>
+
+<h2>The HMDA API and Qu</h2>
+
+<p>HMDA is the CFPB's first dataset to publish using <strong><em>Qu</em></strong>, an in-progress data platform created to serve public data.</p>
+
+<p>Qu is the first CFPB project built from the beginning on GitHub. Think you can make the API better or just want to look under the hood? Check it out, and learn about how you can host your own datasets or contribute to the project.</p>
+
 <ul class="repo-list">
   <li class="list-icon">
-    <p class="image-wrap"><img src="static/img/octocat.png" width="25px" title="Github"></p>
+    <p class="image-wrap">
+      <img src="static/img/octocat.png" width="25px" title="Github">
+    </p>
   </li>
   <li>
-    <a href="https://github.com/cfpb/">
-      <h4>qu</h4> 
-      <p>The software that runs the platform</p>
+    <a href="https://github.com/cfpb">
+      <h4>qu</h4>
+      <p>The open source software that runs the platform</p>
     </a>
   </li>
-
-</section>
-
-<section id="basics">
-  <h2>API Basics</h2>
-  <ul>
-    <li>Datasets</li>
-    <li>Slices</li>
-    <li>Concepts</li>
-  </ul>
-
-  <h3>Specifying content type</h3>
-  <p>You can use a file extension to specify content type. For example, to specify for JSON, you would use: <code>/data/hmda/slice/incomes.json</code>.</p>
-
-  <h3>Response format</h3>
-  <p>We support HTML, XML, and JSON data formats...</p>
-</section> <!-- /#basics-->
-
-
-
-<section id="calls">
-  <h2>API calls</h2>
-
-  <p>Lorem ipsum...</p>
-</section> <!-- /#calls-->
-
-<section id="language">
-  <h2>Query Language</h2>
-
-  <p>Lorem ipsum...</p>
-</section> <!--/#language-->
-
-<section id="reference">
-  <h2>Field Reference</h2>
-
-  <p>Lorem ipsum...</p>
-</section> <!--/#reference-->      
-
-
-<section id="open-source">
-  <h2>Open Source and Contributing</h2>
-
-  <p>Lorem ipsum...</p>
-</section> <!--/#open-source-->
+</ul>
 
