@@ -14,7 +14,7 @@ layout: default
 
 <p>HMDA is true big data, with about 15 to 20 million records per year. The CFPB plans to offer every HMDA dataset since 2007, and we think that you could build something really cool with it.</p>
 
-<p>Just want the data, and not interested in programming? Visit our <a href="http://www.consumerfinance.gov/hmda/explore">HMDA site</p>, where you can create custom data sets for download.</p>
+<p>Just want the data, and not interested in programming? Visit our <a href="http://www.consumerfinance.gov/hmda/explore">HMDA site</a>, where you can create custom data sets for download.</p>
 
 <h2>Get Started</h2>
 <p>We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized these docs into three major areas.</p>

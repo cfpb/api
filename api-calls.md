@@ -6,28 +6,19 @@ nav: "api-calls"
 
 ## API Calls
 
-### Get all datasets
-`/data`
+Explore the API here using our <a href="http://wordnik.swagger.com">Swagger</a> console. Need a little help? Read our <a href="#">API Basics</a> to learn about <a href="#">datasets</a>, <a href="#">slices</a>, and <a href="#">concepts</a>. 
 
-For convenience, the root `/` also acts as this endpoint.
+### Basic example
 
-#### Get the metadata about a dataset
-`/data/:dataset`
+>**data:** Operations about datasets console goes here
 
-This call would give you the [formats](#formats) available for the dataset, its [properties](#properties), [slices](#slices), and [concepts](#concepts).
-[See an example here >](#)
+### Using HMDA DAta
 
-#### Get the metadata about a concept
-`/data/:dataset/concept/:concept`
+> **hmda** console goes here
 
-This call would give you the [formats](#formats) available for the concept, and its [properties](#properties), which might include a description of the [concepts](#concepts) and any codes that may be associated for all its possible values.
+Ready to dive deeper? Look up all functions, and enumerations in our <a href="#">Query Language</a> or 
+learn about the variables found in HMDA data at <a href="#">Field Reference</a>. 
 
-#### Get the metadata about a slice
-`/data/:dataset/slice/:slice/metadata`
-
-This call would give you the information about the dataset name, description, all [dimensions](#dimensions), all metrics, types, and all field references for the slice.
-
-#### Query a slice
-`/data/:dataset/slice/:slice`
-
-This call allows you to filter a slice on any of its [dimensions](#dimensions), metrics, and clauses. You can specify the [format](#format) in which the data is returned to you.
+Think you can make the API better or just want to look under the hood? Check out <a href="http://cfpg.github.io/qu">Qu</a>, the
+software our data platform is based upon, and learn about how you can host your own 
+datasets or contribute to the project.
