@@ -6,37 +6,31 @@ nav: basics
 
 ## API Basics
 
-### What is a dataset?
-The API endpoint for getting all datasets is `/data`.
+HMDA is a GET API which supports three main operations, each designed to save you time and allow you to focus only on
+the parts of the data you need.
 
-Each dataset has an endpoint at `/data/<dataset-name>`. This endpoint gives all information about a dataset needed to query it. Each dataset has several slices representing views of the dataset. These are analogous to tables in a relational database.
+You can query an entire dataset, but you can also take advantage of different pre-loaded views, or perspectives on a dataset. 
+When you're ready to get into the weeds, you can query the nitty-gritty details of a dataset you are interested in.
 
-[See the HMDA datasets and their formats here >](http://mortgages.demo.cfpb.gov/learn-more.html)
+### Datasets
+The endpoint for getting all data begins with ```/data```. Each dataset has an endpoint at ```/data/{dataset-name}```. This endpoint gives 
+all information about a dataset needed to query it. These different views of a dataset are called slices. 
 
-### What is a slice?
-Each dataset has several slices representing views of the dataset. These are like tables in a relational database. Each slice has an
-endpoint at `/data/<dataset-name>/<slice-name>`. All endpoints can have an optional filename extension, so accessing a slice
-could use any of the following example URLs:
+<a href="#">See this in action</a>
 
-```
-/data/census/population_estimates
-/data/census/population_estimates.html
-/data/census/population_estimates.csv
-```
+### Slices
+Think of slices as tables in a relational database. Every dataset has many slices representing different views of it. The endpoint for
+every slice is ```/data/{dataset-name}/{slice-name}```. 
 
-If the MIME type corresponding to the extension is available, it will be served. If an extension is not used, the request's Accept header will be used to determine what MIME type to serve.
+<a href="#">See this in action</a>
 
-[See a list of all the HMDA slices here >](http://qu.demo.cfpb.gov/data/hmda)
+You can even request a slice in HTML, XML, JSON, JSONP, or CSV. Just append the filename extension to the endpoint like so:
+```/data/{dataset-name}/{slice-name.extension}```. 
 
-### What is a concept?
-Each dataset has defined concepts, which are analogous to variables, or column headers in a spreadsheet. Concepts have properties,
-which describe all the possible values.
+<a href="#">See this in action</a>
 
-[See a list of all the HMDA concepts here >](http://qu.demo.cfpb.gov/data/hmda)
+### Concepts
+Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible
+values. You can also specify concepts in any of the supported file formats like so ```/data/{dataset-name}/{contept-name.extension}```. 
 
-### Specifying content type?
-You can use a file extension to specify content type. For example, to specify for JSON, you would use:
-`/data/hmda/slice/incomes.json`.
-
-### Response format
-We support HTML, XML, and JSON data formats. To get a particular format, set your request's Accept header, or suffix the request with the correct file extension. Slices also support the CSV and JSONP data formats. To receive JSONP, use the `.jsonp` file extension and the `$callback` clause.
+<a href="#">See this in action</a>
