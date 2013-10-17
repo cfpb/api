@@ -4,32 +4,28 @@ layout: default
 
 ---
 
-<p>Each year thousands of banks and other financial institutions report data about mortgages to the public as part of the <a href="http://www.consumerfinance.gov/hmda/">Home Mortgage Disclosure Act (HMDA)</a>. This data is important because:</p>
+Each year thousands of banks and other financial institutions report data about mortgages to the public as part of the [Home Mortgage Disclosure Act (HMDA)](http://www.consumerfinance.gov/hmda/). This data is important because:
 
-<ul>
-  <li>It helps show whether lenders are serving the housing needs of their communities;</li>
-  <li>It gives public officials insight that helps them make informed decisions about policies; and</li>
-  <li>It sheds light on lending patterns that could be discriminatory</li>
-</ul>
+- It helps show whether lenders are serving the housing needs of their communities;
+- It gives public officials insight that helps them make informed decisions about policies; and
+- It sheds light on lending patterns that could be discriminatory
 
-<p>HMDA is true big data, with about 15 to 20 million records per year. The CFPB plans to offer every HMDA dataset since 2007, and we think that you could build something really cool with it.</p>
+HMDA is true big data, with about 15 to 20 million records per year. The CFPB plans to offer every HMDA dataset since 2007, and we think that you could build something really cool with it.
 
-<p>Just want the data, and not interested in programming? Visit our <a href="http://www.consumerfinance.gov/hmda/explore">HMDA site</a>, where you can create custom data sets for download.</p>
+Just want the data, and not interested in programming? Visit our HMDA site, where you can create [custom data sets](http://www.consumerfinance.gov/hmda/explore) for download.
 
-<h2>Get Started</h2>
-<p>We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized these docs into three major areas.</p>
+## Get Started
+We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized these docs into three major areas.
 
-<ul>
-  <li><strong>API Basics</strong> introduces you to the operations offered by the API. As we release other dataset APIs in the future, these will remain basically consistent.<li>
-  <li><strong>API Calls</strong> gives you a hands-on experience with the operations through an interactive console based on <a href="http://wordnik.swagger.com">Swagger</a>.</li>
-  <li><strong>Query Language</strong> and <strong>Field Reference</strong> contain a comprehensive listing of all the API's types, functions, and enumerations.</li>
-</ul>
+- **API Basics** introduces you to the operations offered by the API. As we release other dataset APIs in the future, these will remain basically consistent.
+- **API Calls** gives you a hands-on experience with the operations through an interactive console based on [Swagger](http://wordnik.swagger.com).
+- **Query Language** and **Field Reference** contain a comprehensive listing of all the API's types, functions, and enumerations.
 
-<h2>The HMDA API and Qu</h2>
+## The HMDA API and Qu
 
-<p>HMDA is the CFPB's first dataset to publish using <strong><em>Qu</em></strong>, an in-progress data platform created to serve public data.</p>
+HMDA is the CFPB's first dataset to publish using **Qu**, an in-progress data platform created to serve public data.
 
-<p>Qu is the first CFPB project built from the beginning on GitHub. Think you can make the API better or just want to look under the hood? Check it out, and learn about how you can host your own datasets or contribute to the project.</p>
+Qu is the first CFPB project built from the beginning on GitHub. Think you can make the API better or just want to look under the hood? Check it out, and learn about how you can host your own datasets or contribute to the project.
 
 <ul class="repo-list">
   <li class="list-icon">
