@@ -14,7 +14,9 @@ Certain fields of a slice are dimensions. Dimensions are usually fields that hav
 `/data/census/population_estimates?state=Nebraska`
 
 ### Clauses
+
 Most queries will involve more than simple equality queries. For these, we have a set of clauses you can use.
+
 <table class="table table-bordered table-striped">
 <thead>
 <tr>
@@ -49,7 +51,7 @@ Most queries will involve more than simple equality queries. For these, we have 
 </tr>
 <tr>
 <td><code>$page</code></td>
-<td><the page="" of="" results="" to="" return.="" if="" not="" specified,="" this="" defaults="" 1.="" <code="">$page is given, <code>$offset</code> is ignored.</the></td>
+<td>the page of results to return. if not specified, this defaults to 1. If <code>$page</code> is given, <code>$offset</code> is ignored.</td>
 </tr>
 <tr>
 <td><code>$perPage</code></td>
@@ -129,6 +131,7 @@ This clause supports a mini-language for writing queries. This language is a sub
 </tbody></table>
 
 #### See a list of boolean operators possible
+
 <table class="table table-bordered table-striped"><thead>
 <tr>
 <th>Operator</th>
@@ -176,7 +179,6 @@ The content for this section comes directly as is written here: [http://cfpb.git
 
 `$group` requires a `$select` clause. In this `$select` clause, you will want to put the fields you are grouping on, as well as any aggregations you want. Aggregations are functions run on fields of the grouped data in order to reduce them to an associated value.
 
-
 <table class="table table-bordered table-striped"><thead>
 <tr>
 <th>Aggregation function</th>
@@ -208,8 +210,7 @@ The `$orderBy` clause determines the order of the results returned. This takes a
 
 Examples:
 
-```
-$orderBy=age
-$orderBy=state, square_miles
-$orderBy=age desc, gender
-```
+
+	$orderBy=age
+	$orderBy=state, square_miles
+	$orderBy=age desc, gender
