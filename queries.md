@@ -6,211 +6,114 @@ nav: queries
 
 ## Query Language
 
-Our query language is based on Socrata's [SoQL](http://dev.socrata.com/consumers/getting-started#queryingwithsoql) language. Queries are simple GET parameters sent to a slice endpoint.
+Our query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
+learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [reference page](http://cfpb.github.io/api/hmda/fields), or by using the [metadata endpoints](http://cfpb.github.io/api/hmda/calls) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
 
-### Dimensions
-Certain fields of a slice are dimensions. Dimensions are usually fields that have one of a series of values, such as a state field having one of the 50 US States, or a marital_status field having Single, Widowed, Divorced, or Separated.
+- **Querying Data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
+barista at your favorite coffee shop, it could handle even a really complex drink order, no sweat.  
+[See this in action](http://cfpb.github.io/api/hmda/calls)
 
-`/data/census/population_estimates?state=Nebraska`
+- **Summarizing or Aggregating Data** - Once you have the data you need to work with, our API can crunch all the numbers 
+for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
 
-### Clauses
+### Querying Data
 
-Most queries will involve more than simple equality queries. For these, we have a set of clauses you can use.
+Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [Explore Data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
 
-<table class="table table-bordered table-striped">
-<thead>
-<tr>
-<th>Clause</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>$select</code></td>
-<td>Which columns to return. If not specified, all columns will be returned.</td>
-</tr>
-<tr>
-<td><code>$where</code></td>
-<td>Filter the results. This uses the <a href="#where_in_detail">WHERE query syntax</a>. If not specified, the results will not be filtered.</td>
-</tr>
-<tr>
-<td><code>$orderBy</code></td>
-<td>Order to return the results. If not specified, the order will be consistent, but unspecified.</td>
-</tr>
-<tr>
-<td><code>$group</code></td>
-<td>Column to group results on.</td>
-</tr>
-<tr>
-<td><code>$limit</code></td>
-<td>Maximum number of results to return. If not specified, this defaults to 100. This has a hard limit of 1000.</td>
-</tr>
-<tr>
-<td><code>$offset</code></td>
-<td>Offset into the results to start at. If not specified, this defaults to 0.</td>
-</tr>
-<tr>
-<td><code>$page</code></td>
-<td>the page of results to return. if not specified, this defaults to 1. If <code>$page</code> is given, <code>$offset</code> is ignored.</td>
-</tr>
-<tr>
-<td><code>$perPage</code></td>
-<td>How many results to return per page. This is a synonym for <code>$limit</code>.</td>
-</tr>
-<tr>
-<td><code>$callback</code></td>
-<td>The name of the callback function used in a JSONP query. Only used with JSONP.</td>
-</tr>
-</tbody>
-</table>
+| Clause        | What it does  |
+| ------------- | ------------- |
+| ```$select``` | Specifies which fields to return, separated by commas. If not specified, all columns will be returned. Use this to [aggregate or summarize data](http://cfpb.github.io/api/hmda/language#aggregating). A list of all fields available is [here](http://cfpb.github.io/api/hmda/fields) or at the [```concept``` endpoint](http://cfpb.github.io/api/hmda/calls). |
+| ```$where```  | Filter the results using SQL ```WHERE``` query syntax. If not specified, the results will not be filtered. [Learn more](http://cfpb.github.io/api/hmda/language#where).      |
+| ```$orderBy```| Fields to order by, separated by commas, or ASC and DESC. If not specified, the order will be consistent, but unspecified. Used in [aggregating or summarizing data](http://cfpb.github.io/api/hmda/language#orderby).      |
+| ```$group```  | Fields to group by, separated by commas. Learn more about [aggregating or summarizing data](http://cfpb.github.io/api/hmda/language#orderby).      |
+| ```$limit```  | Maximum number of results to return. If not specified, defaults to ```100```. Enter ```0``` for no limit.      |
+| ```$offset``` | Number of records to skip. If not specified, defaults to ```0```.      |
+| ```$callback```| The name of the JavaScript callback to invoke in a query. Only used with JSONP.      |
+
+### More on $where
+
+This clause supports a mini-language for writing queries. It's a subset of SQL WHERE clauses, with the addition of function 
+support. A ```$where``` clause is made up of one or more comparisons, joined by boolean operators.
+
+[See a list of possible comparisons]()
+
+|  Operator     | What it means | Example |
+| ------------- | ------------- | -------|
+| ```=```       | equality      | ```name = "Phillip"```|
+| ```!=```      | inequality    | ```state != "Alaska"```|
+| ```>```       | greater than  | ```age > 18```|
+| ```>=```      | greater than or equal | ```square_miles >= 1000```|
+| ```< ``` | less than | ```age < 65```|
+| ```<=``` | less than or equal | ```square_miles <= 1000```|
+| ```LIKE``` | matches strings | ```name LIKE = "Pete%"``` would match "Pete, "Peter," or anything that starts with "Pete"|
+|```ILIKE``` | matches case-insensitive strings | ```name ILIKE = "%rick"``` would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it|
+| ```IS NULL``` | existence of a value | ```city is NULL```|
+| ```IS NOT NULL``` | non-existence of a value | ```city IS NOT NULL```|
+
+[See a list of possible boolean operators]()
+
+| Operator | What it means | Example |
+| -------  | ------------- | ------- |
+| ```AND``` | logical AND of two comparisons | ```state = "Alaska" AND age > 18```|
+| ```OR``` | logical OR of two comparisons | ```state = "Alaksa" OR state = "Hawaii"``` |
+| ```NOT``` | negation of a comparison | ```NOT (state = "Alaska" OR state = "Hawaii"```|
+| ```()``` | grouping or order of operations | ```(state = "Alaska" OR state = "Hawaii") AND age > 18```|
 
 
-### $where
-This clause supports a mini-language for writing queries. This language is a subset of SQL WHERE clauses, with the addition of function support. A `$where` clause is made up of one or more comparisons, joined by *boolean* operators.
+## Summarizing and Aggregating Data
 
-##### Comparisons
-#### See a list of comparisons possible
+In addition to powerful data filtering, you can also aggregate data into summary tables, as seen in the [Summary Tables](https://github.com/pages/data-platform/public-data-platform/explore#summary) section of our HMDA page. The three clauses used in these queries are:
 
-<table class="table table-bordered table-striped"><thead>
-<tr>
-<th>Operator</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>=</code></td>
-<td>equality</td>
-<td><code>name="Phillip"</code></td>
-</tr>
-<tr>
-<td><code>!=</code></td>
-<td>inequality</td>
-<td><code>state != "Alaska"</code></td>
-</tr>
-<tr>
-<td><code>&gt;</code></td>
-<td>greater than</td>
-<td><code>age &gt; 18</code></td>
-</tr>
-<tr>
-<td><code>&gt;=</code></td>
-<td>greater than or equal</td>
-<td><code>square_miles &gt;= 1000</code></td>
-</tr>
-<tr>
-<td><code>&lt;</code></td>
-<td>less than</td>
-<td><code>age &lt; 18</code></td>
-</tr>
-<tr>
-<td><code>&lt;=</code></td>
-<td>less than or equal</td>
-<td><code>square_miles &lt;= 1000</code></td>
-</tr>
-<tr>
-<td><code>LIKE</code></td>
-<td>string matching</td>
-<td><code>name LIKE "Pete%"</code> (would match "Pete", "Peter", or anything that starts with "Pete")</td>
-</tr>
-<tr>
-<td><code>ILIKE</code></td>
-<td>case-insensitive string matching</td>
-<td><code>name ILIKE "%rick"</code> (would match "Rick" as well as "Yorick", "Harrick", or anything else with "rick" in it)</td>
-</tr>
-<tr>
-<td><code>IS NULL</code></td>
-<td>existence of a value</td>
-<td><code>city IS NULL</code></td>
-</tr>
-<tr>
-<td><code>IS NOT NULL</code></td>
-<td>non-existence of a value</td>
-<td><code>city IS NOT NULL</code></td>
-</tr>
-</tbody></table>
+### $select
+This clause takes a list of the fields you want returned, separated by commas.  Unlike the SQL version of ```SELECT```, it does not allow for ```AS``` aliasing, so:
 
-#### See a list of boolean operators possible
+**Right:** ```state_abbr```, ```county```
 
-<table class="table table-bordered table-striped"><thead>
-<tr>
-<th>Operator</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>AND</code></td>
-<td>logical AND of two comparisons</td>
-<td><code>state = "Alaska" AND age &gt; 18</code></td>
-</tr>
-<tr>
-<td><code>OR</code></td>
-<td>logical OR of two comparisons</td>
-<td><code>state = "Alaska" OR state = "Hawaii"</code></td>
-</tr>
-<tr>
-<td><code>NOT</code></td>
-<td>negation of a comparison</td>
-<td><code>NOT (state = "Alaska" OR state = "Hawaii")</code></td>
-</tr>
-<tr>
-<td><code>()</code></td>
-<td>grouping for order of operations</td>
-<td><code>(state = "Alaska" OR state = "Hawaii") AND age &gt; 18</code></td>
-</tr>
-</tbody></table>
+**Wrong:** ```state_abbr AS state```, ```county```
 
-### Aggregating Data
-The content for this section comes directly as is written here: [http://cfpb.github.io/qu/articles/queries.html](http://cfpb.github.io/qu/articles/queries.html).
+### orderBy
+This clause determines the order of the results returned. It takes a list of columns, separated by commas, with an optional suffix of ```ASC``` or ```DESC``` to indicate that you want the data in ascending or descending order. For example, if you wanted to see loan applications ordered by gender, and age in descending order, you would use:
 
-#### $ select
-`$select` is a simple clause: in the normal case, it takes a list of fields you wish returned, separated by commas. Unlike the SQL version of `SELECT`, it does not allow for `AS` aliasing:
+```$orderBy = gender, age DESC```
 
-- **Right** `state_abbr, county`
-- **Wrong** `state_abbr AS state, county`
+### $group
+This clause lists the fields you want to group results by. For example, if you wanted to see loan applications organized by denial reason, you would use:
 
+```$group = denial_reason```
 
-#### $ group
+```$group``` usually requires a ```$select``` clause, where you need to specify the fields you are grouping on, as well as any aggregations you want. 
 
-`$group` lists fields you wish to group results by. For example, if you wanted to see the total number of tax returns by state in the included county taxes dataset, you would set `$group` equal to state_abbr.
+### Aggregation Functions
+Aggregations are functions run on fields of grouped data in order to reduce them to an associated value. All functions are called with the name of the field to aggregate in parentheses. For example, if you wanted to know the total number of owner-occupied properties per metro area in HMDA, you would use:
 
-#### Running the aggregation
+```$select: msamd, SUM(numer_of_owner_occupied_units)```
 
-`$group` requires a `$select` clause. In this `$select` clause, you will want to put the fields you are grouping on, as well as any aggregations you want. Aggregations are functions run on fields of the grouped data in order to reduce them to an associated value.
+```$group: msamd```
 
-<table class="table table-bordered table-striped"><thead>
-<tr>
-<th>Aggregation function</th>
-<th>Result</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>SUM</code></td>
-<td>Totals the values.</td>
-</tr>
-<tr>
-<td><code>MIN</code></td>
-<td>Returns the minimum value in the set.</td>
-</tr>
-<tr>
-<td><code>MAX</code></td>
-<td>Returns the maximum value in the set.</td>
-</tr>
-<tr>
-<td><code>COUNT</code></td>
-<td>Returns the number of rows in the set. <code>COUNT</code> can be called with any field and will return the same thing.</td>
-</tr>
-</tbody></table>
+| Function | What it does |
+| -------- | ------------ |
+| ```SUM``` | Totals the values |
+| ```MIN``` | Returns the minimum value in the results |
+| ```MAX``` | Returns the maximum value in the results |
+| ```COUNT``` | Returns the number of rows in the set, i.e., the number of results. You can use ```COUNT``` for any field |
 
+### Order matters
+When summarizing and aggregating data, take care to know the order in which the clauses and names of the aggregated fields are applied.
+ 
+1. ```$where``` is applied first in order to reduce the amount of data being aggregated
+2. The data is then aggregated using ```$group``` and ```$select``` clauses
+3. ```$orderBy```
+4. ```$limit```, ```$offset```
 
-#### $ orderBy
+Then, when you want to use aggregated fields for grouping, name them according to the function you used following
+this format:
 
-The `$orderBy` clause determines the order of the results returned. This takes a list of columns, separated by commas, with an optional suffix of `desc` to indicate that you want the data in descending order.
+```function_field_name```
 
-Examples:
+```sum_number_of_owner_occupied_units```
 
+### That's everything!
 
-	$orderBy=age
-	$orderBy=state, square_miles
-	$orderBy=age desc, gender
+You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
+
+Get familiar with the information contained in HMDA on our [field reference page](http://cfpb.github.io/api/hmda/fields) page, and head on over to the [API Calls](http://cfpb.github.io/api/hmda/calls) page to test your queries out in our console.

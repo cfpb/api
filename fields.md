@@ -4,38 +4,11 @@ title: Field Reference
 nav: fields
 ---
 
-## Field reference for HMDA data
+## Field reference
 
-I believe this content lives currently on [http://qu.demo.cfpb.gov/data/hmda/slice/hmda_lar/metadata]( http://qu.demo.cfpb.gov/data/hmda/slice/hmda_lar/metadata) but it needs decisions about what will make it on here.
+Why so many rows and fields? Don't be alarmed–there's a lot of information in HMDA, but you can make your queries as basic or as detailed as you want. 
 
-Here are my suggestions for the content on this page:
+Use this page as a cheat sheet when you are ready to add color to some [basic queries](http://github.cfpb.io/api/hmda/basics). You can also skim this table to get an idea of the kinds of information you can find in HMDA records. If you are new to HMDA data, or need to understand the ins and outs of the information itself, visit our [HMDA site](http://consumerfinance.gov/hmda) to learn more.
 
-#### Properties
-##### Name
-HMDA LAR with code sheets
 
-##### Description
-The HMDA LAR data, with code sheet lookups added.
-
-#### Available formats
-- [JSON](http://qu.demo.cfpb.gov/data/hmda/slice/hmda_lar/metadata.json)
-- [JSONP](http://qu.demo.cfpb.gov/data/hmda/slice/hmda_lar/metadata.jsonp)
-- [XML](http://qu.demo.cfpb.gov/data/hmda/slice/hmda_lar/metadata.xml)
-
-#### See all dimensions
-
-#### See all metrics
-- ```applicant_income_000s```
-- ```co_applicant_income_000s```
-- ```hud_median_family_income```
-- ```loan_amount_000s```
-- ```number_of_1_to_4_family_units```
-- ```number_of_owner_occupied_units```
-- ```minority_population```
-- ```population```
-- ```rate_spread```
-- ```tract_to_msamd_income```
-
-#### See all types
-
-#### See all references
+(a 78-row field reference table to be placed here)
