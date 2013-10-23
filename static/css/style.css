@@ -553,10 +553,9 @@ header {
 }
 
 .header h1 {
-    padding-top: 0.54545454545455em;
     color: #75787B;
-    font-size: 1.375em;
-    line-height: 1;
+    font-size: 1.625em;
+    line-height: 2.5em;
 }
 
 .header h1 span {
