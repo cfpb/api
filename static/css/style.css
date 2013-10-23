@@ -543,6 +543,10 @@ footer {
     list-style: none;
 }
 
+.footer-oss {
+    width: 66%;
+}
+
 .footer h4 {
     margin-bottom: 0.75em;
     font-size: 16px;
