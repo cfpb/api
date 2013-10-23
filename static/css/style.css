@@ -12,9 +12,9 @@ Begin with generic 'mobile first' styles
 
 @font-face{
     font-family: "Avenir Next";
-    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot");
-    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("embedded-opentype"),
-         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff");
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot"); /* IE9 Compact Modes */
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("embedded-opentype"), 
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"); /* Modern Browsers */
     font-weight: 400;
     font-style: normal;
 }
@@ -52,100 +52,396 @@ Typography
 ==================================
 */
 
-body {
-    font-family: "Avenir Next", Arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.875;
+/* 16px base font size with 150% (24px) friendly, unitless line height and margin for vertical rhythm */
+/* Font-size percentage is based on 16px browser default size */
+
+body, button, input, select, textarea {
+    font: 100%/1.5 "Avenir Next", Arial, sans-serif;
+    font-size: 1em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-strong {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
+
+/* IE7 and older can't resize px-based text */
+
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+
+    margin: 0 0 1.5em;
+    padding: 0;
 }
 
 h1 {
-    font-size: 1.25em;
-    color: #75787B;
     margin: 0;
-    line-height: 58px;
-    display: inline-block;
-    float: left;
+    margin-bottom: 0.5em;
+    font: 400 34px/1.125 "Avenir Next", Arial, sans-serif;
 }
 
 h2 {
-    font-size: 1.375em;
-    margin: 1.4em 0 0 0;
+    margin: 0;
+    margin-bottom: 0.5em;
+    font: 400 22px/1.125 "Avenir Next", Arial, sans-serif;
 }
 
-/*
-Lists
---------------------------------
-*/
-.main-content ul {
-    padding-left: 1.1em;
+
+h3 {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font: 600 14px/1.125 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
 }
 
-.main-content li {
+
+h4 {
+    margin: 0;
     margin-bottom: 1em;
+    font: 700 18px/1.125 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
 }
 
-li h3,
-li h4 {
+
+h5 {
+    margin: 0;
+    margin-bottom: 1em;
+    font: 600 16px/1.125 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+h6 {
+    margin: 0;
+    margin-bottom: 1em;
+    font: 600 14px/1.125 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+p, ul, blockquote, pre, td, th, label {
+    margin: 0;
+    /* 16px / 24px */
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+small, p.small {
+    margin: 0;
+    margin-bottom: 1.7142857142857142857142857142857em;
+    /* 14px / 24px */
+    font-size: 0.875em;
+    line-height: 1.7142857142857142857142857142857;
+}
+
+strong, b, dt {
+    font-weight: bold;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+}
+
+dfn {
+    font-style: italic;
+}
+
+var, address {
+    font-style: normal;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+     /* Positions 'sub' and 'sup' without affecting line-height */
+     position: relative;
+     vertical-align: baseline;
+}
+
+sup {
+     /* Move superscripted text up */
+    top: -0.5em;
+}
+
+sub {
+    /* Move subscripted text down */
+    bottom: -0.25em;
+}
+
+
+/* CODE */
+pre {
+    /* Allow line wrapping of 'pre' */
+    background-color: #d7d2cb;
+    border: 1px solid #d0d0ce;
+    border-radius: 0.625em;
+    color: #101820;
+    margin-top: 1.25em;
+    overflow-x: auto;
+    padding: 0.625em 1.25em;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+}
+
+pre, code, kbd, samp {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-family: Source Code Pro, Consolas, Monaco, 'Andale Mono', monospace, serif;
+}
+
+code {
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+/* TABLES */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.5em;
+}
+
+th {
+    text-align: left;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    background-color: #DBEDD4;
+}
+
+tr, th, td {
+    padding-right: 1.5em;
+    border-bottom: 0 solid #333;
+}
+
+tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+tr:nth-child(odd) {
+    background-color: #F8F8F8;
+}
+
+/* FORMS */
+
+form {
     margin: 0;
 }
 
-li p {
-    margin-top: 0;
+fieldset {
+    border: 0;
+    padding: 0;
 }
 
-/*
-Links
-==================================
-*/
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
 
+
+legend {
+    *margin-left: -.75em;
+}
+
+button, input, select, textarea {
+    vertical-align: baseline;
+    /* IE7 and older */
+    *vertical-align: middle;
+}
+
+button, input {
+    line-height: normal;
+    *overflow: visible;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    box-sizing: border-box;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button:: -moz-focus-inner, input::-moz-focus-inner {
+    border:0;
+    padding:0;
+}
+
+/* QUOTES */
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+}
+
+blockquote, q, cite {
+    font-style: italic;
+}
+
+blockquote {
+    border-left: 5px solid #BABBBD;
+    color: #796E65;
+    padding-left: 1.5em;
+}
+
+blockquote > p {
+    padding: 0;
+}
+
+/* LISTS */
+ul, ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+li ul, li ol {
+    margin: 0 1.5em;
+}
+
+dl dd {
+    margin-left: 1.5em;
+}
+
+dt {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+}
+
+/* LINKS */
 a {
-    -webkit-transition: .2s; -moz-transition: .2s;
-    transition: .2s;
-}
-
-a,
-a:link,
-a:visited {
-    color: #0072ce;
-    border-bottom: 1px dotted #0072ce;
-    text-decoration: none; 
-}
-
-a:hover {
-    border-bottom: 1px solid #7eb8dd; 
-    color: #7eb8dd; 
+    border-bottom: none;
+    color: #0072CE;
     text-decoration: none;
 }
 
-a:active {
-    border-bottom: 1px solid #002d72; 
-    color: #002d72; 
+main p a:visited {
+    border-bottom: 1px solid #005E5D;
+    color: #005E5D;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px dotted #0072CE;
+    color: #0072CE;
     text-decoration: none;
 }
 
 a:focus {
-    border-bottom: 1px solid #0072ce; 
-    color: #0072ce; 
-    outline: thin dotted; 
+    border-bottom: 1px solid #0072CE;
+    outline: thin dotted;
+    color: #0072CE;
     text-decoration: none;
 }
 
-/*
-Navigation
-==================================
-*/
+a:active {
+    border-bottom: 1px solid #002D72;
+    color: #002D72;
+    text-decoration: none;
+}
+
+a.call-to-action {
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+/* MEDIA */
+
+figure {
+    margin: 0;
+}
+
+img, object, embed, video {
+    /* fluid images */
+    max-width: 100%;
+    _width: 100%;
+}
+
+img {
+    border: 0;
+    /* improve IE's resizing of images */
+    -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+    /* corrects IE9 overflow */
+    overflow: hidden;
+}
+
+/* ABBREVIATION */
+abbr[title],  dfn[title] {
+    border-bottom: 1px dotted #333;
+     cursor: help;
+}
+
+
+/* MARKED/INSERTED/DELETED AND SELECTED TEXT */
+ins,  mark {
+    text-decoration: none;
+}
+mark {
+    background: #c47529;
+}
+ins {
+    background: #d49855;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* Selected text */
+::-moz-selection {
+    background: #0072ce;
+    color: #fff;
+    text-shadow: none;
+}
+
+ /* Selected text */
+::selection {
+    background: #0072ce;
+     color: #fff;
+     text-shadow: none;
+}
+
+/* MICRO CLEARFIX HACK */
+.cf:before,  .cf:after {
+    content: "";
+    display: table;
+}
+ /* For modern browsers */
+.cf:after {
+    clear: both;
+}
+.cf {
+    /* For IE 6/7 (trigger hasLayout) */
+    zoom: 1;
+}
+
+
+/* ALIGNMENT */
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* BASIC NAV */
 
  nav a {
     display: block;
@@ -172,10 +468,7 @@ nav li {
 }
 
 
-/*
-Layout
-==================================
-*/
+/* LAYOUT */
 
 /* offset the fixed position header for jump links */
 section:before {
@@ -193,8 +486,7 @@ section:before {
 
 header {
     width: 100%;
-    border-top: 4px solid #2CB34A;
-    border-bottom: 1px solid #BABBBD;
+    border-bottom: 4px solid #2CB34A;
     background-color: #fff;
     position: fixed;
     top: 0;
@@ -202,15 +494,24 @@ header {
     height: 3.625em;
 }
 
+header h1 {
+    margin-top: 0.54545454545455em;
+    color: #75787B;
+    font-size: 1.375em;
+    line-height: 1;
+}
+
+header h1 span {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
+}
+
 .content {
     margin-top: 80px;
 }
 
 
-/*
-Style
-==================================
-*/
+/* STYLE */
 
 .e {
     font-family: "Avenir Next", Arial, sans-serif;
@@ -224,20 +525,44 @@ Style
 
 .logo {
     width: 150px;
-    margin-top: .75em; /*this is a pretty hacky job of vertically centering the logo */
+    margin-top: .75em;
     padding-right: 20px;
     float: right;
+
 }
 
 footer {
-    font-size: 0.75em;
-    color: #75787B;
+    padding: 2em 0;
+    border-top: 2px solid #BABBBD;
+    margin-top: 2em;
+    background: #F1F2F2;
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer h4 {
+    margin-bottom: 0.75em;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.footer p {
+    font-size: 0.875em;
+    line-height: 1.42857142857143;
 }
 
 footer a,
 footer a:link,
 footer a:visited {
     border-bottom: none;
+}
+
+footer a:hover {
+    border-bottom: 1px dotted #0072CE;
 }
 
 li h4 {
@@ -250,10 +575,7 @@ li h4 {
     font-style: normal; 
 }
 
-/*
-Repo list
-----------------------------------
-*/
+/* REPO LIST */
 
 ul.repo-list {
     margin: .5em 0 1em 0;
@@ -269,26 +591,18 @@ ul.repo-list {
     font-size: 0.875em;
 }
 
-/*
-Desktop Styles
-==================================
-*/
+/* DESKTOP STYLES */
+
 @media screen and (min-width: 40.5em) and (min-height: 32.5em) {
 
-    /*
-    Typography
-    ==============================
-    */
+    /* TYPOGRAPHY */
 
     h1 {
         font-size: 1.625em;
         margin: 0;
     }
 
-    /*
-    Layout
-    ==============================
-    */
+    /* LAYOUT */
 
     .logo {
         float: right;
@@ -303,9 +617,11 @@ Desktop Styles
     }
 
     footer {
-        position: fixed;
-        width: 235px;
-        bottom: 20px;
+       padding: 2em 0;
+       border-top: 2px solid #BABBBD;
+       margin-top: 2em;
+       background: #F1F2F2
+       font-family: "Avenir Next", Arial, sans-serif;
     }
 
     .main-content {
@@ -314,27 +630,19 @@ Desktop Styles
         margin-bottom: 120px;
     }
 
-    /*
-    Navigation
-    ==============================
-    */
+    /* NAVIGATION */
 
     nav a:hover {
         color: #4D5F87;
         border-bottom: none;
-        background-color: #CDE3F1;
+        border-left: 5px solid #2CB34A;
+        background-color: none;
         padding-left: 10px;
     }
 
-    /*
-    Style
-    ==============================
-    */
+    /* STYLE */
 
-    /*
-    Repo list
-    ------------------------------
-    */
+    /* REPO LIST*/
 
     .repo-list li {
         list-style: none;
@@ -351,10 +659,7 @@ Desktop Styles
 
 }
 
-/*
-Mobile Styles
-==================================
-*/
+/* Mobile Styles */
 @media screen and (max-width: 40.5em) {
 
     .list-icon {
