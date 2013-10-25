@@ -4,15 +4,15 @@ title: API Calls
 nav: "api-calls"
 ---
 
-## API Calls
+### API Calls
 
 Explore the API here using our <a href="http://wordnik.swagger.com">Swagger</a> console. Need a little help? Read our <a href="#">API Basics</a> to learn about <a href="#">datasets</a>, <a href="#">slices</a>, and <a href="#">concepts</a>. 
 
-### Basic example
+##### Basic example
 
 >**data:** Operations about datasets console goes here
 
-### Using HMDA DAta
+##### Using HMDA Data
 
 > **hmda** console goes here
 

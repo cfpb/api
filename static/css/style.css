@@ -37,6 +37,7 @@ Begin with generic 'mobile first' styles
     font-style: normal;
 }
 
+
 /*
 Normalize the box model
 ==================================
@@ -47,83 +48,93 @@ Normalize the box model
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
-/*
-Typography
-==================================
-*/
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
 
-/* 16px base font size with 150% (24px) friendly, unitless line height and margin for vertical rhythm */
-/* Font-size percentage is based on 16px browser default size */
-
-body, button, input, select, textarea {
-    font: 100%/1.5 "Avenir Next", Arial, sans-serif;
-    font-size: 1em;
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0 !important;
+    font-family: "Avenir Next", Arial, sans-serif;
+    text-rendering: optimizeLegibility;
 }
-
 
 /* IE7 and older can't resize px-based text */
 
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
 
-    padding: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
 h1 {
     margin: 0;
-    padding-bottom: 0.5em;
-    font: 400 34px/1.125 "Avenir Next", Arial, sans-serif;
+    margin-bottom: 0.5em;
+    font: 400 2.125em/1.23529411764706 "Avenir Next", Arial, sans-serif;
+    font-weight: normal;
 }
 
 h2 {
     margin: 0;
-    padding-bottom: 0.5em;
-    font: 400 22px/1.125 "Avenir Next", Arial, sans-serif;
+    margin-bottom: 0.5em;
+    font: 400 1.625em/1.23076923076923 "Avenir Next", Arial, sans-serif;
+    font-weight: normal;
 }
 
 
 h3 {
     margin: 0;
-    padding-bottom: 0.5em;
-    font: 600 14px/1.125 "Avenir Next Demi", Arial, sans-serif;
-    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    font: 400 1.375em/1.27272727272727 "Avenir Next", Arial, sans-serif;
+    font-weight: normal;
 }
 
 
 h4 {
     margin: 0;
-    padding-bottom: 1em;
-    font: 700 18px/1.125 "Avenir Next Demi", Arial, sans-serif;
-    text-transform: uppercase;
+    margin-bottom: 1em;
+    font: 700 1.125em/1.22222222222222 "Avenir Next Demi", Arial, sans-serif;
+    font-weight: 500;
 }
 
 
 h5 {
     margin: 0;
-    padding-bottom: 1em;
-    font: 600 16px/1.125 "Avenir Next Demi", Arial, sans-serif;
+    margin-bottom: 1em;
+    font: 600 0.875em/1.57142857142857 "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 h6 {
     margin: 0;
-    padding-bottom: 1em;
-    font: 600 14px/1.125 "Avenir Next Demi", Arial, sans-serif;
+    margin-bottom: 1em;
+    font: 600 0.75em/1.83333333333333 "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-p, ul, blockquote, pre, td, th, label {
+p  {
     margin: 0;
-    /* 16px / 24px */
+    font-size: 0.875em;
+    line-height: 1.375em;
+    margin-bottom: 1.5em;
+}
+
+ul, blockquote, pre, td, th, label {
+    margin: 0;
     font-size: 1em;
-    line-height: 1.5;
-    padding-bottom: 1.5em;
+    line-height: 1.375em; /* 22/14 */
+    margin-bottom: 1.5em;
 }
 
 small, p.small {
     margin: 0;
-    padding-bottom: 1.7142857142857142857142857142857em;
-    /* 14px / 24px */
-    font-size: 0.875em;
+    margin-bottom: 1.7142857142857142857142857142857em;
+    /* 12px / 24px */
+    font-size: 0.75em;
     line-height: 1.7142857142857142857142857142857;
 }
 
@@ -160,14 +171,14 @@ sub {
 
 
 /* CODE */
-pre {
+pre, code {
     /* Allow line wrapping of 'pre' */
-    background-color: #d7d2cb;
-    border: 1px solid #d0d0ce;
-    border-radius: 0.625em;
-    color: #101820;
+    background-color: #E7E7E6;
+    border: 1px solid #D0D0CE;
+    border-radius: 0.250em;
+    color: #D12124;
     overflow-x: auto;
-    padding: 0.625em 1.25em;
+    padding: 0.125em 0.250em;
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -175,15 +186,16 @@ pre {
 }
 
 pre, code, kbd, samp {
-    font-size: 1em;
-    line-height: 1.5;
-    padding-bottom: 1.5em;
-    font-family: Source Code Pro, Consolas, Monaco, 'Andale Mono', monospace, serif;
+    font-size: 0.875em;
+    line-height: 1.375;
+    margin-bottom: 1.5em;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-code {
-    background-color: #f2f2f2;
-    border-radius: 2px;
+.qute {
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    font-style: italic;
 }
 
 /* TABLES */
@@ -191,7 +203,7 @@ code {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 th {
@@ -452,6 +464,8 @@ nav a,
 nav a:link,
 nav a:visited {
     border-bottom: none;
+    color: #75787b;
+
 }
 
 nav ul {
@@ -463,6 +477,7 @@ nav ul {
 nav li {
     list-style: none;
     border-bottom: 1px solid #CDE3F1;
+    font-size: 1.125em;
 }
 
 
@@ -522,23 +537,13 @@ nav li {
 
 /* offset the fixed position header for jump links */
 
-html, body {
-        height: 100%;
-    }
+
 
 section:before {
     display: block; 
     content: ""; 
     height: 60px; 
     margin: -60px 0 0;
-}
-
-.wrap {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-    min-height: 100%;
-    /*margin-bottom: -157px;*/
 }
 
 
@@ -549,23 +554,23 @@ header {
     position: fixed;
     top: 0;
     z-index: 99999;
-    height: 3.625em;
+    height: 4.375em;
 }
 
 .header h1 {
     color: #75787B;
     font-size: 1.625em;
-    line-height: 2.5em;
+    line-height: 2.375em;
 }
 
 .header h1 span {
     font-family: "Avenir Next Demi", Arial, sans-serif;
-    font-weight: bold;
+    font-style: bold italic;
 }
 
 .content {
-    padding-top: 80px;
-    padding-bottom: 157px;
+    margin-top: 70px;
+    margin-bottom: 150px;
     overflow: auto;
 }
 
@@ -579,14 +584,15 @@ header {
 }
 
 .intro {
-    color: #75787B;
+    font-size: 1em;
 }
 
 .logo {
-    width: 150px;
-    padding-top: .75em;
-    padding-right: 20px;
+    width: 151px;
     float: right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
 
 }
 
@@ -596,8 +602,8 @@ footer {
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
     position: relative;
-    margin-top: -157px;
-    height: 157px;
+    margin-top: -150px;
+    height: 150px;
     clear: both;
 }
 
@@ -617,7 +623,7 @@ footer {
 }
 
 .footer h4 {
-    padding-bottom: 0.75em;
+    margin-bottom: 0.75em;
     font-size: 16px;
     line-height: 1.5;
     text-transform: uppercase;
@@ -671,8 +677,8 @@ ul.repo-list {
     /* TYPOGRAPHY */
 
     h1 {
-        font-size: 1.625em;
-        margin: 0;
+        font-size: 1.95em;
+        margin-bottom: 20px;
     }
 
     /* LAYOUT */
@@ -683,10 +689,11 @@ ul.repo-list {
 
     aside {
         position: fixed;
-        top: 82px;
-        width: 245px;
-        padding-right: 15px;
+        width: 220px;
+        margin: 0 10px 0;
         height: 100%;
+        margin-top: 45px;
+        color: #75787B;
     }
 
     footer {
@@ -695,8 +702,8 @@ ul.repo-list {
        background: #F1F2F2
        font-family: "Avenir Next", Arial, sans-serif;
        position: relative;
-       margin-top: -157px;
-       height: 157px;
+       margin-top: -150px;
+       height: 150px;
        clear:both;
     }
 
@@ -710,7 +717,7 @@ ul.repo-list {
     /* NAVIGATION */
 
     nav a:hover {
-        color: #4D5F87;
+        color: #75787b;;
         border-bottom: none;
         border-left: 5px solid #2CB34A;
         background-color: none;
@@ -745,7 +752,7 @@ ul.repo-list {
 
 .wrap {
     width: 90%;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
 }
 
 .header {
@@ -774,6 +781,7 @@ ul.repo-list {
 
 }
 
+
 /* SMALL TABLET */
 
 @media only screen and (min-width: 37.5em) {
@@ -791,7 +799,8 @@ ul.repo-list {
         width: 66%;
     }
 
-}
+} 
+
 
 /* TABLET/NETBOOK */
 @media only screen and (min-width: 46.5em) {
@@ -799,9 +808,10 @@ ul.repo-list {
         text-align: left;
     }
 
-}
+} 
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024PX) */
+
 @media only screen and (min-width: 64em) {
     .content {
         overflow: hidden;
@@ -810,12 +820,13 @@ ul.repo-list {
         max-width: 960px;
     }
 
-}
+} 
 
-@media only screen and (min-width: 80em) {
+
+
+@media only screen and (min-width: 80em) {}
 /* DESKTOP */
 
-}
 
 /*    W I D E S C R E E N    */
 /* Increased body size for legibility */
