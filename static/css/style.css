@@ -579,6 +579,10 @@ ul.repo-list {
     margin: 0;
 }
 
+.repo-list h4 {
+    margin: 0;
+}
+
 
 /* DESKTOP STYLES */
 
@@ -589,9 +593,10 @@ ul.repo-list {
     aside {
         position: fixed;
         width: 220px;
+        margin-right: 10px;
         margin: 0;
         height: 100%;
-        margin-top: 45px;
+        margin-top: 7.188em;
         color: #75787B;
     }
 
@@ -601,16 +606,16 @@ ul.repo-list {
        background: #F1F2F2
        font-family: "Avenir Next", Arial, sans-serif;
        position: relative;
-       margin-top: -150px;
-       height: 150px;
+       margin-top: -9.375em;
+       height: 9.375em;
        clear:both;
     }
 
     .main-content {
         width: 67%;
         float: right;
-        margin-bottom: 150px;
-        margin-top: 4.375em;
+        margin-bottom: 7.5em;
+        margin-top: 7.5em;
     }
 
     /* REPO LIST*/
