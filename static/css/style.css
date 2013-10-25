@@ -37,6 +37,16 @@ Begin with generic 'mobile first' styles
     font-style: normal;
 }
 
+@font-face {
+  font-family: "CFPB Icons";
+  src: url("../fonts/CFPB_minicons.eot");
+  src: url("../fonts/CFPB_minicons.eot?#iefix") format('embedded-opentype'), 
+       url("../fonts/CFPB_minicons.svg") format('svg'),
+       url("../fonts/CFPB_minicons.woff") format('woff'),
+       url("../fonts/CFPB_minicons.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*
 Normalize the box model
@@ -65,7 +75,7 @@ body, html {
 
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
 
-    margin: 0 0 1.5em;
+    margin: 0 0 1.375em;
 }
 
 h1 {
@@ -121,14 +131,14 @@ p  {
     margin: 0;
     font-size: 0.875em;
     line-height: 1.375em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.375em;
 }
 
 ul, blockquote, pre, td, th, label {
     margin: 0;
     font-size: 0.875em;
     line-height: 1.375em; /* 22/14 */
-    margin-bottom: 1.5em;
+    margin-bottom: 1.375em;
 }
 
 
@@ -190,7 +200,7 @@ pre, code {
 pre, code, kbd, samp {
     font-size: 0.875em;
     line-height: 1.375;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.375em;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
@@ -204,12 +214,13 @@ pre, code, kbd, samp {
     font-size: 1em;
 }
 
+
 /* TABLES */
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.375em;
 }
 
 th {
@@ -314,7 +325,7 @@ blockquote > p {
 /* LISTS */
 ul, ol {
     padding: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.375em;
     margin-left: 25px;
 }
 
@@ -547,9 +558,12 @@ nav li {
 
 /* REPO LIST */
 
+.repo-list {
+    margin: 0;
+}
+
 ul.repo-list {
-    padding: .5em 0 1em 0;
-    padding: 0;
+    padding: 1em 0 1em 0;
 }
 
 .repo-list li {
@@ -561,6 +575,11 @@ ul.repo-list {
     font-size: 0.875em;
 }
 
+.repo-list img {
+    margin: 0;
+}
+
+
 /* DESKTOP STYLES */
 
 @media screen and (min-width: 40.5em) and (min-height: 32.5em) {
@@ -570,7 +589,7 @@ ul.repo-list {
     aside {
         position: fixed;
         width: 220px;
-        margin: 0 10px 0;
+        margin: 0;
         height: 100%;
         margin-top: 45px;
         color: #75787B;
@@ -590,8 +609,8 @@ ul.repo-list {
     .main-content {
         width: 67%;
         float: right;
-        margin-bottom: 120px;
-        margin-top: 60px;
+        margin-bottom: 150px;
+        margin-top: 4.375em;
     }
 
     /* REPO LIST*/
@@ -600,7 +619,7 @@ ul.repo-list {
         list-style: none;
         display: table-cell;
         vertical-align:middle;
-        padding: .625em 1em;
+        padding: 1em;
         background-color: #E7E7E6;
         border-left: 1px solid #BABBBD;
     }
@@ -619,8 +638,7 @@ ul.repo-list {
 .g1,.g2,.g3 { width: 90.0%; }
 
 .wrap {
-    width: 90%;
-    margin: 0 auto;
+        max-width: 960px;
 }
 
 /* offset the fixed position header for jump links */
@@ -670,15 +688,13 @@ footer {
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
     position: relative;
-    margin-top: -150px;
-    height: 150px;
+    margin-top: -9.75em;
+    height: 9.75em;
     clear: both;
 }
 
 .footer section {
     display: inline-block;
-    margin-right: -0.26em;
-    margin-left: 2%;
     vertical-align: top;
 }
 
@@ -687,19 +703,7 @@ footer {
 }
 
 .footer-oss {
-    width: 66%;
-}
-
-.footer h4 {
-    margin-bottom: 0.75em;
-    font-size: 16px;
-    line-height: 1.5;
-    text-transform: uppercase;
-}
-
-.footer p {
-    font-size: 0.875em;
-    line-height: 1.42857142857143;
+    width: 67%;
 }
 
 footer a,
@@ -710,16 +714,6 @@ footer a:visited {
 
 footer a:hover {
     border-bottom: 1px dotted #0072CE;
-}
-
-li h4 {
-    margin: 0;
-}
-
-.license {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal; 
 }
 
 
@@ -733,6 +727,11 @@ li h4 {
         float: left;
     }
 
+    .wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
 }
 
 
@@ -741,8 +740,6 @@ li h4 {
 @media only screen and (min-width: 37.5em) {
     .footer section {
         display: inline-block;
-        margin-right: -0.26em;
-        margin-left: 2%;
         vertical-align: top;
     }
     .footer .footer-links {
@@ -750,7 +747,7 @@ li h4 {
         margin-left: 0;
     }
     .footer .footer-oss {
-        width: 66%;
+        width: 67%;
     }
 
 } 
@@ -770,10 +767,6 @@ li h4 {
     .content {
         overflow: hidden;
     }
-    /*.wrap {
-        max-width: 960px;
-    }*/
-
 } 
 
 
@@ -789,6 +782,7 @@ li h4 {
         font-size: 1.125em;
     }
 }
+
 
 /* PRINT */
 @media print {

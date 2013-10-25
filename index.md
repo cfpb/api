@@ -38,7 +38,7 @@ Qu is the first CFPB project built from the beginning on GitHub. Think you can m
   </li>
   <li>
     <a href="https://github.com/cfpb">
-      <h4>qu</h4>
+     <h4>Qu</h4>
       <p>The open source software that runs the platform</p>
     </a>
   </li>
