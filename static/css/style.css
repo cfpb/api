@@ -57,6 +57,7 @@ body, html {
     width: 100%;
     padding: 0 !important;
     font-family: "Avenir Next", Arial, sans-serif;
+    color: #101820;
     text-rendering: optimizeLegibility;
 }
 
@@ -125,10 +126,11 @@ p  {
 
 ul, blockquote, pre, td, th, label {
     margin: 0;
-    font-size: 1em;
+    font-size: 0.875em;
     line-height: 1.375em; /* 22/14 */
     margin-bottom: 1.5em;
 }
+
 
 small, p.small {
     margin: 0;
@@ -173,8 +175,8 @@ sub {
 /* CODE */
 pre, code {
     /* Allow line wrapping of 'pre' */
-    background-color: #E7E7E6;
-    border: 1px solid #D0D0CE;
+    background-color: #F2F2F2;
+    border: 1px solid #E7E7E6;
     border-radius: 0.250em;
     color: #D12124;
     overflow-x: auto;
@@ -198,6 +200,10 @@ pre, code, kbd, samp {
     font-style: italic;
 }
 
+.intro {
+    font-size: 1em;
+}
+
 /* TABLES */
 
 table {
@@ -209,16 +215,16 @@ table {
 th {
     text-align: left;
     font-family: "Avenir Next Demi", Arial, sans-serif;
-    background-color: #DBEDD4;
+    background-color: #dbedd4;
+    font-size: 0.938em;
 }
 
 tr, th, td {
-    padding-right: 1.5em;
-    border-bottom: 0 solid #333;
+    padding: 10px 15px;
 }
 
 tr:nth-child(even) {
-    background-color: #F2F2F2;
+    background-color: #F1F2F2;
 }
 
 tr:nth-child(odd) {
@@ -293,12 +299,11 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 blockquote, q, cite {
-    font-style: italic;
 }
 
 blockquote {
-    border-left: 5px solid #BABBBD;
-    color: #796E65;
+    border-left: 4px solid #BABBBD;
+    color: #75787b;
     padding-left: 1.5em;
 }
 
@@ -308,16 +313,15 @@ blockquote > p {
 
 /* LISTS */
 ul, ol {
-    list-style-position: inside;
     padding: 0;
+    margin-bottom: 1.5em;
+    margin-left: 25px;
 }
 
 li ul, li ol {
-    margin: 0 1.5em;
 }
 
 dl dd {
-    margin-left: 1.5em;
 }
 
 dt {
@@ -326,27 +330,27 @@ dt {
 
 /* LINKS */
 a {
-    border-bottom: none;
+    border-bottom: 1px dotted #0072CE;
     color: #0072CE;
     text-decoration: none;
 }
 
-main p a:visited {
+a:visited {
     border-bottom: 1px solid #005E5D;
     color: #005E5D;
     text-decoration: none;
 }
 
 a:hover {
-    border-bottom: 1px dotted #0072CE;
-    color: #0072CE;
+    border-bottom: 1px solid #7eb8dd;
+    color: #7eb8dd;
     text-decoration: none;
 }
 
 a:focus {
-    border-bottom: 1px solid #0072CE;
+    border-bottom: 1px solid #0072ce;
     outline: thin dotted;
-    color: #0072CE;
+    color: #0072ce;
     text-decoration: none;
 }
 
@@ -451,11 +455,11 @@ del {
 }
 
 
-/* BASIC NAV */
+/* NAVIGATION */
 
  nav a {
     display: block;
-    padding: .5em 0;
+    padding: 10px;
     -webkit-transition: .4s; -moz-transition: .4s;
     transition: .4s;
 }
@@ -468,15 +472,23 @@ nav a:visited {
 
 }
 
+nav a:hover {
+    color: #75787b;;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    padding-left: 10px;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
-    border-top: 1px solid #CDE3F1;
+    border-top: 1px solid #d0d0ce;
 }
 
 nav li {
     list-style: none;
-    border-bottom: 1px solid #CDE3F1;
+    border-bottom: 1px solid #d0d0ce;
     font-size: 1.125em;
 }
 
@@ -533,21 +545,93 @@ nav li {
 }
 
 
-/* LAYOUT */
+/* REPO LIST */
+
+ul.repo-list {
+    padding: .5em 0 1em 0;
+    padding: 0;
+}
+
+.repo-list li {
+    list-style: none;
+}
+
+.repo-list p {
+    margin: 0;
+    font-size: 0.875em;
+}
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 40.5em) and (min-height: 32.5em) {
+
+    /* LAYOUT */
+
+    aside {
+        position: fixed;
+        width: 220px;
+        margin: 0 10px 0;
+        height: 100%;
+        margin-top: 45px;
+        color: #75787B;
+    }
+
+    footer {
+       padding: 2em 0;
+       border-top: 2px solid #BABBBD;
+       background: #F1F2F2
+       font-family: "Avenir Next", Arial, sans-serif;
+       position: relative;
+       margin-top: -150px;
+       height: 150px;
+       clear:both;
+    }
+
+    .main-content {
+        width: 67%;
+        float: right;
+        margin-bottom: 120px;
+        margin-top: 60px;
+    }
+
+    /* REPO LIST*/
+
+    .repo-list li {
+        list-style: none;
+        display: table-cell;
+        vertical-align:middle;
+        padding: .625em 1em;
+        background-color: #E7E7E6;
+        border-left: 1px solid #BABBBD;
+    }
+
+    .repo-list li:first-child {
+        border-left: none;
+    }
+
+}
+
+/* DEFAULT MOBILE STYLES */
+
+/* column grid */
+.g1,.g2,.g3 { display: block; position: relative; margin-left: 1%; margin-right: 1%; }
+/* 1 column grid */
+.g1,.g2,.g3 { width: 90.0%; }
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+}
 
 /* offset the fixed position header for jump links */
-
-
-
 section:before {
     display: block; 
     content: ""; 
-    height: 60px; 
-    margin: -60px 0 0;
+    height: 4.375em; 
+    margin: -4.375em 0 0;
 }
 
-
-header {
+.header {
     width: 100%;
     border-bottom: 4px solid #2CB34A;
     background-color: #fff;
@@ -557,43 +641,27 @@ header {
     height: 4.375em;
 }
 
-.header h1 {
+.header h2 {
     color: #75787B;
-    font-size: 1.625em;
-    line-height: 2.375em;
+    margin-top: 0.6em;
 }
 
-.header h1 span {
+.header h2 span {
     font-family: "Avenir Next Demi", Arial, sans-serif;
-    font-style: bold italic;
-}
-
-.content {
-    margin-top: 70px;
-    margin-bottom: 150px;
-    overflow: auto;
-}
-
-
-/* STYLE */
-
-.e {
-    font-family: "Avenir Next", Arial, sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-}
-
-.intro {
-    font-size: 1em;
 }
 
 .logo {
+    display: block;
     width: 151px;
     float: right;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
 
-
+.content { /* only here to keep footer sticky */
+    margin-top: 0;
+    margin-bottom: 150px;
+    overflow: auto;
 }
 
 footer {
@@ -654,120 +722,6 @@ li h4 {
     font-style: normal; 
 }
 
-/* REPO LIST */
-
-ul.repo-list {
-    padding: .5em 0 1em 0;
-    padding: 0;
-}
-
-.repo-list li {
-    list-style: none;
-}
-
-.repo-list p {
-    margin: 0;
-    font-size: 0.875em;
-}
-
-/* DESKTOP STYLES */
-
-@media screen and (min-width: 40.5em) and (min-height: 32.5em) {
-
-    /* TYPOGRAPHY */
-
-    h1 {
-        font-size: 1.95em;
-        margin-bottom: 20px;
-    }
-
-    /* LAYOUT */
-
-    .logo {
-        float: right;
-    }
-
-    aside {
-        position: fixed;
-        width: 220px;
-        margin: 0 10px 0;
-        height: 100%;
-        margin-top: 45px;
-        color: #75787B;
-    }
-
-    footer {
-       padding: 2em 0;
-       border-top: 2px solid #BABBBD;
-       background: #F1F2F2
-       font-family: "Avenir Next", Arial, sans-serif;
-       position: relative;
-       margin-top: -150px;
-       height: 150px;
-       clear:both;
-    }
-
-    .main-content {
-        width: 67%;
-        float: right;
-        margin-bottom: 120px;
-        margin-top: 60px;
-    }
-
-    /* NAVIGATION */
-
-    nav a:hover {
-        color: #75787b;;
-        border-bottom: none;
-        border-left: 5px solid #2CB34A;
-        background-color: none;
-        padding-left: 10px;
-    }
-
-    /* STYLE */
-
-    /* REPO LIST*/
-
-    .repo-list li {
-        list-style: none;
-        display: table-cell;
-        vertical-align:middle;
-        padding: .625em 1em;
-        background-color: #E7E7E6;
-        border-left: 1px solid #BABBBD;
-    }
-
-    .repo-list li:first-child {
-        border-left: none;
-    }
-
-}
-
-/* DEFAULT MOBILE STYLES */
-
-/* column grid */
-.g1,.g2,.g3 { display: block; position: relative; margin-left: 1%; margin-right: 1%; }
-/* 1 column grid */
-.g1,.g2,.g3 { width: 98.0%; }
-
-.wrap {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.header {
-    border-bottom: 4px solid #2CB34A;
-    overflow: auto;
-}
-
-.header .logo {
-    display: block;
-}
-
-.header h1 {
-
-}
-
 
 /* MOBILE PORTRAIT */
 
@@ -816,9 +770,9 @@ ul.repo-list {
     .content {
         overflow: hidden;
     }
-    .wrap {
+    /*.wrap {
         max-width: 960px;
-    }
+    }*/
 
 } 
 
