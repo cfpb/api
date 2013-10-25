@@ -184,16 +184,13 @@ sub {
 
 /* CODE */
 pre, code {
-    /* Allow line wrapping of 'pre' */
-    background-color: #F2F2F2;
-    border: 1px solid #E7E7E6;
+    background-color: #fff;
+    border: 1px solid #D0D0CE;
     border-radius: 0.250em;
-    color: #D12124;
     overflow-x: auto;
     padding: 0.125em 0.250em;
     white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    white-space: no-wrap;
 
 }
 
@@ -242,85 +239,6 @@ tr:nth-child(odd) {
     background-color: #F8F8F8;
 }
 
-/* FORMS */
-
-form {
-    margin: 0;
-}
-
-fieldset {
-    border: 0;
-    padding: 0;
-}
-
-textarea {
-    overflow: auto;
-    vertical-align: top;
-}
-
-
-legend {
-    *margin-left: -.75em;
-}
-
-button, input, select, textarea {
-    vertical-align: baseline;
-    /* IE7 and older */
-    *vertical-align: middle;
-}
-
-button, input {
-    line-height: normal;
-    *overflow: visible;
-}
-
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-    cursor: pointer;
-    -webkit-appearance: button;
-}
-
-input[type="checkbox"], input[type="radio"]{
-    box-sizing: border-box;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-button:: -moz-focus-inner, input::-moz-focus-inner {
-    border:0;
-    padding:0;
-}
-
-/* QUOTES */
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: "";
-    content: none;
-}
-
-blockquote, q, cite {
-}
-
-blockquote {
-    border-left: 4px solid #BABBBD;
-    color: #75787b;
-    padding-left: 1.5em;
-}
-
-blockquote > p {
-    padding: 0;
-}
 
 /* LISTS */
 ul, ol {
@@ -375,96 +293,6 @@ a.call-to-action {
     font-family: "Avenir Next", Arial, sans-serif;
 }
 
-/* MEDIA */
-
-figure {
-    margin: 0;
-}
-
-img, object, embed, video {
-    /* fluid images */
-    max-width: 100%;
-    _width: 100%;
-}
-
-img {
-    border: 0;
-    /* improve IE's resizing of images */
-    -ms-interpolation-mode: bicubic;
-}
-
-svg:not(:root) {
-    /* corrects IE9 overflow */
-    overflow: hidden;
-}
-
-/* ABBREVIATION */
-abbr[title],  dfn[title] {
-    border-bottom: 1px dotted #333;
-    cursor: help;
-}
-
-
-/* MARKED/INSERTED/DELETED AND SELECTED TEXT */
-ins,  mark {
-    text-decoration: none;
-}
-mark {
-    background: #c47529;
-}
-ins {
-    background: #d49855;
-}
-del {
-    text-decoration: line-through;
-}
-
-/* Selected text */
-::-moz-selection {
-    background: #0072ce;
-    color: #fff;
-    text-shadow: none;
-}
-
- /* Selected text */
-::selection {
-    background: #0072ce;
-     color: #fff;
-     text-shadow: none;
-}
-
-/* MICRO CLEARFIX HACK */
-.cf:before,  .cf:after {
-    content: "";
-    display: table;
-}
- /* For modern browsers */
-.cf:after {
-    clear: both;
-}
-.cf {
-    /* For IE 6/7 (trigger hasLayout) */
-    zoom: 1;
-}
-
-
-/* ALIGNMENT */
-.alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
-}
-.alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
-}
-.aligncenter {
-    clear: both;
-    display: block;
-    margin: 0 auto;
-}
-
 
 /* NAVIGATION */
 
@@ -504,58 +332,6 @@ nav li {
 }
 
 
-/* Image replacement */
-.ir {
-    background-color: transparent;
-    border:0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/* Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible {
-    visibility: hidden;
-}
-
-
 /* REPO LIST */
 
 .repo-list {
@@ -584,56 +360,6 @@ ul.repo-list {
 }
 
 
-/* DESKTOP STYLES */
-
-@media screen and (min-width: 40.5em) and (min-height: 32.5em) {
-
-    /* LAYOUT */
-
-    aside {
-        position: fixed;
-        width: 220px;
-        margin-right: 10px;
-        margin: 0;
-        height: 100%;
-        margin-top: 7.188em;
-        color: #75787B;
-    }
-
-    footer {
-       padding: 2em 0;
-       border-top: 2px solid #BABBBD;
-       background: #F1F2F2
-       font-family: "Avenir Next", Arial, sans-serif;
-       position: relative;
-       margin-top: -9.375em;
-       height: 9.375em;
-       clear:both;
-    }
-
-    .main-content {
-        width: 67%;
-        float: right;
-        margin-bottom: 7.5em;
-        margin-top: 7.5em;
-    }
-
-    /* REPO LIST*/
-
-    .repo-list li {
-        list-style: none;
-        display: table-cell;
-        vertical-align:middle;
-        padding: 1em;
-        background-color: #E7E7E6;
-        border-left: 1px solid #BABBBD;
-    }
-
-    .repo-list li:first-child {
-        border-left: none;
-    }
-
-}
 
 /* DEFAULT MOBILE STYLES */
 
@@ -722,6 +448,58 @@ footer a:hover {
 }
 
 
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 40.5em) and (min-height: 32.5em) {
+
+    /* LAYOUT */
+
+    aside {
+        position: fixed;
+        width: 220px;
+        margin-right: 10px;
+        margin: 0;
+        height: 100%;
+        margin-top: 7.188em;
+        color: #75787B;
+    }
+
+    footer {
+       padding: 2em 0;
+       border-top: 2px solid #BABBBD;
+       background: #F1F2F2
+       font-family: "Avenir Next", Arial, sans-serif;
+       position: relative;
+       margin-top: -9.75em;
+       height: 9.75em;
+       clear:both;
+    }
+
+    .main-content {
+        width: 67%;
+        float: right;
+        margin-bottom: 7.5em;
+        margin-top: 7.5em;
+    }
+
+    /* REPO LIST*/
+
+    .repo-list li {
+        list-style: none;
+        display: table-cell;
+        vertical-align:middle;
+        padding: 1em;
+        background-color: #E7E7E6;
+        border-left: 1px solid #BABBBD;
+    }
+
+    .repo-list li:first-child {
+        border-left: none;
+    }
+
+}
+
+
 /* MOBILE PORTRAIT */
 
 @media only screen and (min-width: 30em) {
@@ -786,6 +564,228 @@ footer a:hover {
     body {
         font-size: 1.125em;
     }
+}
+
+
+/* ALIGNMENT */
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+/* FORMS */
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+
+legend {
+    *margin-left: -.75em;
+}
+
+button, input, select, textarea {
+    vertical-align: baseline;
+    /* IE7 and older */
+    *vertical-align: middle;
+}
+
+button, input {
+    line-height: normal;
+    *overflow: visible;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    box-sizing: border-box;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button:: -moz-focus-inner, input::-moz-focus-inner {
+    border:0;
+    padding:0;
+}
+
+
+/* QUOTES */
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+}
+
+blockquote, q, cite {
+}
+
+blockquote {
+    border-left: 4px solid #BABBBD;
+    color: #75787b;
+    padding-left: 1.5em;
+}
+
+blockquote > p {
+    padding: 0;
+}
+
+/* MEDIA */
+
+figure {
+    margin: 0;
+}
+
+img, object, embed, video {
+    /* fluid images */
+    max-width: 100%;
+    _width: 100%;
+}
+
+img {
+    border: 0;
+    /* improve IE's resizing of images */
+    -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+    /* corrects IE9 overflow */
+    overflow: hidden;
+}
+
+/* ABBREVIATION */
+abbr[title],  dfn[title] {
+    border-bottom: 1px dotted #333;
+    cursor: help;
+}
+
+
+/* MARKED/INSERTED/DELETED AND SELECTED TEXT */
+ins,  mark {
+    text-decoration: none;
+}
+mark {
+    background: #c47529;
+}
+ins {
+    background: #d49855;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* Selected text */
+::-moz-selection {
+    background: #0072ce;
+    color: #fff;
+    text-shadow: none;
+}
+
+ /* Selected text */
+::selection {
+    background: #0072ce;
+     color: #fff;
+     text-shadow: none;
+}
+
+/* MICRO CLEARFIX HACK */
+.cf:before,  .cf:after {
+    content: "";
+    display: table;
+}
+ /* For modern browsers */
+.cf:after {
+    clear: both;
+}
+.cf {
+    /* For IE 6/7 (trigger hasLayout) */
+    zoom: 1;
+}
+
+/* Image replacement */
+.ir {
+    background-color: transparent;
+    border:0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
 }
 
 
