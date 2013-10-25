@@ -232,7 +232,7 @@ tr, th, td {
 }
 
 td:code {
-    background-color: #FFFFFF;
+    background-color: none;
 }
 
 tr:nth-child(even) {
