@@ -4,7 +4,7 @@ title: Field Reference
 nav: fields
 ---
 
-## Field reference
+### Field reference
 
 Why so many rows and fields? Don't be alarmed–there's a lot of information in HMDA, but you can make your queries as basic or as detailed as you want. 
 

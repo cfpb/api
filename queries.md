@@ -4,7 +4,7 @@ title: Query Language
 nav: queries
 ---
 
-## Query Language
+### Query Language
 
 Our query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
 learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [reference page](http://cfpb.github.io/api/hmda/fields), or by using the [metadata endpoints](http://cfpb.github.io/api/hmda/calls) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
@@ -16,7 +16,7 @@ barista at your favorite coffee shop, it could handle even a really complex drin
 - **Summarizing or Aggregating Data** - Once you have the data you need to work with, our API can crunch all the numbers 
 for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
 
-### Querying Data
+##### Querying Data
 
 Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [Explore Data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
 
@@ -30,7 +30,7 @@ Use these clauses to filter through millions of records to get only the data you
 | ```$offset``` | Number of records to skip. If not specified, defaults to ```0```.      |
 | ```$callback```| The name of the JavaScript callback to invoke in a query. Only used with JSONP.      |
 
-### More on $where
+##### More on $where
 
 This clause supports a mini-language for writing queries. It's a subset of SQL WHERE clauses, with the addition of function 
 support. A ```$where``` clause is made up of one or more comparisons, joined by boolean operators.
@@ -60,30 +60,30 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 | ```()``` | grouping or order of operations | ```(state = "Alaska" OR state = "Hawaii") AND age > 18```|
 
 
-## Summarizing and Aggregating Data
+### Summarizing and Aggregating Data
 
 In addition to powerful data filtering, you can also aggregate data into summary tables, as seen in the [Summary Tables](https://github.cfpb.gov/pages/data-platform/public-data-platform/explore#summary) section of our HMDA page. The three clauses used in these queries are:
 
-### $select
+##### $select
 This clause takes a list of the fields you want returned, separated by commas.  Unlike the SQL version of ```SELECT```, it does not allow for ```AS``` aliasing, so:
 
 **Right:** ```state_abbr```, ```county```
 
 **Wrong:** ```state_abbr AS state```, ```county```
 
-### orderBy
+##### orderBy
 This clause determines the order of the results returned. It takes a list of columns, separated by commas, with an optional suffix of ```ASC``` or ```DESC``` to indicate that you want the data in ascending or descending order. For example, if you wanted to see loan applications ordered by gender, and age in descending order, you would use:
 
 ```$orderBy = gender, age DESC```
 
-### $group
+##### $group
 This clause lists the fields you want to group results by. For example, if you wanted to see loan applications organized by denial reason, you would use:
 
 ```$group = denial_reason```
 
 ```$group``` usually requires a ```$select``` clause, where you need to specify the fields you are grouping on, as well as any aggregations you want. 
 
-### Aggregation Functions
+##### Aggregation Functions
 Aggregations are functions run on fields of grouped data in order to reduce them to an associated value. All functions are called with the name of the field to aggregate in parentheses. For example, if you wanted to know the total number of owner-occupied properties per metro area in HMDA, you would use:
 
 ```$select: msamd, SUM(numer_of_owner_occupied_units)```
@@ -97,7 +97,7 @@ Aggregations are functions run on fields of grouped data in order to reduce them
 | ```MAX``` | Returns the maximum value in the results |
 | ```COUNT``` | Returns the number of rows in the set, i.e., the number of results. You can use ```COUNT``` for any field |
 
-### Order matters
+##### Order matters
 When summarizing and aggregating data, take care to know the order in which the clauses and names of the aggregated fields are applied.
  
 1. ```$where``` is applied first in order to reduce the amount of data being aggregated
@@ -112,7 +112,7 @@ this format:
 
 ```sum_number_of_owner_occupied_units```
 
-### That's everything!
+##### That's everything!
 
 You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
 
