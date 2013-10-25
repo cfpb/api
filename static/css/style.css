@@ -129,14 +129,14 @@ h6 {
 
 p  {
     margin: 0;
-    font-size: 0.875em;
+    font-size: 1em;
     line-height: 1.375em;
     margin-bottom: 1.375em;
 }
 
 ul, blockquote, pre, td, th, label {
     margin: 0;
-    font-size: 0.875em;
+    font-size: 1em;
     line-height: 1.375em; /* 22/14 */
     margin-bottom: 1.375em;
 }
@@ -184,8 +184,8 @@ sub {
 
 /* CODE */
 pre, code {
-    background-color: #fff;
-    border: 1px solid #D0D0CE;
+    background-color: #F2F2F2;
+    border: 1px solid #E7E7E6;
     border-radius: 0.250em;
     overflow-x: auto;
     padding: 0.125em 0.250em;
@@ -229,6 +229,10 @@ th {
 
 tr, th, td {
     padding: 10px 15px;
+}
+
+td:code {
+    background-color: #FFFFFF;
 }
 
 tr:nth-child(even) {
@@ -411,6 +415,7 @@ section:before {
     margin-top: 0;
     margin-bottom: 150px;
     overflow: auto;
+    max-width: 90%
 }
 
 footer {
@@ -562,7 +567,7 @@ footer a:hover {
 /* Increased body size for legibility */
 @media only screen and (min-width: 87.5em) {
     body {
-        font-size: 1.125em;
+        
     }
 }
 

@@ -12,4 +12,29 @@ $(function() {
       }
     }
   });
+
+  $("#hmda-lar-fields tbody").each(function () {
+    var $body = $(this);
+
+    var ajax = $.ajax({
+      url: "static/hmda_lar.json",
+      dataType: "json"
+    });
+
+    ajax.done(function (data) {
+      var fields = data['fields'];
+      var fieldNames = _(fields).keys().sort();
+
+      _(fieldNames).each(function (fieldName) {
+        var info = fields[fieldName];
+        var $row = $("<tr></tr>");
+        $row.
+          append("<td>" + fieldName + "</td>").
+          append("<td>" + info['description'] + "</td>").
+          append("<td>" + info['type'] + "</td>").
+          append("<td>" + (info['indexed'] ? "true" : "false") + "</td>");
+        $body.append($row);
+      });
+    });
+  });
 });
