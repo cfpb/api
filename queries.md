@@ -9,16 +9,16 @@ nav: queries
 Our query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
 learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [reference page](http://cfpb.github.io/api/hmda/fields), or by using the [metadata endpoints](http://cfpb.github.io/api/hmda/calls) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
 
-**Querying Data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
+**Querying data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
 barista at your favorite coffee shop, it could handle even a really complex drink order, no sweat.  
 [See this in action](http://cfpb.github.io/api/hmda/calls)
 
-**Summarizing or Aggregating Data** - Once you have the data you need to work with, our API can crunch all the numbers 
+**Summarizing or aggregating data** - Once you have the data you need to work with, our API can crunch all the numbers 
 for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
 
-##### Querying Data
+##### Querying data
 
-Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [Explore Data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
+Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
 
 | Clause        | What it does  |
 | ------------- | ------------- |
@@ -60,9 +60,9 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 | ```()``` | grouping or order of operations | ```(state = "Alaska" OR state = "Hawaii") AND age > 18```|
 
 
-### Summarizing and Aggregating Data
+### Summarizing and aggregating data
 
-In addition to powerful data filtering, you can also aggregate data into summary tables, as seen in the [Summary Tables](https://github.cfpb.gov/pages/data-platform/public-data-platform/explore#summary) section of our HMDA page. The three clauses used in these queries are:
+In addition to powerful data filtering, you can also aggregate data into summary tables, as seen in the [summary tables](https://github.cfpb.gov/pages/data-platform/public-data-platform/explore#summary) section of our HMDA page. The three clauses used in these queries are:
 
 ##### $select
 This clause takes a list of the fields you want returned, separated by commas.  Unlike the SQL version of ```SELECT```, it does not allow for ```AS``` aliasing, so:
@@ -83,7 +83,7 @@ This clause lists the fields you want to group results by. For example, if you w
 
 ```$group``` usually requires a ```$select``` clause, where you need to specify the fields you are grouping on, as well as any aggregations you want. 
 
-##### Aggregation Functions
+##### Aggregation functions
 Aggregations are functions run on fields of grouped data in order to reduce them to an associated value. All functions are called with the name of the field to aggregate in parentheses. For example, if you wanted to know the total number of owner-occupied properties per metro area in HMDA, you would use:
 
 ```$select: msamd, SUM(numer_of_owner_occupied_units)```
@@ -116,4 +116,4 @@ this format:
 
 You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
 
-Get familiar with the information contained in HMDA on our [field reference page](http://cfpb.github.io/api/hmda/fields) page, and head on over to the [API Calls](http://cfpb.github.io/api/hmda/calls) page to test your queries out in our console.
+Get familiar with the information contained in HMDA on our [field reference page](http://cfpb.github.io/api/hmda/fields) page, and head on over to the [API calls](http://cfpb.github.io/api/hmda/calls) page to test your queries out in our console.
