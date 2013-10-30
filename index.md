@@ -17,7 +17,7 @@ HMDA is true big data, with about 15 to 20 million records per year. The CFPB pl
 
 Just want the data, and not interested in programming? Visit our HMDA site, where you can create [custom data sets](http://www.consumerfinance.gov/hmda/explore) for download.
 
-### Get Started
+### Get started
 We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized these docs into three major areas.
 
 - **API Basics** introduces you to the operations offered by the API. As we release other dataset APIs in the future, these will remain basically consistent.
@@ -26,7 +26,7 @@ We built the API to be as self-documenting as possible, but if you find yourself
 
 ### The HMDA API and Qu
 
-HMDA is the CFPB's first dataset to publish using <span class="qute">Qu</span>, an in-progress data platform created to serve public data.
+HMDA is the CFPB's first dataset to publish using [Qu](http://cfpb.github.io/qu/), an in-progress data platform created to serve public data.
 
 Qu is the first CFPB project built from the beginning on GitHub. Think you can make the API better or just want to look under the hood? Check it out, and learn about how you can host your own datasets or contribute to the project.
 
