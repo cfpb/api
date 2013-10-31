@@ -515,7 +515,6 @@ footer a:hover {
     }
 
     .wrap {
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -533,6 +532,11 @@ footer a:hover {
         width: 32%;
         margin-left: 0;
     }
+
+    .footer-links ul, li {
+        margin-left: 0;
+    }
+
     .footer .footer-oss {
         width: 67%;
     }
