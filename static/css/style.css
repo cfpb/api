@@ -150,7 +150,7 @@ p  {
 ul, blockquote, pre, td, th, label {
     margin: 0;
     font-size: 1em;
-    line-height: 1.375em; /* 22/14 */
+    line-height: 1.57142857142857em;
     margin-bottom: 1.375em;
 }
 
@@ -262,14 +262,16 @@ tr:nth-child(odd) {
 /* LISTS */
 ul, ol {
     padding: 0;
-    margin-bottom: 1.375em;
-    margin-left: 25px;
+    list-style-position: outside;
+    margin-left: 1.375em;
 }
 
 li ul, li ol {
+    margin-left: 1.375em;
 }
 
 dl dd {
+    margin-left: 1.375em;
 }
 
 dt {
