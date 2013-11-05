@@ -263,7 +263,7 @@ tr:nth-child(odd) {
 ul, ol {
     padding: 0;
     list-style-position: outside;
-    margin-left: 1.375em;
+    margin-left: 3%;
 }
 
 li ul, li ol {
@@ -515,10 +515,11 @@ footer a:hover {
     }
 
     .main-content {
-        width: 67%;
+        width: 66%;
         float: right;
         margin-bottom: 7.5em;
         margin-top: 7.5em;
+        margin-left: 2%;
     }
 
     /* REPO LIST*/
