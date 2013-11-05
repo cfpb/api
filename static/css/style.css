@@ -332,13 +332,13 @@ nav a:visited {
 
 }
 
-nav a:hover {
+nav li:hover {
     color: #75787b;;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
     background-color: none;
+    border-bottom: 1px solid #d0d0ce;
     padding-left: 0;
-
 }
 
 nav ul {
@@ -351,6 +351,7 @@ nav li {
     list-style: none;
     border-bottom: 1px solid #d0d0ce;
     font-size: 1.125em;
+    padding-left: 4px;
 }
 
 
