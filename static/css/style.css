@@ -1,14 +1,5 @@
-/*
-Style.css
-==================================
-Begin with generic 'mobile first' styles
-*/
-
-
-/*
-@font-face
-==================================
-*/
+@import "normalize.css";
+@import "fonts.css";
 
 @font-face{
     font-family: "Avenir Next";
@@ -49,8 +40,8 @@ Begin with generic 'mobile first' styles
 }
 
 /*
-Normalize the box model
-==================================
+Normalize the box model - Thanks, Paul Irish!
+==============================================
 */
 *,
 *:before,
@@ -67,15 +58,36 @@ body, html {
     width: 100%;
     padding: 0 !important;
     font-family: "Avenir Next", Arial, sans-serif;
-    color: #101820;
+    color: #101820; /* CFPB black */
+
+    /* Improve default text rendering, handling of kerning pairs and ligatures */
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* New CSS3 syntax supported by Chrome */
 }
 
 /* IE7 and older can't resize px-based text */
 
-p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+p, 
+blockquote, 
+q, 
+pre, 
+address, 
+hr, 
+code, 
+samp, 
+dl, 
+ol, 
+ul, 
+form, 
+table, 
+fieldset, 
+menu, 
+img {
 
-    margin: 0 0 1.375em;
+    margin:0;
 }
 
 h1 {
@@ -394,14 +406,14 @@ section:before {
     overflow: auto;
 }
 
-.header h2 {
+.header h1 {
     color: #75787B;
     margin-top: 0.54545454545455em;
     font-size: 1.375em;
     line-height: 1;
 }
 
-.header h2 span {
+.header h1 span {
     font-family: "Avenir Next Demi", Arial, sans-serif;
     font-weight: bold;
 }
