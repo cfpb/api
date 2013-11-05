@@ -117,7 +117,7 @@ h3 {
 h4 {
     margin: 0;
     margin-bottom: 1em;
-    font: 700 1.125em/1.22222222222222 "Avenir Next", Arial, sans-serif;
+    font: 700 1.125em/1.22222222222222 "Avenir Next Demi", Arial, sans-serif;
     font-weight: 500;
 }
 
@@ -164,7 +164,6 @@ small, p.small {
 }
 
 strong, b, dt {
-    font-weight: bold;
     font-family: "Avenir Next Demi", Arial, sans-serif;
 }
 
@@ -449,6 +448,8 @@ footer {
 .footer section {
     display: inline-block;
     vertical-align: top;
+    margin-right: -0.26em;
+    margin-left: 2%;
 }
 
 .footer-links ul {
@@ -467,14 +468,10 @@ footer {
     line-height: 1.42857142857143;
 }
 
-.footer-oss {
-    width: 67%;
-}
-
 footer a,
 footer a:link,
 footer a:visited {
-    border-bottom: none;
+    border-bottom: 1px dotted;
 }
 
 footer a:hover {
@@ -570,7 +567,7 @@ footer a:hover {
     }
 
     .footer .footer-oss {
-        width: 67%;
+        width: 66%;
     }
 
 } 
