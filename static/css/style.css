@@ -320,7 +320,7 @@ nav a:hover {
     border-bottom: none;
     border-left: 4px solid #2CB34A;
     background-color: none;
-    padding-left: 10px;
+    padding-left: 0;
 }
 
 nav ul {
