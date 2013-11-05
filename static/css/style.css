@@ -396,12 +396,12 @@ ul.repo-list {
 }
 
 /* offset the fixed position header for jump links */
-section:before {
+/*section:before {
     display: block; 
     content: ""; 
     height: 4.375em; 
     margin: -4.375em 0 0;
-}
+}*/
 
 .header {
     border-bottom: 4px solid #2CB34A;
@@ -447,10 +447,6 @@ footer {
     border-top: 2px solid #BABBBD;
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
-    margin-top: 2em;
-    /* height: 9.75em;
-    position: relative;
-    clear: both; */
 }
 
 .footer section {
@@ -508,10 +504,6 @@ footer a:hover {
        border-top: 2px solid #BABBBD;
        background: #F1F2F2
        font-family: "Avenir Next", Arial, sans-serif;
-       position: relative;
-       margin-top: -9.75em;
-       height: 9.75em;
-       clear:both;
     }
 
     .main-content {
@@ -565,6 +557,9 @@ footer a:hover {
     .footer section {
         display: inline-block;
         vertical-align: top;
+        margin-right: -0.26em;
+        margin-left: 2%;
+
     }
     .footer .footer-links {
         width: 32%;
