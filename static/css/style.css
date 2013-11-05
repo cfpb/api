@@ -88,6 +88,7 @@ menu,
 img {
 
     margin:0;
+    margin-bottom: 1.375em;
 }
 
 h1 {
@@ -411,6 +412,7 @@ section:before {
     margin-top: 0.54545454545455em;
     font-size: 1.375em;
     line-height: 1;
+    margin-bottom: 1.375em;
 }
 
 .header h1 span {
@@ -526,8 +528,10 @@ footer a:hover {
 @media only screen and (min-width: 30em) {
     .header .logo {
         float: right;
+        margin: 1.25em 0;
     }
     .header h1 {
+        margin-top: 1.5em;
         float: left;
     }
 
