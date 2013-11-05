@@ -405,7 +405,12 @@ section:before {
 
 .header {
     border-bottom: 4px solid #2CB34A;
-    overflow: auto;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+
 }
 
 .header h1 {
