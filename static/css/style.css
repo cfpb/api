@@ -201,12 +201,6 @@ pre, code, kbd, samp {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-.qute {
-    font-family: "Georgia", serif;
-    font-weight: bold;
-    font-style: italic;
-}
-
 .intro {
     font-size: 1em;
 }
@@ -218,6 +212,16 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 1.375em;
+}
+
+.table-code code {
+    background-color: #ffffff;
+    border: 1px solid #e3e4e5;
+    border-radius: 0.250em;
+    overflow-x: auto;
+    padding: 0.125em 0.250em;
+    white-space: pre;
+    white-space: no-wrap;
 }
 
 th {
@@ -321,6 +325,7 @@ nav a:hover {
     border-left: 4px solid #2CB34A;
     background-color: none;
     padding-left: 0;
+
 }
 
 nav ul {

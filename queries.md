@@ -20,15 +20,44 @@ for you too. This section explains the ins and outs of how to gain more insight 
 
 Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
 
-| Clause        | What it does  |
-| ------------- | ------------- |
-| ```$select``` | Specifies which fields to return, separated by commas. If not specified, all columns will be returned. Use this to [aggregate or summarize data](http://cfpb.github.io/api/hmda/language#aggregating). A list of all fields available is [here](http://cfpb.github.io/api/hmda/fields) or at the [```concept``` endpoint](http://cfpb.github.io/api/hmda/calls). |
-| ```$where```  | Filter the results using SQL ```WHERE``` query syntax. If not specified, the results will not be filtered. [Learn more](http://cfpb.github.io/api/hmda/language#where).      |
-| ```$orderBy```| Fields to order by, separated by commas, or ASC and DESC. If not specified, the order will be consistent, but unspecified. Used in [aggregating or summarizing data](http://cfpb.github.io/api/hmda/language#orderby).      |
-| ```$group```  | Fields to group by, separated by commas. Learn more about [aggregating or summarizing data](http://cfpb.github.io/api/hmda/language#orderby).      |
-| ```$limit```  | Maximum number of results to return. If not specified, defaults to ```100```. Enter ```0``` for no limit.      |
-| ```$offset``` | Number of records to skip. If not specified, defaults to ```0```.      |
-| ```$callback```| The name of the JavaScript callback to invoke in a query. Only used with JSONP.      |
+<table class="table-code">
+<thead>
+<tr>
+<th>Clause</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$select</code></td>
+<td>Specifies which fields to return, separated by commas. If not specified, all columns will be returned. Use this to <a href="http://cfpb.github.io/api/hmda/language#aggregating">aggregate or summarize data</a>. A list of all fields available is <a href="http://cfpb.github.io/api/hmda/fields">here</a> or at the <a href="http://cfpb.github.io/api/hmda/calls"><code>concept</code> endpoint</a>.</td>
+</tr>
+<tr>
+<td><code>$where</code></td>
+<td>Filter the results using SQL <code>WHERE</code> query syntax. If not specified, the results will not be filtered. <a href="http://cfpb.github.io/api/hmda/language#where">Learn more</a>.</td>
+</tr>
+<tr>
+<td><code>$orderBy</code></td>
+<td>Fields to order by, separated by commas, or ASC and DESC. If not specified, the order will be consistent, but unspecified. Used in <a href="http://cfpb.github.io/api/hmda/language#orderby">aggregating or summarizing data</a>.</td>
+</tr>
+<tr>
+<td><code>$group</code></td>
+<td>Fields to group by, separated by commas. Learn more about <a href="http://cfpb.github.io/api/hmda/language#orderby">aggregating or summarizing data</a>.</td>
+</tr>
+<tr>
+<td><code>$limit</code></td>
+<td>Maximum number of results to return. If not specified, defaults to <code>100</code>. Enter <code>0</code> for no limit.</td>
+</tr>
+<tr>
+<td><code>$offset</code></td>
+<td>Number of records to skip. If not specified, defaults to <code>0</code>.</td>
+</tr>
+<tr>
+<td><code>$callback</code></td>
+<td>The name of the JavaScript callback to invoke in a query. Only used with JSONP.</td>
+</tr>
+</tbody>
+</table>
 
 ##### More on $where
 
@@ -37,27 +66,101 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 
 [See a list of possible comparisons]()
 
-|  Operator     | What it means | Example |
-| ------------- | ------------- | -------|
-| ```=```       | equality      | ```name = "Phillip"```|
-| ```!=```      | inequality    | ```state != "Alaska"```|
-| ```>```       | greater than  | ```age > 18```|
-| ```>=```      | greater than or equal | ```square_miles >= 1000```|
-| ```< ``` | less than | ```age < 65```|
-| ```<=``` | less than or equal | ```square_miles <= 1000```|
-| ```LIKE``` | matches strings | ```name LIKE = "Pete%"``` would match "Pete, "Peter," or anything that starts with "Pete"|
-|```ILIKE``` | matches case-insensitive strings | ```name ILIKE = "%rick"``` would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it|
-| ```IS NULL``` | existence of a value | ```city is NULL```|
-| ```IS NOT NULL``` | non-existence of a value | ```city IS NOT NULL```|
+<table class="table-code">
+<thead>
+<tr>
+<th>Operator</th>
+<th>What it means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>equality</td>
+<td><code>name = "Phillip"</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>inequality</td>
+<td><code>state != "Alaska"</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>greater than</td>
+<td><code>age &gt; 18</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>greater than or equal</td>
+<td><code>square_miles &gt;= 1000</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>less than</td>
+<td><code>age &lt; 65</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>less than or equal</td>
+<td><code>square_miles &lt;= 1000</code></td>
+</tr>
+<tr>
+<td><code>LIKE</code></td>
+<td>matches strings</td>
+<td><code>name LIKE = "Pete%"</code> would match "Pete, "Peter," or anything that starts with "Pete"</td>
+</tr>
+<tr>
+<td><code>ILIKE</code></td>
+<td>matches case-insensitive strings</td>
+<td><code>name ILIKE = "%rick"</code> would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it</td>
+</tr>
+<tr>
+<td><code>IS NULL</code></td>
+<td>existence of a value</td>
+<td><code>city is NULL</code></td>
+</tr>
+<tr>
+<td><code>IS NOT NULL</code></td>
+<td>non-existence of a value</td>
+<td><code>city IS NOT NULL</code></td>
+</tr>
+</tbody>
+</table>
 
 [See a list of possible boolean operators]()
 
-| Operator | What it means | Example |
-| -------  | ------------- | ------- |
-| ```AND``` | logical AND of two comparisons | ```state = "Alaska" AND age > 18```|
-| ```OR``` | logical OR of two comparisons | ```state = "Alaksa" OR state = "Hawaii"``` |
-| ```NOT``` | negation of a comparison | ```NOT (state = "Alaska" OR state = "Hawaii"```|
-| ```()``` | grouping or order of operations | ```(state = "Alaska" OR state = "Hawaii") AND age > 18```|
+<table class="table-code">
+<thead>
+<tr>
+<th>Operator</th>
+<th>What it means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AND</code></td>
+<td>logical AND of two comparisons</td>
+<td><code>state = "Alaska" AND age &gt; 18</code></td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td>logical OR of two comparisons</td>
+<td><code>state = "Alaksa" OR state = "Hawaii"</code></td>
+</tr>
+<tr>
+<td><code>NOT</code></td>
+<td>negation of a comparison</td>
+<td><code>NOT (state = "Alaska" OR state = "Hawaii"</code></td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td>grouping or order of operations</td>
+<td><code>(state = "Alaska" OR state = "Hawaii") AND age &gt; 18</code></td>
+</tr>
+</tbody>
+</table>
 
 
 ### Summarizing and aggregating data
@@ -90,12 +193,32 @@ Aggregations are functions run on fields of grouped data in order to reduce them
 
 ```$group: msamd```
 
-| Function | What it does |
-| -------- | ------------ |
-| ```SUM``` | Totals the values |
-| ```MIN``` | Returns the minimum value in the results |
-| ```MAX``` | Returns the maximum value in the results |
-| ```COUNT``` | Returns the number of rows in the set, i.e., the number of results. You can use ```COUNT``` for any field |
+<table class="table-code">
+<thead>
+<tr>
+<th>Function</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SUM</code></td>
+<td>Totals the values</td>
+</tr>
+<tr>
+<td><code>MIN</code></td>
+<td>Returns the minimum value in the results</td>
+</tr>
+<tr>
+<td><code>MAX</code></td>
+<td>Returns the maximum value in the results</td>
+</tr>
+<tr>
+<td><code>COUNT</code></td>
+<td>Returns the number of rows in the set, i.e., the number of results. You can use <code>COUNT</code> for any field</td>
+</tr>
+</tbody>
+</table>
 
 ##### Order matters
 When summarizing and aggregating data, take care to know the order in which the clauses and names of the aggregated fields are applied.
