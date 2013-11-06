@@ -154,6 +154,9 @@ ul, blockquote, pre, td, th, label {
     margin-bottom: 1.375em;
 }
 
+ol {
+    line-height: 1.57142857142857em;
+}
 
 small, p.small {
     margin: 0;
