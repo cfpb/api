@@ -860,30 +860,25 @@ del {
     h2, h3{page-break-after: avoid}
 }
 
-/* EXPANDABLES */
 .expandable {
   background-color: #F2F2F2;
 }
 
-.expandable a {
-  text-decoration: none;
-}
-
 .expandable-header {
-  /* padding: 10px; */
+  padding: 10px;
   cursor: pointer;
 }
 
 .expandable-content {
-  /* padding: 0 10px 10px 10px; */
+  padding: 0 10px 10px 10px;
 }
 
 .expandable:hover {
-  /* background-color: #E7E7E6; */
+  background-color: #E7E7E6;
 }
 
 .open {
-  /* background-color: #E7E7E6; */
+  background-color: #E7E7E6;
 }
 
 .expandable h4 {
@@ -909,8 +904,4 @@ del {
   margin-left: 8px;
   line-height: 1.25em;
   float: right;
-}
-
-.open .expandable-button:before {
-  content: "\f056";
 }

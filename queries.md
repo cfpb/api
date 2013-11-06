@@ -64,9 +64,14 @@ Use these clauses to filter through millions of records to get only the data you
 This clause supports a mini-language for writing queries. It's a subset of SQL WHERE clauses, with the addition of function 
 support. A ```$where``` clause is made up of one or more comparisons, joined by boolean operators.
 
-[See a list of possible comparisons]()
+<div class="expandable expandable open">
+    <header class="expandable-header">
+        <h4>See a list of possible comparisons</h4>
+        <a class="expandable-button" href="#"><span class="expandable-text">Hide</span></a>
+    </header>
 
-<table class="table-code">
+    <div class="expandable-content expandable-hidden" style="display: block;">
+        <table class="table-code">
 <thead>
 <tr>
 <th>Operator</th>
@@ -127,6 +132,8 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 </tr>
 </tbody>
 </table>
+    </div>
+</div>
 
 [See a list of possible boolean operators]()
 
