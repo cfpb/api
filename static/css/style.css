@@ -262,8 +262,6 @@ tr:nth-child(odd) {
 }
 
 .field-table td:nth-child(1) {
-    font-size: .75em;
-    line-height: 1.375;
 }
 
 .field-table {
@@ -271,6 +269,15 @@ tr:nth-child(odd) {
     table-layout: fixed;
 }
 
+.field-table code {
+    background-color: #ffffff;
+    border: 1px solid #e3e4e5;
+    border-radius: 0.250em;
+    overflow-x: auto;
+    padding: 0.125em 0.250em;
+    white-space: pre;
+    white-space: no-wrap;
+}
 
 /* LISTS */
 ul, ol {
