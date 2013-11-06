@@ -261,6 +261,17 @@ tr:nth-child(odd) {
     background-color: #F8F8F8;
 }
 
+.field-table td:nth-child(1) {
+    font-size: .75em;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    line-height: 1.375;
+}
+
+.field-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
 
 /* LISTS */
 ul, ol {
