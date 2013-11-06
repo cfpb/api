@@ -29,7 +29,7 @@ $(function() {
         var info = fields[fieldName];
         var $row = $("<tr></tr>");
         $row.
-          append("<td>" + fieldName + "</td>").
+          append("<td><code>" + fieldName + "</code></td>").
           append("<td>" + info['description'] + "</td>").
           append("<td>" + info['type'] + "</td>").
           append("<td>" + (info['indexed'] ? "true" : "false") + "</td>");
