@@ -238,7 +238,6 @@ tr:nth-child(odd) {
 .field-table {
     width: 100%;
     table-layout: fixed;
-    font-size: .85em;
 }
 
 .field-table code {
@@ -864,6 +863,10 @@ del {
 /* EXPANDABLES */
 .expandable {
   background-color: #F2F2F2;
+}
+
+.expandable a {
+  text-decoration: none;
 }
 
 .expandable-header {
