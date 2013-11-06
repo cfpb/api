@@ -46,7 +46,7 @@ Normalize the box model - Thanks, Paul Irish!
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
 /* ==========================================================================
@@ -54,10 +54,12 @@ Normalize the box model - Thanks, Paul Irish!
    ========================================================================== */
 
 body, html {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    padding: 0 !important;
+    padding: 0;
+    margin: 0;
     font-family: "Avenir Next", Arial, sans-serif;
+    line-height: 1.375;
     color: #101820; /* CFPB black */
 
     /* Improve default text rendering, handling of kerning pairs and ligatures */
@@ -68,6 +70,13 @@ body, html {
     overflow-wrap: break-word; /* New CSS3 syntax supported by Chrome */
 }
 
+html {
+    position:relative;
+}
+
+body {
+    padding-bottom: 20em; /* Making room for absolutely-positioned footer */
+}
 /* IE7 and older can't resize px-based text */
 
 p, 
@@ -467,7 +476,11 @@ footer {
     border-top: 2px solid #BABBBD;
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
+
 
 .footer section {
     display: inline-block;
@@ -574,6 +587,11 @@ footer a:hover {
 /* SMALL TABLET */
 
 @media only screen and (min-width: 37.5em) {
+
+    body {
+        padding-bottom: 13.5em;
+    }
+
     .footer section {
         display: inline-block;
         vertical-align: top;
@@ -595,6 +613,12 @@ footer a:hover {
     }
 
 } 
+
+@media only screen and (min-width: 40em) {
+    body {
+        padding-bottom: 12em;
+    }
+}
 
 
 /* TABLET/NETBOOK */
