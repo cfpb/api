@@ -263,7 +263,6 @@ tr:nth-child(odd) {
 
 .field-table td:nth-child(1) {
     font-size: .75em;
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
     line-height: 1.375;
 }
 
