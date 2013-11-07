@@ -319,7 +319,6 @@ nav a:link,
 nav a:visited {
     border-bottom: none;
     color: #75787b;
-
 }
 
 nav li:hover {
@@ -344,6 +343,13 @@ nav li {
     padding-left: 4px;
 }
 
+.page-title a,
+.page-title a:link,
+.page-title a:visited {
+    border-bottom: none;
+    text-decoration: none;
+    color: #75787B;
+}
 
 /* REPO LIST */
 
