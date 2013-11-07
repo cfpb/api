@@ -16,21 +16,21 @@ When you're ready to get into the weeds, you can query the nitty-gritty details 
 The endpoint for getting all data begins with ```/data```. Each dataset has an endpoint at ```/data/{dataset-name}```. This endpoint gives 
 all information about a dataset needed to query it. These different views of a dataset are called slices. 
 
-[See this in action]()
+<a href="#" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 ##### Slices
 Think of slices as tables in a relational database. Every dataset has many slices representing different views of it. The endpoint for
 every slice is ```/data/{dataset-name}/{slice-name}```. 
 
-[See this in action]()
+<a href="#" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 You can even request a slice in HTML, XML, JSON, JSONP, or CSV. Just append the filename extension to the endpoint like so:
 ```/data/{dataset-name}/{slice-name.extension}```. 
 
-[See this in action]()
+<a href="#" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 ##### Concepts
 Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible
 values. You can also specify concepts in any of the supported file formats like so ```/data/{dataset-name}/{contept-name.extension}```. 
 
-[See this in action]()
+<a href="#" class="action-arrow">See this in action <i class="icon-right"> </i></a>

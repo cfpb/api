@@ -304,6 +304,29 @@ a.call-to-action {
     font-family: "Avenir Next", Arial, sans-serif;
 }
 
+a.action-arrow {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-style: normal;
+    font-size: 1em;
+}
+
+a.action-arrow .icon-right {
+    position: relative;
+}
+
+a.action-arrow i {
+    text-decoration: none;
+}
+
+.icon-right:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: .7em;
+}
+
 
 /* NAVIGATION */
 

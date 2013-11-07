@@ -11,7 +11,7 @@ learn how to construct more advanced queries by familiarizing yourself with all 
 
 **Querying data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
 barista at your favorite coffee shop, it could handle even a really complex drink order, no sweat.  
-[See this in action](http://cfpb.github.io/api/hmda/calls)
+<a href="calls.html" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 **Summarizing or aggregating data** - Once you have the data you need to work with, our API can crunch all the numbers 
 for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
