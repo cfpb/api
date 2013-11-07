@@ -870,6 +870,11 @@ del {
   margin-bottom: 5px;
 }
 
+.expandable a {
+    border-bottom: none;
+    color: #0072CE;
+}
+
 .expandable-header {
   padding-bottom: .5em;
   cursor: pointer;
@@ -883,8 +888,8 @@ del {
 .expandable:hover {
 }
 
-.open {
-}
+.open {}
+
 
 .expandable h4 {
   display: inline;
@@ -910,3 +915,12 @@ del {
   line-height: 1.25em;
   float: right;
 }
+
+.open .expandable-button:before {
+  content: "\f056";
+
+/* custom class as .hidden is already used in the guide */
+.expandable-hidden {
+  display: none;
+}
+
