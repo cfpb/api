@@ -868,6 +868,7 @@ del {
 
 .expandable {
   margin-bottom: 5px;
+  font-family: "Avenir Next Medium", Arial, sans-serif;
 }
 
 .expandable a {
@@ -899,7 +900,6 @@ del {
 }
 
 .expandable-button {
-  /* float: left; */
   font-size: 1em;
   line-height: 1.25em;
 }
@@ -913,7 +913,6 @@ del {
   content: "\f055";
   margin-left: 8px;
   line-height: 1.25em;
-  /* float: left; */
 }
 
 .open .expandable-button:before {

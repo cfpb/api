@@ -11,7 +11,7 @@ $(document).ready( function() {
       section.toggleClass('open');
       header.next('.expandable-content').slideToggle();
       button.toggleClass('open');
-      buttonText.html(section.hasClass('open') ? '' : '');
+      buttonText.html(section.hasClass('open') ? 'Hide' : 'Show');
     });
   }
 
