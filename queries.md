@@ -66,8 +66,7 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 
 <div class="expandable expandable">
     <header class="expandable-header">
-        <h4>See a list of possible comparisons</h4>
-        <a class="expandable-button" href="#"><span class="expandable-text">Show</span></a>
+        <h4>Show/Hide a list of possible comparisons</h4><a class="expandable-button" href="#"><span class="expandable-text"></span></a>
     </header>
 
 <div class="expandable-content expandable-hidden" style="display:none;">
@@ -139,8 +138,7 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 
 <div class="expandable expandable">
     <header class="expandable-header">
-        <h4>See a list of possible boolean operators</h4>
-        <a class="expandable-button" href="#"><span class="expandable-text">Show</span></a>
+        <h4>Show/Hide a list of possible boolean operators</h4><a class="expandable-button" href="#"><span class="expandable-text"></span></a>
     </header>
 
 <div class="expandable-content expandable-hidden" style="display:none;">

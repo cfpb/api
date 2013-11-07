@@ -899,7 +899,7 @@ del {
 }
 
 .expandable-button {
-  float: right;
+  /* float: left; */
   font-size: 1em;
   line-height: 1.25em;
 }
@@ -913,7 +913,7 @@ del {
   content: "\f055";
   margin-left: 8px;
   line-height: 1.25em;
-  float: right;
+  /* float: left; */
 }
 
 .open .expandable-button:before {
