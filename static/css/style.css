@@ -89,12 +89,12 @@ h3:first-child {
 h4 {
     margin: 0;
     margin-bottom: 1em;
-    font: 700 1.125em/1.22222222222222 "Avenir Next Medium", Arial, sans-serif;
+    font: 500 1.125em/1.22222222222222 "Avenir Next Medium", Arial, sans-serif;
     font-weight: 500;
 }
 
 h5 {
-    margin: 2.5em 0 1.25em 0;
+    margin: 3em 0 1.25em 0;
     font: 600 0.875em/1.57142857142857 "Avenir Next Demi", Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;

@@ -16,7 +16,7 @@ barista at your favorite coffee shop, it could handle even a really complex drin
 **Summarizing or aggregating data** - Once you have the data you need to work with, our API can crunch all the numbers 
 for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
 
-##### Querying data
+### Querying data
 
 Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
 
