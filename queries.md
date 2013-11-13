@@ -9,14 +9,14 @@ nav: queries
 Our query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
 learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [reference page](http://cfpb.github.io/api/hmda/fields), or by using the [metadata endpoints](http://cfpb.github.io/api/hmda/calls) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
 
-**Querying data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
+1. **Querying data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
 barista at your favorite coffee shop, it could handle even a really complex drink order, no sweat.  
 <a href="calls.html" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
-**Summarizing or aggregating data** - Once you have the data you need to work with, our API can crunch all the numbers 
+1. **Summarizing or aggregating data** - Once you have the data you need to work with, our API can crunch all the numbers 
 for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
 
-##### Querying data
+### Querying data
 
 Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
 

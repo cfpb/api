@@ -10,7 +10,7 @@ Under the hood, HMDA data is stored and served by Qu, the [first government open
 
 The project is in the public domain, and we encourage you to [contribute to it on GitHub](http://github.com/cfpb/qu) by improving on it, serving your own datasets, or making your own apps and tools using CFPB's data.
 
-### Check out the repo
+##### Check out the repo
 
 <ul class="repo-list">
   <li class="list-icon">
