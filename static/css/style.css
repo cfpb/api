@@ -64,7 +64,7 @@ img {
 
 h1 {
     margin: 0;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     font: 400 2.125em/1.23529411764706 "Avenir Next", Arial, sans-serif;
     font-weight: normal;
 }
@@ -195,6 +195,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 1.375em;
+    font-size: 0.875em;
 }
 
 .table-code code {
@@ -204,22 +205,23 @@ table {
     overflow-x: auto;
     padding: 0.125em 0.250em;
     white-space: pre;
-    white-space: no-wrap;
+    white-space: nowrap;
 }
 
 th {
     text-align: left;
     font-family: "Avenir Next Demi", Arial, sans-serif;
     background-color: #dbedd4;
-    font-size: 0.938em;
 }
 
 tr, th, td {
     padding: 10px 15px;
+    line-height: 1.5em;
 }
 
 td:code {
     background-color: none;
+    white-space: nowrap;
 }
 
 tr:nth-child(even) {
