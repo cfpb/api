@@ -64,38 +64,37 @@ img {
 
 h1 {
     margin: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: .5em;
     font: 400 2.125em/1.23529411764706 "Avenir Next", Arial, sans-serif;
     font-weight: normal;
 }
 
 h2 {
     margin: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font: 400 1.625em/1.23076923076923 "Avenir Next", Arial, sans-serif;
     font-weight: normal;
 }
 
-
 h3 {
-    margin: 0;
-    margin-bottom: 0.5em;
+    margin: 2em 0 1em 0;
     font: 400 1.375em/1.27272727272727 "Avenir Next", Arial, sans-serif;
     font-weight: normal;
 }
 
+h3:first-child {
+    margin-top: 0;
+}
 
 h4 {
     margin: 0;
     margin-bottom: 1em;
-    font: 700 1.125em/1.22222222222222 "Avenir Next Medium", Arial, sans-serif;
+    font: 500 1.125em/1.22222222222222 "Avenir Next Medium", Arial, sans-serif;
     font-weight: 500;
 }
 
-
 h5 {
-    margin: 0;
-    margin-bottom: 1em;
+    margin: 3em 0 1.25em 0;
     font: 600 0.875em/1.57142857142857 "Avenir Next Demi", Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
@@ -112,10 +111,9 @@ h6 {
 }
 
 p  {
-    margin: 0;
+    margin: .75em 0;
     font-size: 1em;
     line-height: 1.375em;
-    margin-bottom: 1.375em;
 }
 
 ul, blockquote, pre, td, th, label {
@@ -197,6 +195,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 1.375em;
+    font-size: 0.875em;
 }
 
 .table-code code {
@@ -206,22 +205,23 @@ table {
     overflow-x: auto;
     padding: 0.125em 0.250em;
     white-space: pre;
-    white-space: no-wrap;
+    white-space: nowrap;
 }
 
 th {
     text-align: left;
     font-family: "Avenir Next Demi", Arial, sans-serif;
     background-color: #dbedd4;
-    font-size: 0.938em;
 }
 
 tr, th, td {
     padding: 10px 15px;
+    line-height: 1.5em;
 }
 
 td:code {
     background-color: none;
+    white-space: nowrap;
 }
 
 tr:nth-child(even) {

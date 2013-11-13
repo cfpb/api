@@ -30,7 +30,6 @@ You can even request a slice in HTML, XML, JSON, JSONP, or CSV. Just append the 
 <a href="#" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 ##### Concepts
-Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible
-values. You can also specify concepts in any of the supported file formats like so ```/data/{dataset-name}/{contept-name.extension}```. 
+Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible values. You can also specify concepts in any of the supported file formats like so ```/data/{dataset-name}/{contept-name.extension}```. 
 
 <a href="#" class="action-arrow">See this in action <i class="icon-right"> </i></a>
