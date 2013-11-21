@@ -31,6 +31,16 @@ time, mark, audio, video {
 }
 */
 
+/* NEW STUFF */
+.endpoints {
+    margin-left: 0;
+}
+
+.operations {
+    margin-left: 0;
+}
+
+
 /* HIDE SWAGGER UI ITEMS */
 #resource_integration_test {
     display: none;
@@ -345,11 +355,11 @@ body p#colophon a {
 */
 body ul#resources {
     font-family: "Avenir Next", Arial, sans-serif;
-    font-size: 0.9em;
+    margin-left: 0;
 }
 
 body ul#resources li.resource {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: none;
 }
 
 body ul#resources li.resource:last-child {
@@ -365,21 +375,24 @@ body ul#resources li.resource div.heading {
 }
 
 body ul#resources li.resource div.heading h2 {
-    color: #999999;
+    color: #101820;
     padding-left: 0;
     display: block;
     clear: none;
     float: left;
     font-family: "Avenir Next", Arial, sans-serif;
-    font-weight: bold;
+    font-size: .85em;
 }
 
 body ul#resources li.resource div.heading h2 a {
-    color: #999999;
+    color: #101820;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    text-decoration: none;
+    border-bottom: none;
 }
 
 body ul#resources li.resource div.heading h2 a:hover {
-    color: black;
+    color: #101820;
 }
 
 body ul#resources li.resource div.heading ul.options {
@@ -388,15 +401,17 @@ body ul#resources li.resource div.heading ul.options {
     display: block;
     clear: none;
     float: right;
-    margin: 14px 10px 0 0;
+    margin: 0;
+    font-size: .75em;
+    color: #0072ce;
 }
 
 body ul#resources li.resource div.heading ul.options li {
     float: left;
     clear: none;
     margin: 0;
-    padding: 2px 10px;
-    border-right: 1px solid #dddddd;
+    padding: 0px 5px;
+    border-right: 1px solid #101820;
 }
 
 body ul#resources li.resource div.heading ul.options li:first-child, body ul#resources li.resource div.heading ul.options li.first {
@@ -409,26 +424,27 @@ body ul#resources li.resource div.heading ul.options li:last-child, body ul#reso
 }
 
 body ul#resources li.resource div.heading ul.options li {
-    color: #666666;
-    font-size: 0.9em;
+    color: #101820;
+    font-size: 1em;
 }
 
 body ul#resources li.resource div.heading ul.options li a {
-    color: #aaaaaa;
+    color: #101820;
     text-decoration: none;
+    border-bottom: none;
 }
 
 body ul#resources li.resource div.heading ul.options li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: black;
 }
 
 body ul#resources li.resource:hover div.heading h2 a, body ul#resources li.resource.active div.heading h2 a {
-    color: black;
+    color: #101820;
 }
 
 body ul#resources li.resource:hover div.heading ul.options li a, body ul#resources li.resource.active div.heading ul.options li a {
-    color: #555555;
+    color: #0072CE;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get {
@@ -447,8 +463,8 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     display: block;
     margin: 0;
     padding: 0;
-    background-color: #e7f0f7;
-    border: 1px solid #c3d9ec;
+    background-color: #CDE3F1;
+    border: 1px solid #7EB8DD;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 {
@@ -458,8 +474,8 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     width: auto;
     margin: 0;
     padding: 0;
-    line-height: 1.1em;
-    color: black;
+    line-height: 1em;
+    color: #101820;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span {
@@ -469,29 +485,32 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.http_method a {
     text-transform: uppercase;
-    background-color: #0f6ab4;
+    background-color: #0072CE;
     text-decoration: none;
     color: white;
     display: inline-block;
-    width: 50px;
-    font-size: 0.7em;
+    font-size: 0.64em;
+    line-height: 1em;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
     text-align: center;
-    padding: 7px 0 4px 0;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -khtml-border-radius: 2px;
-    border-radius: 2px;
+    padding: .64em 1em;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    border-radius: 0px;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.path {
     padding-left: 10px;
+    font-size: 14px;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.path a {
-    color: black;
+    color: #101820;
     text-decoration: none;
+    border-bottom: none;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.path a:hover {
@@ -504,7 +523,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     display: block;
     clear: none;
     float: right;
-    margin: 6px 10px 0 0;
+    margin: .64em 1em;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li {
@@ -531,7 +550,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li a {
-    color: #0f6ab4;
+    color: #101820;
     text-decoration: none;
 }
 
@@ -662,6 +681,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.post div.heading h3 span.path {
     padding-left: 10px;
+    padding-bottom: 0;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.post div.heading h3 span.path a {
