@@ -1,15 +1,26 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+@import "fonts.css";
+/* @import "normalize.css"; */
+
+/*
+Normalize the box model - Thanks, Paul Irish!
+==============================================
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+*/
+
+/*
+html, span, applet, object, iframe, abbr, acronym, address, big, cite,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+small, strike, strong, sub, sup, tt, var, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+article, canvas, details, embed,
+figure, figcaption, hgroup,
+menu, output, ruby, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -18,88 +29,10 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-
-body {
-    line-height: 1;
-}
+*/
 
 ol, ul {
     list-style: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-caption, th, td {
-    text-align: left;
-    font-weight: normal;
-    vertical-align: middle;
-}
-
-q, blockquote {
-    quotes: none;
-}
-
-q:before, q:after, blockquote:before, blockquote:after {
-    content: "";
-    content: none;
-}
-
-a img {
-    border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-    display: block;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    text-decoration: none;
-}
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    text-decoration: underline;
-}
-
-h1 span.divider, h2 span.divider, h3 span.divider, h4 span.divider, h5 span.divider, h6 span.divider {
-    color: #aaaaaa;
-}
-
-h1 {
-    color: black;
-    font-size: 1.5em;
-    line-height: 1.3em;
-    padding: 10px 0 10px 0;
-    font-family: "Droid Sans", sans-serif;
-    font-weight: bold;
-}
-
-h2 {
-    color: black;
-    font-size: 1.3em;
-    padding: 10px 0 10px 0;
-}
-
-h2 a {
-    color: black;
-}
-
-h2 span.sub {
-    font-size: 0.7em;
-    color: #999999;
-    font-style: italic;
-}
-
-h2 span.sub a {
-    color: #777777;
-}
-
-h3 {
-    color: black;
-    font-size: 1.1em;
-    padding: 10px 0 10px 0;
 }
 
 .heading_with_menu {
@@ -142,12 +75,7 @@ input.parameter {
     border: 1px solid #aaa;
 }
 
-p {
-    line-height: 1.4em;
-    padding: 0 0 10px;
-    color: #333333;
-}
-
+/*
 ol {
     margin: 0px 0 10px;
     padding: 0 0 0 18px;
@@ -159,80 +87,19 @@ ol li {
     font-size: 0.9em;
     color: #333333;
 }
+*/
 
-.markdown h3 {
-    color: #547f00;
-}
-
-.markdown h4 {
-    color: #666666;
-}
-
-.markdown pre {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
-    background-color: #fcf6db;
-    border: 1px solid #e5e0c6;
-    padding: 10px;
-    margin: 0 0 10px 0;
-}
-
-.markdown pre code {
-    line-height: 1.6em;
-}
-
-.markdown p code, .markdown li code {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
-    background-color: #f0f0f0;
-    color: black;
-    padding: 1px 3px;
-}
-
-.markdown ol, .markdown ul {
-    font-family: "Droid Sans", sans-serif;
-    margin: 5px 0 10px;
-    padding: 0 0 0 18px;
-    list-style-type: disc;
-}
-
-.markdown ol li, .markdown ul li {
-    padding: 3px 0px;
-    line-height: 1.4em;
-    color: #333333;
-}
 
 div.gist {
     margin: 20px 0 25px 0 !important;
 }
 
-p.big, div.big p {
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-span.weak {
-    color: #666666;
-}
-
-span.blank, span.empty {
-    color: #888888;
-    font-style: italic;
-}
-
-a {
-    color: #547f00;
-}
-
-b, strong {
-    font-family: "Droid Sans", sans-serif;
-    font-weight: bold;
-}
-
 .code {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
 }
 
 pre {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
     background-color: #fcf6db;
     border: 1px solid #e5e0c6;
     padding: 10px;
@@ -247,7 +114,7 @@ pre code {
 }
 
 table.fullwidth {
-    width: 100%;
+    width: 60%;
 }
 
 table thead tr th {
@@ -346,7 +213,7 @@ form.formtastic fieldset.inputs ol li.string input.title, form.formtastic fields
 }
 
 form.formtastic fieldset.inputs ol li.text textarea {
-    font-family: "Droid Sans", sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     height: 250px;
     padding: 4px;
     display: block;
@@ -389,9 +256,6 @@ form.fullwidth ol li.string input, form.fullwidth ol li.url input, form.fullwidt
     width: 500px !important;
 }
 
-body {
-    font-family: "Droid Sans", sans-serif;
-}
 
 body #content_message {
     margin: 10px 15px;
@@ -399,20 +263,7 @@ body #content_message {
     color: #999999;
 }
 
-body #header {
-    background-color: #89bf04;
-    padding: 14px;
-}
-
-body #header a#logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    background: transparent url(../images/logo_small.png) no-repeat left center;
-    padding: 20px 0 20px 40px;
-    color: white;
-}
-
+/* disable swagger header
 body #header form#api_selector {
     display: block;
     clear: none;
@@ -465,7 +316,7 @@ body p#colophon {
     padding: 10px 0;
     font-size: 0.8em;
     border-top: 1px solid #dddddd;
-    font-family: "Droid Sans", sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     color: #999999;
     font-style: italic;
 }
@@ -474,9 +325,9 @@ body p#colophon a {
     text-decoration: none;
     color: #547f00;
 }
-
+*/
 body ul#resources {
-    font-family: "Droid Sans", sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     font-size: 0.9em;
 }
 
@@ -502,7 +353,7 @@ body ul#resources li.resource div.heading h2 {
     display: block;
     clear: none;
     float: left;
-    font-family: "Droid Sans", sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -731,7 +582,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content div.response div.block pre {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
     padding: 10px;
     font-size: 0.9em;
     max-height: 400px;
@@ -906,7 +757,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.post div.content div.response div.block pre {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
     padding: 10px;
     font-size: 0.9em;
     max-height: 400px;
@@ -1256,7 +1107,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.patch div.content div.response div.block pre {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
     padding: 10px;
     font-size: 0.9em;
     max-height: 400px;
@@ -1443,7 +1294,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.head div.content div.response div.block pre {
-    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
     padding: 10px;
     font-size: 0.9em;
     max-height: 400px;
@@ -1627,7 +1478,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 
 
 .model-signature {
-    font-family: "Droid Sans", sans-serif;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
     font-size: 1em;
     line-height: 1.5em;
 }
@@ -1735,7 +1586,7 @@ pre code {
 }
 
 .swagger-ui-wrap {
-  max-width: 960px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1757,6 +1608,8 @@ pre code {
 .message-fail {
   color: #cc0000;
 }
+
+/*
 
 .info_title {
   padding-bottom: 10px;
@@ -1780,3 +1633,4 @@ pre code {
 .info_contact {
   padding-bottom: 5px;
 }
+*/

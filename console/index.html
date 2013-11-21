@@ -2,9 +2,20 @@
 <html>
 <head>
   <title>Swagger UI</title>
+  <meta charset="utf-8">
+
+  <!--disable droid sans
   <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
+-->
+
   <link href='css/highlight.default.css' media='screen' rel='stylesheet' type='text/css'/>
   <link href='css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
+
+  <link rel='stylesheet' href='css/style.css'>
+  <!--disable normalize
+  <link rel='stylesheet' href='css/normalize.css'>
+  -->
+
   <script type="text/javascript" src="lib/shred.bundle.js" /></script>  
   <script src='lib/jquery-1.8.0.min.js' type='text/javascript'></script>
   <script src='lib/jquery.slideto.min.js' type='text/javascript'></script>
@@ -52,14 +63,115 @@
 </head>
 
 <body>
+  <header class="header cf" role="banner">
+            <div class="wrap">
+            <a href="http://www.consumerfinance.gov/" target="_blank">
+                <img class="logo" src="img/logo_210.png" alt="Consumer Financial Protection Bureau logo">
+            </a>
+            
+            <a href="http://cfpb.github.io/" target="_blank">
+            <h1><span>CFPB</span> Open Tech</h1>
+          </a>
+          </div>
 
-<div id="message-bar" class="swagger-ui-wrap">
+  </header>
+
+<div class="wrap">
+    <div class="content">
+
+    <aside>
+    <h1 class="page-title"><a href="index.html">HMDA <br>API docs</a></h1>
+      <p class="intro">Build your own tools using our API to access HMDA public data.</p>
+    <nav>    
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="basics.html">API basics</a></li>
+          <li><a href="calls.html">API calls</a></li>
+          <li><a href="console/">API console</a></li>
+          <li><a href="queries.html">Query language</a></li>
+          <li><a href="fields.html">Field reference</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+        </ul>
+    </nav>
+    </aside>
+
+    <section class="main-content" role="main">
+
+      <h3 id='api_calls'>API calls</h3>
+
+<p>Explore the API here using our interactive console. Need a little help? Read our <a href=''>API basics</a> to learn about <a href=''>datasets</a>, <a href=''>slices</a>, and <a href=''>concepts</a>.</p>
+
+<h5 id='basic_example'>Basic example</h5>
+
+<blockquote>
+<p><strong>data:</strong> Operations about datasets</p>
+</blockquote>
+
+<h5 id='using_hmda_data'>Using HMDA data</h5>
+
+<blockquote>
+<p><strong>hmda</strong></p>
+</blockquote>
+
+
+
+     <div id="message-bar" class="swagger-ui-wrap">
   &nbsp;
 </div>
 
 <div id="swagger-ui-container" class="swagger-ui-wrap">
 
 </div>
+
+<h5 id='ready_to_dive_deeper'>Ready to dive deeper?</h5>
+
+<p>Look up all functions, and enumerations in our <a href=''>Query language</a> or learn about the variables found in HMDA data at <a href=''>Field reference</a>.</p>
+
+<p>Think you can make the API better or just want to look under the hood? Check out <a href='http://cfpg.github.io/qu'>Qu</a>, the software our data platform is based upon, and learn about how you can host your own datasets or contribute to the project.</p>
+    </section>
+
+    </div>
+  </div> <!--wrap-->
+
+    <footer class="footer cf" role="contentinfo">
+      <div class="wrap">
+        <section class="footer-links">
+                <ul>
+                    <li>
+                        <a href="http://www.consumerfinance.gov/">consumerfinance.gov</a>
+                    </li>
+                    <li>
+                        <a href="http://github.com/cfpb">github.com/cfpb</a>
+                    </li>
+                    <li>
+                        <a href="http://www.consumerfinance.gov/jobs/">Work with us</a>
+                    </li>
+                    <li>
+                        <a href="mailto:tech@consumerfinance.gov">Contact us</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="footer-oss">
+                <h4>Open source</h4>
+                <p>
+                    As a work of the United States Government, source code released by the CFPB is in the public
+                    domain by default within the United States.
+                    <a href="https://github.com/cfpb/source-code-policy/blob/master/cfpb-source-code-policy.txt">
+                        View our full source code policy.
+                    </a>
+                </p>
+            </section>
+
+      </div>
+    </footer>
+  <script src="static/js/docs.min.js"></script>
+  <script type="text/javascript" src="static/js/expandables.js"></script>
+</body>
+</html>
+
+
+
 
 </body>
 
