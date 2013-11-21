@@ -31,6 +31,19 @@ time, mark, audio, video {
 }
 */
 
+/* HIDE OTHER DATA */
+#resource_integration_test {
+    display: none;
+}
+
+#resource_county_taxes {
+    display: none;
+}
+
+#resource_census {
+    display: none;
+}
+
 ol, ul {
     list-style: none;
 }
