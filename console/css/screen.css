@@ -31,7 +31,7 @@ time, mark, audio, video {
 }
 */
 
-/* HIDE OTHER DATA */
+/* HIDE SWAGGER UI ITEMS */
 #resource_integration_test {
     display: none;
 }
@@ -41,6 +41,10 @@ time, mark, audio, video {
 }
 
 #resource_census {
+    display: none;
+}
+
+#message_bar {
     display: none;
 }
 
@@ -544,7 +548,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     -webkit-border-bottom-left-radius: 6px;
     -o-border-bottom-left-radius: 6px;
     -ms-border-bottom-left-radius: 6px;
-    -khtml-border-bottom-left-radius: 6px;
+    -khtml-border-bottom-left-radius: 6px;-
     border-bottom-left-radius: 6px;
     -moz-border-radius-bottomright: 6px;
     -webkit-border-bottom-right-radius: 6px;
@@ -1609,9 +1613,9 @@ pre code {
 }
 
 #message-bar {
-  min-height: 30px;
+  /*min-height: 30px;*/
   text-align: center;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
 }
 
 .message-success {
