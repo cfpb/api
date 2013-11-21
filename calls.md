@@ -10,11 +10,11 @@ Explore the API here using our interactive console. Need a little help? Read our
 
 ##### Basic example
 
->**data:** Operations about datasets console goes here
+>**data:** Operations about datasets
 
 ##### Using HMDA data
 
-> **hmda** console goes here
+> **hmda**
 
 ##### Ready to dive deeper? 
 
