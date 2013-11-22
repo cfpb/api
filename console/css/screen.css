@@ -33,12 +33,21 @@ time, mark, audio, video {
 
 /* NEW STUFF */
 
+.console-footer h4 {
+    text-transform: lowercase;
+}
+
 .endpoints {
     margin-left: 0;
 }
 
 .operations {
     margin-left: 0;
+}
+
+h6 {
+    color: #75787B;
+    text-transform: none;
 }
 
 
@@ -419,6 +428,7 @@ body ul#resources li.resource div.heading h2 a {
     font-family: "Avenir Next Demi", Arial, sans-serif;
     text-decoration: none;
     border-bottom: none;
+    font-size: 1.25em;
 }
 
 body ul#resources li.resource div.heading h2 a:hover {
@@ -435,6 +445,19 @@ body ul#resources li.resource div.heading ul.options {
     font-size: .75em;
     color: #0072ce;
     font-family: "Avenir Next Medium", Arial, sans-serif;
+}
+
+ul.options li{
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    clear: none;
+    float: right;
+    margin: 0;
+    font-size: .75em;
+    color: #0072ce;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+    line-height: 2em;
 }
 
 body ul#resources li.resource div.heading ul.options li {
@@ -523,7 +546,6 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     font-weight: bold;
     text-align: center;
     padding: .57em 1.25em;
-    line-height: 1.57142857142857em;
     border-bottom: none;
 }
 
@@ -548,15 +570,14 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     display: block;
     clear: none;
     float: right;
-    margin: .64em 1em;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li {
     float: left;
     clear: none;
     margin: 0;
-    padding: 2px 10px;
-    border-right: 1px solid #dddddd;
+    padding: .3em 1em 0 .5em;
+
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li:first-child, body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li.first {
@@ -564,14 +585,12 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li:last-child, body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li.last {
-    padding-right: 0;
     border-right: none;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li {
     border-right-color: #c3d9ec;
     color: #0f6ab4;
-    font-size: 0.9em;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li a {
