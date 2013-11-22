@@ -394,6 +394,7 @@ body p#colophon a {
 body ul#resources {
     font-family: "Avenir Next", Arial, sans-serif;
     margin-left: 0;
+    margin-bottom: ;
 }
 
 body ul#resources li.resource {
@@ -1695,17 +1696,17 @@ pre code {
 }
 
 #message-bar {
-  /*min-height: 30px;*/
   text-align: center;
-  /*padding-top: 10px;*/
+  min-height: 20px;
+  padding-top: 10px;
 }
 
 .message-success {
-  color: #89BF04;
+  color: #0072CE;
 }
 
 .message-fail {
-  color: #cc0000;
+  color: #D12124;
 }
 
 /*
