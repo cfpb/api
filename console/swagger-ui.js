@@ -292,7 +292,7 @@ function program8(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class='info' id='api_info'>\n <h5>Basic example</h5> ";
+  buffer += "<div class='info' id='api_info'>\n";
   stack1 = helpers['if'].call(depth0, depth0.info, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>\n<div class='container' id='resources_container'>\n    <ul id='resources'>\n    </ul>\n\n    <div class=\"console-footer\">\n                <h4 style=\"color: #999\">[ <span style=\"font-variant: small-caps\">base url</span>: ";
@@ -1041,7 +1041,7 @@ function program1(depth0,data) {
   return " : ";
   }
 
-  buffer += "<div class='heading'>\n  <h2>\n    <a href='#!/";
+  buffer += "<div class='heading'>\n <h2> \n    <a href='#!/";
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)

@@ -54,9 +54,6 @@ time, mark, audio, video {
     display: none;
 }
 
-#message_bar {
-    display: none;
-}
 
 ol, ul {
     list-style: none;
@@ -372,6 +369,7 @@ body ul#resources li.resource div.heading {
     clear: both;
     overflow: hidden;
     display: block;
+    font-family: "Avenir Next", Arial, sans-serif;
 }
 
 body ul#resources li.resource div.heading h2 {
@@ -404,6 +402,7 @@ body ul#resources li.resource div.heading ul.options {
     margin: 0;
     font-size: .75em;
     color: #0072ce;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
 }
 
 body ul#resources li.resource div.heading ul.options li {
@@ -424,19 +423,19 @@ body ul#resources li.resource div.heading ul.options li:last-child, body ul#reso
 }
 
 body ul#resources li.resource div.heading ul.options li {
-    color: #101820;
+    color: #0072ce;
     font-size: 1em;
 }
 
 body ul#resources li.resource div.heading ul.options li a {
-    color: #101820;
+    color: #0072ce;
     text-decoration: none;
     border-bottom: none;
 }
 
 body ul#resources li.resource div.heading ul.options li a:hover {
     text-decoration: none;
-    color: black;
+    color: #0072ce;
 }
 
 body ul#resources li.resource:hover div.heading h2 a, body ul#resources li.resource.active div.heading h2 a {
@@ -474,7 +473,6 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     width: auto;
     margin: 0;
     padding: 0;
-    line-height: 1em;
     color: #101820;
 }
 
@@ -487,24 +485,19 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     text-transform: uppercase;
     background-color: #0072CE;
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
     display: inline-block;
-    font-size: 0.64em;
-    line-height: 1em;
-    font-family: "Avenir Next Medium", Arial, sans-serif;
+    font-size: .64em;
+    font-weight: bold;
     text-align: center;
-    padding: .64em 1em;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -o-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -khtml-border-radius: 0px;
-    border-radius: 0px;
+    padding: .57em 1.25em;
+    line-height: 1.57142857142857em;
+    border-bottom: none;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.path {
-    padding-left: 10px;
-    font-size: 14px;
+    padding-left: .64em;
+    font-size: .64em;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.path a {
@@ -579,10 +572,10 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content h4 {
-    color: #0f6ab4;
-    font-size: 1.1em;
+    color: #101820;
+    font-size: .85em;
     margin: 0;
-    padding: 15px 0 5px;
+    padding: 1em 0 .5em;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content form input[type='text'].error {
@@ -601,7 +594,24 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     display: block;
     clear: none;
     float: left;
-    padding: 6px 8px;
+    padding: .6em 1em;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-right: 1em;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #0072CE;
+    text-decoration: none;
+    transition: .1s;
+    -webkit-transition: .1s;
+    font-size: .875em;
+    border: none;
+}
+
+body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content div.sandbox_header input.submit:hover {
+
+    background-color: #328ED8;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content div.sandbox_header img {
@@ -611,18 +621,30 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content div.sandbox_header a {
-    padding: 4px 0 0 10px;
-    color: #6fa5d2;
+    margin-top: 1.2em;
+    color: #0072CE;
     display: inline-block;
-    font-size: 0.9em;
+    font-size: 0.75em;
+    line-height: 1.57142857142857em;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content div.response div.block pre {
     font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
-    padding: 10px;
-    font-size: 0.9em;
+    padding: 0.125em 0.250em;
+    font-size: 0.75em;
     max-height: 400px;
     overflow-y: auto;
+    line-height: 1.375;
+}
+
+
+body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content div.response div.block pre code {
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
+    font-size: 1em;
+    border: none;
+    margin-bottom: 0;
+    padding: 0.125em 0.250em;
+
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.post {
