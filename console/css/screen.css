@@ -33,8 +33,8 @@ time, mark, audio, video {
 
 /* NEW STUFF */
 
-.console-footer h4 {
-    text-transform: lowercase;
+.console-footer {
+    display: none;
 }
 
 .endpoints {
