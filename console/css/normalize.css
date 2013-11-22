@@ -425,6 +425,9 @@ input {
 button,
 select {
     text-transform: none;
+    width: 120px;
+    font-size: .9em;
+    font-family: "Avenir Next", Arial, sans-serif;
 }
 
 /**

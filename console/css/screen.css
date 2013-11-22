@@ -32,6 +32,7 @@ time, mark, audio, video {
 */
 
 /* NEW STUFF */
+
 .endpoints {
     margin-left: 0;
 }
@@ -52,6 +53,13 @@ time, mark, audio, video {
 
 #resource_census {
     display: none;
+}
+
+
+.fullwidth th {
+    background-color: #CDE3F1;
+    color: #101820;
+    padding: .5em;
 }
 
 
@@ -89,8 +97,23 @@ ol, ul {
 }
 
 input.parameter {
-    width: 300px;
-    border: 1px solid #aaa;
+    width: 75%;
+    border: 1px #d0d0ce solid;
+    font-family: "Avenir Next", Arial, sans-serif;
+    padding: 2px;
+}
+
+select.parameter {
+    background-color: #FFFFFF;
+    width: 85%;
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    font-family: "Avenir Next", Arial, sans-serif;
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
+    padding: 2px;
+
+
 }
 
 .body-textarea {
@@ -120,6 +143,7 @@ div.gist {
 
 .code {
     font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
+    padding-left: .5em;
 }
 
 pre {
@@ -138,26 +162,34 @@ pre code {
 }
 
 table.fullwidth {
-    width: 60%;
+    width: 100%;
+
+}
+
+
+table thead {
+    border-left: none;
+    border-right: none;
 }
 
 table thead tr th {
-    padding: 5px;
-    font-size: 0.9em;
-    color: #666666;
-    border-bottom: 1px solid #999999;
+    font-size: .9em;
+    color: #101820;
+    border-bottom: 1px solid #D0D0CE;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
+    background-color: none;
 }
 
 table tbody tr.offset {
-    background-color: #f5f5f5;
+    background-color: none;
 }
 
 table tbody tr td {
-    padding: 6px;
+    padding: 5px 0 5px 0;
     font-size: 0.9em;
     border-bottom: 1px solid #cccccc;
     vertical-align: top;
-    line-height: 1.3em;
 }
 
 table tbody tr:last-child td {
@@ -165,7 +197,7 @@ table tbody tr:last-child td {
 }
 
 table tbody tr.offset {
-    background-color: #f0f0f0;
+    background-color: none;
 }
 
 form.form_box {
@@ -186,25 +218,24 @@ form.form_box input[type=submit] {
 form.form_box p {
     font-size: 0.9em;
     padding: 0 0 15px;
-    color: #7e7b6d;
+    color: #101820;
 }
 
 form.form_box p a {
-    color: #646257;
+    color: #0072CE;
 }
 
 form.form_box p strong {
-    color: black;
+    font-weight: bold;
 }
 
 form.form_box p.weak {
-    font-size: 0.8em;
+    font-size: 0.85em;
 }
 
 form.formtastic fieldset.inputs ol li p.inline-hints {
     margin-left: 0;
-    font-style: italic;
-    font-size: 0.9em;
+    font-size: 0.85em;
     margin: 0;
 }
 
@@ -213,16 +244,16 @@ form.formtastic fieldset.inputs ol li label {
     clear: both;
     width: auto;
     padding: 0 0 3px;
-    color: #666666;
+    color: #75787B;
 }
 
 form.formtastic fieldset.inputs ol li label abbr {
     padding-left: 3px;
-    color: #888888;
+    color: #BABBBD;
 }
 
 form.formtastic fieldset.inputs ol li.required label {
-    color: black;
+    color: #101820;
 }
 
 form.formtastic fieldset.inputs ol li.string input, form.formtastic fieldset.inputs ol li.url input, form.formtastic fieldset.inputs ol li.numeric input {
@@ -233,7 +264,7 @@ form.formtastic fieldset.inputs ol li.string input, form.formtastic fieldset.inp
 }
 
 form.formtastic fieldset.inputs ol li.string input.title, form.formtastic fieldset.inputs ol li.url input.title, form.formtastic fieldset.inputs ol li.numeric input.title {
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 form.formtastic fieldset.inputs ol li.text textarea {
@@ -248,6 +279,7 @@ form.formtastic fieldset.inputs ol li.select select {
     display: block;
     clear: both;
 }
+
 
 form.formtastic fieldset.inputs ol li.boolean {
     float: none;
@@ -556,18 +588,6 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     border: 1px solid #c3d9ec;
     border-top: none;
     padding: 10px;
-    -moz-border-radius-bottomleft: 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    -o-border-bottom-left-radius: 6px;
-    -ms-border-bottom-left-radius: 6px;
-    -khtml-border-bottom-left-radius: 6px;-
-    border-bottom-left-radius: 6px;
-    -moz-border-radius-bottomright: 6px;
-    -webkit-border-bottom-right-radius: 6px;
-    -o-border-bottom-right-radius: 6px;
-    -ms-border-bottom-right-radius: 6px;
-    -khtml-border-bottom-right-radius: 6px;
-    border-bottom-right-radius: 6px;
     margin: 0 0 20px;
 }
 
@@ -1537,31 +1557,31 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 
 
 .model-signature {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     font-size: 1em;
     line-height: 1.5em;
 }
 
 .model-signature .description div {
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 1.5em;
     margin-left: 1em;
 }
 
 .model-signature .description .strong {
-    font-weight: bold;
-    color: #000;
-    font-size: .9em;
+    font-weight: normal;
+    color: #101820;
+    font-size: .85em;
 }
 
 .model-signature .description .stronger {
-    font-weight: bold;
-    color: #000;
+    font-weight: normal;
+    color: #101820;
 }
 
 .model-signature .signature-nav a {
     text-decoration: none;
-    color: #AAA;
+    color: #101820;
 }
 
 .model-signature pre {
@@ -1573,7 +1593,8 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 .model-signature pre:hover {
-    background-color: #ffffdd;
+    background-color: none;
+    cursor: pointer;
 }
 
 .model-signature .snippet small {
@@ -1585,12 +1606,12 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 .model-signature .signature-nav a:hover {
-    text-decoration: underline;
-    color: black;
+    text-decoration: none;
+    color: #7eb8dd;
 }
 
 .model-signature .signature-nav .selected {
-    color: black;
+    color: #0072CE;
     text-decoration: none;
 }
 
