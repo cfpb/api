@@ -73,7 +73,7 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 
 <table class="table-code">
 	<colgroup>
-	
+
 	</colgroup>
 <thead>
 <tr>
@@ -259,3 +259,5 @@ this format:
 You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
 
 Get familiar with the information contained in HMDA on our [field reference page](http://cfpb.github.io/api/hmda/fields) page, and head on over to the [API calls](http://cfpb.github.io/api/hmda/calls) page to test your queries out in our console.
+
+<body id="queries"></body>
