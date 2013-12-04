@@ -72,6 +72,9 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 <div class="expandable-content expandable-hidden" style="display:none;">
 
 <table class="table-code">
+	<colgroup>
+	
+	</colgroup>
 <thead>
 <tr>
 <th>Operator</th>
