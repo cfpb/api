@@ -178,7 +178,7 @@ pre, code {
 }
 
 pre, code, kbd, samp {
-    font-size: 0.75em;
+    font-size: .75em;
     line-height: 1.375;
     margin-bottom: 1.375em;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -354,13 +354,23 @@ nav a:visited {
 }
 
 nav li:hover {
-    color: #75787b;;
+    color: #75787b;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
     background-color: none;
     border-bottom: 1px solid #d0d0ce;
     padding-left: 0;
 }
+
+nav li:active {
+    color: #75787b;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    border-bottom: 1px solid #d0d0ce;
+    padding-left: 0;
+}
+
 
 nav ul {
     margin: 0;
@@ -373,6 +383,54 @@ nav li {
     border-bottom: 1px solid #d0d0ce;
     font-size: 1.125em;
     padding-left: 4px;
+}
+
+#overview a.overview {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    margin-left: -4px;
+}
+
+#basics a.basics {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    margin-left: -4px;
+}
+
+#console a.console {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    margin-left: -4px;
+}
+
+#queries a.queries {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    margin-left: -4px;
+}
+
+#fields a.fields {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    margin-left: -4px;
+}
+
+#contribute a.contribute {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: none;
+    margin-left: -4px;
 }
 
 .page-title a,
@@ -900,7 +958,7 @@ del {
 
 .expandable {
   margin-bottom: 5px;
-  font-family: "Avenir Next Medium", Arial, sans-serif;
+  font-family: "Avenir Next", Arial, sans-serif;
 }
 
 .expandable a {
