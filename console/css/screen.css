@@ -66,9 +66,9 @@ h6 {
 
 
 .fullwidth th {
-    background-color: #CDE3F1;
+    background-color: #ebf3f9;
     color: #101820;
-    padding: .5em;
+    padding: .5em 0 .25em 0;
 }
 
 
@@ -114,13 +114,13 @@ input.parameter {
 
 select.parameter {
     background-color: #FFFFFF;
-    width: 85%;
+    /*width: 85%; disabling this to match drop-down menu width with that of other drop-downs in other consoles */
     border: 1px solid #CCC;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     font-family: "Avenir Next", Arial, sans-serif;
-    -webkit-border-radius: 0px !important;
-    border-radius: 0px !important;
-    padding: 2px;
+    /*-webkit-border-radius: 0px !important;
+    border-radius: 0px !important;*/
+    padding: .75em 0;
 
 
 }
@@ -152,13 +152,13 @@ div.gist {
 
 .code {
     font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
-    padding-left: .5em;
+    padding: .75em 0;
 }
 
-pre {
+.code td pre {
     font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
-    background-color: #fcf6db;
-    border: 1px solid #e5e0c6;
+    background-color: #FFFFFF;
+    border: 1px solid #e3e4e5;
     padding: 10px;
 }
 
@@ -182,10 +182,10 @@ table thead {
 }
 
 table thead tr th {
-    font-size: .9em;
+    font-size: 1em;
     color: #101820;
     border-bottom: 1px solid #D0D0CE;
-    font-family: "Avenir Next", Arial, sans-serif;
+    font-family: "Avenir Next Medium", Arial, sans-serif;
     font-weight: 400;
     background-color: none;
 }
@@ -195,7 +195,7 @@ table tbody tr.offset {
 }
 
 table tbody tr td {
-    padding: 5px 0 5px 0;
+    padding: 1em 0;
     font-size: 0.9em;
     border-bottom: 1px solid #cccccc;
     vertical-align: top;
@@ -616,6 +616,8 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     font-size: .85em;
     margin: 0;
     padding: 1em 0 .5em;
+    text-transform: uppercase;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.content form input[type='text'].error {
@@ -641,7 +643,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
     font-family: "Avenir Next Medium", Arial, sans-serif;
     font-weight: 500;
     color: #FFFFFF;
-    background-color: #0072CE;
+    background-color: #75787B;
     text-decoration: none;
     transition: .1s;
     -webkit-transition: .1s;
@@ -1602,6 +1604,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 .model-signature .signature-nav a {
     text-decoration: none;
     color: #101820;
+    font-size: .85em;
 }
 
 .model-signature pre {
@@ -1633,6 +1636,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 .model-signature .signature-nav .selected {
     color: #0072CE;
     text-decoration: none;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
 }
 
 .model-signature ul.signature-nav {
@@ -1676,13 +1680,19 @@ pre code {
   padding: 5px;
 }
 
-.content > .content-type > div > label {
+.content > .response-content-type > div > label {
   clear: both;
   display: block;
-  color: #0F6AB4;
-  font-size: 1.1em;
+  color: #101820;
+  font-size: .85em;
   margin: 0;
-  padding: 15px 0 5px;
+  text-transform: uppercase;
+  font-family:"Avenir Next Demi", Arial, sans-serif;
+  padding: .5em 0;
+}
+
+.parameter-table {
+    padding: 1em 0;
 }
 
 .swagger-ui-wrap {
