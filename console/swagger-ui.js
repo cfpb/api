@@ -334,7 +334,7 @@ function program3(depth0,data) {
 function program5(depth0,data) {
   
   
-  return "\n          <h4>Parameters</h4>\n          <table class='fullwidth'>\n          <thead>\n            <tr>\n            <th style=\"\">Parameter</th>\n            <th style=\"\">Value</th>\n            <th style=\"width: 30%\">Parameter</th>\n            <th style=\"\">Parameter Type</th>\n            <th style=\"\">Data Type</th>\n            </tr>\n          </thead>\n          <tbody class=\"operation-params\">\n\n          </tbody>\n          </table>\n          ";
+  return "\n          <h4>Parameters</h4>\n          <table class='fullwidth'>\n          <thead>\n            <tr>\n            <th style=\"\">Parameter</th>\n            <th style=\"\">Value</th>\n            <th style=\"width: 30%\">Description</th>\n            <th style=\"\">Parameter Type</th>\n            <th style=\"\">Data Type</th>\n            </tr>\n          </thead>\n          <tbody class=\"operation-params\">\n\n          </tbody>\n          </table>\n          ";
   }
 
 function program7(depth0,data) {
