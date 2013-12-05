@@ -3,7 +3,6 @@ layout: default
 title: Contribute
 nav: contribute
 ---
-
 ### Open source contributing
 
 Under the hood, HMDA data is stored and served by Qu, the [first government open-source project developed on GitHub](http://cfpb.github.io/qu/).
@@ -25,3 +24,4 @@ The project is in the public domain, and we encourage you to [contribute to it o
     </a>
   </li>
 </ul>
+<body id="contribute"></body>
