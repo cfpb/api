@@ -18,6 +18,11 @@ all information about a dataset needed to query it. These different views of a d
 
 <a href="console/#!/data/getDataset_get_1" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
+##### Concepts
+Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible values. You can also specify concepts in any of the supported file formats like so ```/data/{dataset-name}/{contept-name.extension}```. 
+
+<a href="console/#!/hmda/getConceptHmda_get_1" class="action-arrow">See this in action <i class="icon-right"> </i></a>
+
 ##### Slices
 Think of slices as tables in a relational database. Every dataset has many slices representing different views of it, which you can use to <a href="queries.html">construct advanced queries</a>. The endpoint for
 every slice is ```/data/{dataset-name}/{slice-name}```. 
@@ -26,11 +31,5 @@ You can even request a slice in HTML, XML, JSON, JSONP, or CSV. Just append the 
 ```/data/{dataset-name}/{slice-name.extension}```. 
 
 <a href="console/#!/hmda/querySliceHmda_get_2" class="action-arrow"> See this in action <i class="icon-right"> </i></a>
-
-
-##### Concepts
-Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible values. You can also specify concepts in any of the supported file formats like so ```/data/{dataset-name}/{contept-name.extension}```. 
-
-<a href="console/#!/hmda/getConceptHmda_get_1" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 <body id="basics"></body>
