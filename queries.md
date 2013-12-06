@@ -7,18 +7,18 @@ nav: queries
 ### Query Language
 
 Our query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
-learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [reference page](http://cfpb.github.io/api/hmda/fields), or by using the [metadata endpoints](http://cfpb.github.io/api/hmda/calls) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
+learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [reference page](fields.html), or by using the [metadata endpoints](console/#!/hmda/getSliceMetadataHmda_get_3) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
 
 1. **Querying data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
 barista at your favorite coffee shop, it could handle even a really complex drink order, no sweat.  
-<a href="calls.html" class="action-arrow">See this in action <i class="icon-right"> </i></a>
+<a href="console/#!/hmda/querySliceHmda_get_2" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 1. **Summarizing or aggregating data** - Once you have the data you need to work with, our API can crunch all the numbers 
 for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
 
 ### Querying data
 
-Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore) section of CFPB's HMDA page.
+Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda) section of CFPB's HMDA page.
 
 <table class="table-code">
 <thead>
@@ -30,19 +30,19 @@ Use these clauses to filter through millions of records to get only the data you
 <tbody>
 <tr>
 <td><code>$select</code></td>
-<td>Specifies which fields to return, separated by commas. If not specified, all columns will be returned. Use this to <a href="http://cfpb.github.io/api/hmda/language#aggregating">aggregate or summarize data</a>. A list of all fields available is <a href="http://cfpb.github.io/api/hmda/fields">here</a> or at the <a href="http://cfpb.github.io/api/hmda/calls"><code>concept</code> endpoint</a>.</td>
+<td>Specifies which fields to return, separated by commas. If not specified, all columns will be returned. Use this to <a href="#aggregating">aggregate or summarize data</a>. A list of all fields available is <a href="fields.html">here</a> or at the <code>concept</code> <a href="console/#!/hmda/getConceptHmda_get_1" class="toggleOperation">endpoint</a>.</td>
 </tr>
 <tr>
 <td><code>$where</code></td>
-<td>Filter the results using SQL <code>WHERE</code> query syntax. If not specified, the results will not be filtered. <a href="http://cfpb.github.io/api/hmda/language#where">Learn more</a>.</td>
+<td>Filter the results using SQL <code>WHERE</code> query syntax. If not specified, the results will not be filtered. <a href="#where">Learn more</a>.</td>
 </tr>
 <tr>
 <td><code>$orderBy</code></td>
-<td>Fields to order by, separated by commas, or ASC and DESC. If not specified, the order will be consistent, but unspecified. Used in <a href="http://cfpb.github.io/api/hmda/language#orderby">aggregating or summarizing data</a>.</td>
+<td>Fields to order by, separated by commas, or ASC and DESC. If not specified, the order will be consistent, but unspecified. <a href="#orderby">Learn more.</a>.</td>
 </tr>
 <tr>
 <td><code>$group</code></td>
-<td>Fields to group by, separated by commas. Learn more about <a href="http://cfpb.github.io/api/hmda/language#orderby">aggregating or summarizing data</a>.</td>
+<td>Fields to group by, separated by commas. <a href="#group">Learn more</a>.</td>
 </tr>
 <tr>
 <td><code>$limit</code></td>
@@ -59,6 +59,7 @@ Use these clauses to filter through millions of records to get only the data you
 </tbody>
 </table>
 
+<a name="where"> </a>
 ##### More on $where
 
 This clause supports a mini-language for writing queries. It's a subset of SQL WHERE clauses, with the addition of function 
@@ -181,10 +182,10 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 </div>
 
 
-
+<a name="aggregating"> </a>
 ### Summarizing and aggregating data
 
-In addition to powerful data filtering, you can also aggregate data into summary tables, as seen in the [summary tables](https://github.com/pages/data-platform/public-data-platform/explore#summary) section of our HMDA page. The three clauses used in these queries are:
+In addition to powerful data filtering, you can also aggregate data. The three clauses used in these queries are:
 
 ##### $select
 This clause takes a list of the fields you want returned, separated by commas.  Unlike the SQL version of ```SELECT```, it does not allow for ```AS``` aliasing, so:
@@ -193,11 +194,13 @@ This clause takes a list of the fields you want returned, separated by commas.  
 
 **Wrong:** ```state_abbr AS state```, ```county```
 
+<a name="orderby"> </a>
 ##### orderBy
 This clause determines the order of the results returned. It takes a list of columns, separated by commas, with an optional suffix of ```ASC``` or ```DESC``` to indicate that you want the data in ascending or descending order. For example, if you wanted to see loan applications ordered by gender, and age in descending order, you would use:
 
 ```$orderBy = gender, age DESC```
 
+<a name="group"> </a>
 ##### $group
 This clause lists the fields you want to group results by. For example, if you wanted to see loan applications organized by denial reason, you would use:
 
@@ -258,6 +261,6 @@ this format:
 
 You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
 
-Get familiar with the information contained in HMDA on our [field reference page](http://cfpb.github.io/api/hmda/fields) page, and head on over to the [API calls](http://cfpb.github.io/api/hmda/calls) page to test your queries out in our console.
+Get familiar with the information contained in HMDA on our [field reference page](fields.html) page, and head on over to the [API calls](console/) page to test your queries out in our console.
 
 <body id="queries"></body>

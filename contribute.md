@@ -18,7 +18,7 @@ The project is in the public domain, and we encourage you to [contribute to it o
     </p>
   </li>
   <li>
-    <a href="https://github.com/cfpb">
+    <a href="https://github.com/cfpb/qu">
       <h4>Qu</h4>
       <p>The open source software that runs the platform</p>
     </a>
