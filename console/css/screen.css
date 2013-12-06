@@ -543,6 +543,7 @@ pre code {
   text-align: center;
   min-height: 20px;
   padding-top: 10px;
+  font-size: .75em;
 }
 
 .message-success {
@@ -714,7 +715,7 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options {
     overflow: hidden;
-    padding: 0;
+    padding-top: 4px;
     display: block;
     clear: none;
     float: right;
