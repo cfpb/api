@@ -38,6 +38,8 @@
           console.log("Loaded SwaggerUI")
         }
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+        $onload = Docs.toggleEndpointListForResource('data');
+        $onload = Docs.toggleEndpointListForResource('hmda');
       },
       onFailure: function(data) {
         if(console) {
