@@ -16,7 +16,7 @@ When you're ready to get into the weeds, you can query the nitty-gritty details 
 The endpoint for getting all data begins with ```/data```. Each dataset has an endpoint at ```/data/{dataset-name}```. This endpoint gives 
 all information about a dataset needed to query it. These different views of a dataset are called slices. 
 
-<a href="#" class="action-arrow">See this in action <i class="icon-right"> </i></a>
+<a href="console/#!/data" onclick="Docs.toggleEndpointListForResource('data');" class="action-arrow">See this in action <i class="icon-right"> </i></a>
 
 ##### Slices
 Think of slices as tables in a relational database. Every dataset has many slices representing different views of it. The endpoint for
