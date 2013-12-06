@@ -18,7 +18,7 @@ for you too. This section explains the ins and outs of how to gain more insight 
 
 ### Querying data
 
-Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda) section of CFPB's HMDA page.
+Use these clauses to filter through millions of records to get only the data you want in a matter of seconds.
 
 <table class="table-code">
 <thead>
