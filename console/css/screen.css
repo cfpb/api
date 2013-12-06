@@ -24,7 +24,7 @@ menu, output, ruby, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
-    border: 0;
+    border: 0;©
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -439,7 +439,7 @@ body ul#resources li.resource div.heading h2 a:hover {
 
 body ul#resources li.resource div.heading ul.options {
     overflow: hidden;
-    padding: 0;
+    padding-top: .25em;
     display: block;
     clear: none;
     float: right;
@@ -459,7 +459,6 @@ ul.options li{
     font-size: .75em;
     color: #0072ce;
     font-family: "Avenir Next", Arial, sans-serif;
-    line-height: 2em;
 }
 
 body ul#resources li.resource div.heading ul.options li {
@@ -467,7 +466,7 @@ body ul#resources li.resource div.heading ul.options li {
     clear: none;
     margin: 0;
     padding: 0px 5px;
-    border-right: 1px solid #101820;
+    border-right: 1px solid #75787B;
 }
 
 body ul#resources li.resource div.heading ul.options li:first-child, body ul#resources li.resource div.heading ul.options li.first {
