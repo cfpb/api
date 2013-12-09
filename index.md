@@ -47,4 +47,4 @@ Qu is the first CFPB project built from the beginning on [GitHub](https://github
 <body id="overview"></body>
 
 
-Not interested in programming? You can still get the data! Visit our HMDA site, where you can create [custom data sets](http://consumerfinance.gov/hmda/explore.html) for donwload.
+Not interested in programming? You can still get the data! Visit our HMDA site, where you can create [custom data sets](http://consumerfinance.gov/hmda/explore.html) for download.
