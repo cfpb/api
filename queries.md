@@ -18,7 +18,7 @@ for you too. This section explains the ins and outs of how to gain more insight 
 
 ### Querying data
 
-Use these clauses to filter through millions of records to get only the data you want in a matter of seconds.
+Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore.html) section of our HMDA page.
 
 <table class="table-code">
 <thead>
@@ -59,7 +59,7 @@ Use these clauses to filter through millions of records to get only the data you
 </tbody>
 </table>
 
-<a name="where"> </a>
+<span class="anchor" id="where"> </span>
 ##### More on $where
 
 This clause supports a mini-language for writing queries. It's a subset of SQL WHERE clauses, with the addition of function 
@@ -181,11 +181,10 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
     </div><!-- /.expandable-content -->
 </div>
 
-
-<a name="aggregating"> </a>
+<span class="anchor" id="aggregating"> </span>
 ### Summarizing and aggregating data
 
-In addition to powerful data filtering, you can also aggregate data. The three clauses used in these queries are:
+In addition to powerful data filtering, you can also aggregate data into summary tables, as seen in the [summary tables](http://consumerfinance.gov/hmda/explore#!/)section of our HMDA page. The three clauses used in these queries are:
 
 ##### $select
 This clause takes a list of the fields you want returned, separated by commas.  Unlike the SQL version of ```SELECT```, it does not allow for ```AS``` aliasing, so:
@@ -194,13 +193,13 @@ This clause takes a list of the fields you want returned, separated by commas.  
 
 **Wrong:** ```state_abbr AS state```, ```county```
 
-<a name="orderby"> </a>
+<span class="anchor" id="orderby"> </span>
 ##### orderBy
 This clause determines the order of the results returned. It takes a list of columns, separated by commas, with an optional suffix of ```ASC``` or ```DESC``` to indicate that you want the data in ascending or descending order. For example, if you wanted to see loan applications ordered by gender, and age in descending order, you would use:
 
 ```$orderBy = gender, age DESC```
 
-<a name="group"> </a>
+<span class="anchor" id="group"> </span>
 ##### $group
 This clause lists the fields you want to group results by. For example, if you wanted to see loan applications organized by denial reason, you would use:
 
