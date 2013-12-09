@@ -174,7 +174,6 @@ pre, code {
     overflow-x: auto;
     padding: 0.125em 0.250em;
     white-space: nowrap;
-
 }
 
 pre, code, kbd, samp {
@@ -182,6 +181,11 @@ pre, code, kbd, samp {
     line-height: 1.375;
     margin-bottom: 1.375em;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+pre {
+    white-space: pre-wrap;
+    margin-bottom: .5em;
 }
 
 
@@ -482,12 +486,12 @@ ul.repo-list {
 }
 
 /* offset the fixed position header for jump links */
-/*section:before {
+.anchor {
     display: block; 
-    content: ""; 
     height: 4.375em; 
-    margin: -4.375em 0 0;
-}*/
+    margin-top: -4.375em;
+    visibility: hidden;
+}
 
 .header {
     border-bottom: 4px solid #2CB34A;
