@@ -13,7 +13,7 @@ Each year thousands of banks and other financial institutions report data about 
 - It gives public officials insight that helps them make informed decisions about policies; and
 - It sheds light on lending patterns that could be discriminatory
 
-The CFPB plans to offer every HMDA dataset since 2007. That's about 15 to 20 million records of loan applications per year from people looking to purchase a home, make home improvements, or refinance their mortgage. 
+The CFPB plans to offer every year of the Loan Application Register (LAR) since 2007. That's about 15 to 20 million records every year from people looking to purchase a home, make home improvements, or refinance their mortgage. 
 
 We think that you could build something really cool with it.
 
@@ -23,7 +23,7 @@ We built the API to be as self-documenting as possible, but if you find yourself
 - [API basics](basics.html) introduces you to the operations offered by the API.
 - [API calls](console/) gives you a hands-on experience of those operations with an interactive console.
 - [Query language](queries.html) contains a comprehensive listing of all the API's types, functions, and enumerations.
-- [Field reference](fields.html) lists and describes the type of information reported in the data.
+- [Field reference](fields.html) lists and describes the type of information reported in the LAR.
 
 ##### The HMDA API and Qu
 
