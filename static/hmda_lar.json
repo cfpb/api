@@ -3,16 +3,16 @@
     "action_taken": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the action taken on the loan."
+      "description": "A code representing the action taken on the application."
     },
     "action_taken_name": {
       "type": "string",
-      "description": "The action taken on the loan."
+      "description": "A description of the action taken."
     },
     "agency_code": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the agency supervising the respondent."
+      "description": "A code representing the respondent's ."
     },
     "agency_abbr": {
       "indexed": true,

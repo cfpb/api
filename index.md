@@ -13,20 +13,23 @@ Each year thousands of banks and other financial institutions report data about 
 - It gives public officials insight that helps them make informed decisions about policies; and
 - It sheds light on lending patterns that could be discriminatory
 
-HMDA is true big data, with about 15 to 20 million records per year. The CFPB plans to offer every HMDA dataset since 2007, and we think that you could build something really cool with it.
+The CFPB plans to offer every HMDA dataset since 2007. That's about 15 to 20 million records of loan applications per year from people looking to purchase a home, make home improvements, or refinance their mortgage. 
+
+We think that you could build something really cool with it.
 
 ##### Get started
-We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized these docs into three major areas.
+We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized this site into four major areas.
 
-- [API basics](basics.html) introduces you to the operations offered by the API. As we release other dataset APIs in the future, these will remain basically consistent.
-- [API calls](console/) gives you a hands-on experience with the operations through an interactive console based on [Swagger](http://wordnik.swagger.com).
-- [Query language](queries.html) and [Field reference](fields.html) contain a comprehensive listing of all the API's types, functions, and enumerations.
+- [API basics](basics.html) introduces you to the operations offered by the API.
+- [API calls](console/) gives you a hands-on experience of those operations with an interactive console.
+- [Query language](queries.html) contains a comprehensive listing of all the API's types, functions, and enumerations.
+- [Field reference](fields.html) lists and describes the type of information reported in the data.
 
 ##### The HMDA API and Qu
 
 HMDA is the CFPB's first dataset to publish using [Qu](http://cfpb.github.io/qu/), an in-progress data platform created to serve public data.
 
-Qu is the first CFPB project built from the beginning on GitHub. Think you can make the API better or just want to look under the hood? Check it out, and learn about how you can host your own datasets or contribute to the project.
+Qu is the first CFPB project built from the beginning on [GitHub](https://github.com/cfpb/), too. If you think you can make the API better–or just want to take a look under the hood–check it out, and learn about how you can host your own datasets or contribute to the project. 
 
 <ul class="repo-list">
   <li class="list-icon">
@@ -42,3 +45,6 @@ Qu is the first CFPB project built from the beginning on GitHub. Think you can m
   </li>
 </ul>
 <body id="overview"></body>
+
+
+Not interested in programming? You can still get the data! Visit our HMDA site, where you can create [custom data sets](http://consumerfinance.gov/hmda/explore.html) for donwload.
