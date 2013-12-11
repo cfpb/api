@@ -164,6 +164,7 @@ div.gist {
 
 pre code {
     line-height: 1.6em;
+    border: none;
 }
 
 .required {
