@@ -7,7 +7,7 @@ nav: queries
 ### Query Language
 
 Our query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
-learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [reference page](fields.html), or by using the [metadata endpoints](console/#!/hmda/getSliceMetadataHmda_get_3) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
+learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [field reference page](fields.html), or by using the [metadata endpoints](console/#!/hmda/getSliceMetadataHmda_get_3) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
 
 1. **Querying data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
 barista at your favorite coffee shop, it could handle even a really complex drink order, no sweat.  
@@ -38,7 +38,7 @@ Use these clauses to filter through millions of records to get only the data you
 </tr>
 <tr>
 <td><code>$orderBy</code></td>
-<td>Fields to order by, separated by commas, or ASC and DESC. If not specified, the order will be consistent, but unspecified. <a href="#orderby">Learn more.</a>.</td>
+<td>Fields to order by, separated by commas, or <code>ASC</code> and <code>DESC</code>. If not specified, the order will be consistent, but unspecified. <a href="#orderby">Learn more.</a>.</td>
 </tr>
 <tr>
 <td><code>$group</code></td>
@@ -62,7 +62,7 @@ Use these clauses to filter through millions of records to get only the data you
 <span class="anchor" id="where"> </span>
 ##### More on $where
 
-This clause supports a mini-language for writing queries. It's a subset of SQL WHERE clauses, with the addition of function 
+This clause supports a mini-language for writing queries. It's a subset of SQL <code>WHERE</code> clauses, with the addition of function 
 support. A ```$where``` clause is made up of one or more comparisons, joined by boolean operators.
 
 <div class="expandable expandable">
@@ -184,7 +184,7 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 <span class="anchor" id="aggregating"> </span>
 ### Summarizing and aggregating data
 
-In addition to powerful data filtering, you can also aggregate data into summary tables, as seen in the [summary tables](http://consumerfinance.gov/hmda/explore#!/)section of our HMDA page. The three clauses used in these queries are:
+In addition to powerful data filtering, you can also aggregate data, as seen in the [summary tables](http://consumerfinance.gov/hmda/explore#!/) section of our HMDA page. The three clauses used in these queries are:
 
 ##### $select
 This clause takes a list of the fields you want returned, separated by commas.  Unlike the SQL version of ```SELECT```, it does not allow for ```AS``` aliasing, so:
@@ -194,7 +194,7 @@ This clause takes a list of the fields you want returned, separated by commas.  
 **Wrong:** ```state_abbr AS state```, ```county```
 
 <span class="anchor" id="orderby"> </span>
-##### orderBy
+##### $orderBy
 This clause determines the order of the results returned. It takes a list of columns, separated by commas, with an optional suffix of ```ASC``` or ```DESC``` to indicate that you want the data in ascending or descending order. For example, if you wanted to see loan applications ordered by gender, and age in descending order, you would use:
 
 ```$orderBy = gender, age DESC```
@@ -260,6 +260,6 @@ this format:
 
 You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
 
-Get familiar with the information contained in HMDA on our [field reference page](fields.html) page, and head on over to the [API calls](console/) page to test your queries out in our console.
+Get familiar with the information contained in the LAR on our [field reference](fields.html) page, and head on over to the [API calls](console/) page to test out your queries in our console.
 
 <body id="queries"></body>
