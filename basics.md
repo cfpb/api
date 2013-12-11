@@ -19,7 +19,7 @@ all information about a dataset needed to query it. These different views of a d
 <a href="console/#!/data/getDataset_get_1" class="action-arrow">Try it out <i class="icon-right"> </i></a>
 
 ##### Concepts
-Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible values. You can also specify concepts in any of the supported file formats like so ```/data/{dataset-name}/{contept-name.extension}```. 
+Concepts are analogous to variables, or column headers in a spreadsheet. Concepts have properties, which describe all the possible values. You can also specify concepts in any of the supported file formats like so: ```/data/{dataset-name}/{contept-name.extension}```. 
 
 <a href="console/#!/hmda/getConceptHmda_get_1" class="action-arrow">Try it out <i class="icon-right"> </i></a>
 
