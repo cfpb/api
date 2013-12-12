@@ -527,7 +527,6 @@ ul.repo-list {
 
 .content { /* only here to keep footer sticky */
     margin-top: 0;
-    margin-bottom: 150px;
     overflow: auto;
 }
 
@@ -583,11 +582,10 @@ footer a:hover {
     /* LAYOUT */
 
     aside {
-        position: fixed;
+        position: absolute;
         width: 220px;
         margin-right: 10px;
         margin: 0;
-        height: 100%;
         margin-top: 7.188em;
         color: #75787B;
     }
@@ -622,6 +620,13 @@ footer a:hover {
         border-left: none;
     }
 
+}
+
+@media screen and (min-width: 40.5em) and (min-height: 50em) {
+    /* Only fix sidebar position if the screen has enough height (800px) */
+    aside {
+        position: fixed;
+    }
 }
 
 
