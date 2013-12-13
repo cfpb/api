@@ -225,7 +225,7 @@ tr, th, td {
 }
 
 td:code {
-    background-color: none;
+    background-color: transparent;
     white-space: nowrap;
 }
 
@@ -238,11 +238,11 @@ tr:nth-child(odd) {
 }
 
 table.fullwidth tr:nth-child(odd) {
-    background-color: none;
+    background-color: transparent;
 }
 
 table.fullwidth tr:nth-child(even) {
-    background-color: none;
+    background-color: transparent;
 }
 
 .field-table td:nth-child(1) {
@@ -346,8 +346,9 @@ a.action-arrow i {
  nav a {
     display: block;
     padding: 10px;
-    -webkit-transition: .4s; -moz-transition: .4s;
-    transition: .4s;
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+            transition: .4s;
 }
 
 nav a,
@@ -359,18 +360,16 @@ nav a:visited {
 
 nav li:hover {
     color: #75787b;
-    border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     border-bottom: 1px solid #d0d0ce;
     padding-left: 0;
 }
 
 nav li:active {
     color: #75787b;
-    border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     border-bottom: 1px solid #d0d0ce;
     padding-left: 0;
 }
@@ -393,7 +392,7 @@ nav li {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     margin-left: -4px;
 }
 
@@ -401,7 +400,7 @@ nav li {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     margin-left: -4px;
 }
 
@@ -409,7 +408,7 @@ nav li {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     margin-left: -4px;
 }
 
@@ -417,7 +416,7 @@ nav li {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     margin-left: -4px;
 }
 
@@ -425,7 +424,7 @@ nav li {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     margin-left: -4px;
 }
 
@@ -433,7 +432,7 @@ nav li {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     margin-left: -4px;
 }
 
@@ -528,7 +527,6 @@ ul.repo-list {
 
 .content { /* only here to keep footer sticky */
     margin-top: 0;
-    margin-bottom: 150px;
     overflow: auto;
 }
 
@@ -584,11 +582,10 @@ footer a:hover {
     /* LAYOUT */
 
     aside {
-        position: fixed;
+        position: absolute;
         width: 220px;
         margin-right: 10px;
         margin: 0;
-        height: 100%;
         margin-top: 7.188em;
         color: #75787B;
     }
@@ -596,7 +593,7 @@ footer a:hover {
     footer {
        padding: 2em 0;
        border-top: 2px solid #BABBBD;
-       background: #F1F2F2
+       background: #F1F2F2;
        font-family: "Avenir Next", Arial, sans-serif;
     }
 
@@ -623,6 +620,13 @@ footer a:hover {
         border-left: none;
     }
 
+}
+
+@media screen and (min-width: 40.5em) and (min-height: 50em) {
+    /* Only fix sidebar position if the screen has enough height (800px) */
+    aside {
+        position: fixed;
+    }
 }
 
 
