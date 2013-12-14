@@ -11,7 +11,7 @@ The project is in the public domain, and we encourage you to [contribute to it o
 
 ##### Check out the repo
 
-<ul class="repo-list">
+<ul class="repo-list no-padding">
   <li class="list-icon">
     <p class="image-wrap">
       <img src="static/img/octocat.png" width="25px" title="Github">

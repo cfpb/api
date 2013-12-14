@@ -185,7 +185,7 @@ pre, code, kbd, samp {
 
 pre {
     white-space: pre-wrap;
-    margin-bottom: .5em;
+    margin-bottom: 1.5em;
 }
 
 
@@ -472,6 +472,9 @@ ul.repo-list {
 }
 
 
+ul.repo-list.no-padding {
+    padding: 0;
+}
 
 /* DEFAULT MOBILE STYLES */
 
