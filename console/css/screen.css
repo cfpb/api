@@ -625,13 +625,24 @@ pre code {
 
 .model-signature ul.signature-nav li {
     float: left;
-    margin: 0 5px 5px 0;
-    padding: 2px 5px 2px 0;
+    margin: 0;
+    padding: 0 .5em 0 0;
     border-right: 1px solid #ddd;
+    line-height: 1.25em;
+    margin-bottom: 1em;
+}
+
+.snippet code, pre {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.snippet {
+    margin: .5em 0;
 }
 
 .model-signature ul.signature-nav li:last-child {
-    padding-right: 0;
+    padding-left: .5em;
     border-right: none;
 }
 
