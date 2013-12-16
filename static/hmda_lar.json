@@ -3,7 +3,7 @@
     "action_taken": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the action taken on the application."
+      "description": "A code representing the action taken on the loan or application, such as whether an application was approved or denied. Loan originated means the application resulted in a mortgage. Loan purchased means that the lender bought the loan on the secondary market."
     },
     "action_taken_name": {
       "type": "string",
@@ -12,16 +12,16 @@
     "agency_code": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the respondent's ."
+      "description": "A code representing the federal agency to which the HMDA-reporting institution submits its HMDA data."
     },
     "agency_abbr": {
       "indexed": true,
       "type": "string",
-      "description": "The abbreviation for the agency supervising the respondent."
+      "description": "The abbreviated name of the federal agency."
     },
     "agency_name": {
       "type": "string",
-      "description": "The agency supervising the respondent."
+      "description": "The full name of the federal agency."
     },
     "applicant_ethnicity": {
       "indexed": true,
@@ -34,7 +34,7 @@
     },
     "applicant_income_000s": {
       "type": "integer",
-      "description": "The income of the primary applicant, in thousands of dollars."
+      "description": "The gross annual income that the lender relied on when evaluating the creditworthiness of the applicant, rounded to the nearest thousand."
     },
     "applicant_race_1": {
       "indexed": true,
@@ -93,7 +93,7 @@
     "application_date_indicator": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the date of the application. 0 means the application was made on or after 1/1/2004; 1 means the application was made before 1/1/2004; 2 means the application date is not available."
+      "description": "A code representing the date of the application. \"0\" means the application was made on or after 1/1/2004; \"1\" means the application was made before 1/1/2004; \"2\" means the application date is not available."
     },
     "as_of_year": {
       "indexed": true,
@@ -102,7 +102,7 @@
     },
     "census_tract_number": {
       "type": "string",
-      "description": "The number of the census tract for the property."
+      "description": "The number of the census tract for the property. This code is only unique when combined with the state and county codes."
     },
     "co_applicant_ethnicity": {
       "indexed": true,
@@ -171,16 +171,16 @@
     "county_code": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the county of the property. This code is only unique when combined with the state code."
+      "description": "A three-digit code representing the county of the property. This code is only unique when combined with the state code."
     },
     "county_name": {
       "type": "string",
-      "description": "The name of the county containing the property."
+      "description": "The name of the county containing the property. Some counties have the same name, so we recommend combining this with state."
     },
     "denial_reason_1": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the first reason for denial of the application. The application can be denied for up to three reasons."
+      "description": "A code representing the first reason for denial of the application. Lenders may report up to three denial reasons, but such reporting is optional."
     },
     "denial_reason_2": {
       "indexed": true,
@@ -194,7 +194,7 @@
     },
     "denial_reason_name_1": {
       "type": "string",
-      "description": "The first reason for denial of the application. The application can be denied for up to three reasons."
+      "description": "The first reason for denial of the application. Lenders may report up to three denial reasons, but such reporting is optional."
     },
     "denial_reason_name_2": {
       "type": "string",
@@ -216,7 +216,7 @@
     "hoepa_status": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the HOEPA status of the application. This only applies to loans originated or purchased."
+      "description": "A code representing whether a loan is subject to the Home Ownership and Equity Protection Act of 1994 (HOEPA)."
     },
     "hoepa_status_name": {
       "type": "string",
@@ -229,7 +229,7 @@
     "lien_status": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the lien status. Only applicable for applications and originations."
+      "description": "A code representing the lien status. Most mortgages are secured by a lien against the property. In the event of a forced liquidation, first lien holders will generally get paid before subordinate lien holders."
     },
     "lien_status_name": {
       "type": "string",
@@ -242,7 +242,7 @@
     "loan_purpose": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the purpose of the loan."
+      "description": "A code representing the purpose of the loan (home purchase, refinance, or home improvement)."
     },
     "loan_purpose_name": {
       "type": "string",
@@ -251,7 +251,7 @@
     "loan_type": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the type of loan applied for."
+      "description": "A code representing the type of loan applied for. Many loans are insured or guaranteed by government programs offered by Federal Housing Administration (FHA), the Department of Veterans Affairs (VA), or the Department of Agriculture's Rural Housing Service (RHS) or Farm Service Agency (FSA). All other loans are classified as conventional."
     },
     "loan_type_name": {
       "type": "string",
@@ -263,7 +263,7 @@
     },
     "msamd": {
       "indexed": true,
-      "description": "A code representing the Metropolitian Statistical Area/Metropolitian Division (MSA/MD) the property is located in."
+      "description": "A code representing the Metropolitian Statistical Area/Metropolitian Division (MSA/MD) the property is located in. An MSA is a region with relatively high population density at its core (usually a single large city) and close economic ties throughout. Larger MSAs are divided into MDs."
     },
     "msamd_name": {
       "type": "string",
@@ -280,7 +280,7 @@
     "owner_occupancy": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the owner-occupancy status of the property."
+      "description": "A code representing the owner-occupancy status of the property. Second homes, vacation homes, and rental properties are classified as \"not owner-occupied as a principal dwelling\"."
     },
     "owner_occupancy_name": {
       "type": "string",
@@ -293,11 +293,11 @@
     "preapproval": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the preapproval status of the application."
+      "description": "A code representing the pre-approval status of the application."
     },
     "preapproval_name": {
       "type": "string",
-      "description": "The preapproval status of the application."
+      "description": "The pre-approval status of the application."
     },
     "property_type": {
       "indexed": true,
@@ -319,21 +319,21 @@
     },
     "rate_spread": {
       "type": "number",
-      "description": "The rate spread for the loan."
+      "description": "The rate spread for the loan, which is the difference between the loan's annual percentage rate (APR) and the average prime offer rate (APOR)."
     },
     "respondent_id": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the loan respondent."
+      "description": "A code representing the bank or other financial institution that is reporting the loan or application."
     },
     "sequence_number": {
       "type": "string",
-      "description": "???"
+      "description": "A one-up number scheme for each respondent to make each loan unique."
     },
     "state_code": {
       "indexed": true,
       "type": "integer",
-      "description": "A code representing the state the property is located in."
+      "description": "A two-digit code representing the state the property is located in."
     },
     "state_abbr": {
       "indexed": true,
