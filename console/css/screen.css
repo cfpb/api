@@ -152,7 +152,6 @@ div.gist {
 
 .code {
     font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
-    padding: .75em 0;
 }
 
 .code td pre {
@@ -629,7 +628,7 @@ pre code {
     padding: 0 .5em 0 0;
     border-right: 1px solid #ddd;
     line-height: 1.25em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 .snippet code, pre {
