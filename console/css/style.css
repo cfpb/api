@@ -84,6 +84,7 @@ h3 {
 
 h3:first-child {
     margin-top: 0;
+    margin-bottom: .75em;
 }
 
 h4 {
@@ -168,21 +169,26 @@ sub {
 
 /* CODE */
 pre, code {
-    background-color: #ffffff;
-    border: 1px solid #e3e4e5; 
+    background-color: #f1f2f2;
+    border: 1px solid #e3e4e5;
     border-radius: 0.250em;
     overflow-x: auto;
     padding: 0.125em 0.250em;
     white-space: nowrap;
-
 }
 
 pre, code, kbd, samp {
-    font-size: .85em;
+    font-size: .75em;
     line-height: 1.375;
     margin-bottom: 1.375em;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
+
+pre {
+    white-space: pre-wrap;
+    margin-bottom: 1.5em;
+}
+
 
 .intro {
     font-size: 1em;
@@ -215,20 +221,29 @@ th {
 }
 
 tr, th, td {
-    padding: .5em 0;
+    padding: 10px 15px;
+    line-height: 1.5em;
 }
 
 td:code {
-    background-color: none;
+    background-color: transparent;
     white-space: nowrap;
 }
 
 tr:nth-child(even) {
-    /*background-color: ;*/
+    background-color: #F1F2F2;
 }
 
 tr:nth-child(odd) {
-    /*background-color: #ebf3f9;*/
+    background-color: #F8F8F8;
+}
+
+table.fullwidth tr:nth-child(odd) {
+    background-color: transparent;
+}
+
+table.fullwidth tr:nth-child(even) {
+    background-color: transparent;
 }
 
 .field-table td:nth-child(1) {
@@ -332,8 +347,9 @@ a.action-arrow i {
  nav a {
     display: block;
     padding: 10px;
-    -webkit-transition: .4s; -moz-transition: .4s;
-    transition: .4s;
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+            transition: .4s;
 }
 
 nav a,
@@ -344,13 +360,21 @@ nav a:visited {
 }
 
 nav li:hover {
-    color: #75787b;;
-    border-bottom: none;
+    color: #75787b;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
     border-bottom: 1px solid #d0d0ce;
     padding-left: 0;
 }
+
+nav li:active {
+    color: #75787b;
+    border-left: 4px solid #2CB34A;
+    background-color: transparent;
+    border-bottom: 1px solid #d0d0ce;
+    padding-left: 0;
+}
+
 
 nav ul {
     margin: 0;
@@ -365,11 +389,51 @@ nav li {
     padding-left: 4px;
 }
 
+#overview a.overview {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: transparent;
+    margin-left: -4px;
+}
+
+#basics a.basics {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: transparent;
+    margin-left: -4px;
+}
+
 #console a.console {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
-    background-color: none;
+    background-color: transparent;
+    margin-left: -4px;
+}
+
+#queries a.queries {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: transparent;
+    margin-left: -4px;
+}
+
+#fields a.fields {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: transparent;
+    margin-left: -4px;
+}
+
+#contribute a.contribute {
+    color: #101820;
+    border-bottom: none;
+    border-left: 4px solid #2CB34A;
+    background-color: transparent;
     margin-left: -4px;
 }
 
@@ -409,6 +473,9 @@ ul.repo-list {
 }
 
 
+ul.repo-list.no-padding {
+    padding: 0;
+}
 
 /* DEFAULT MOBILE STYLES */
 
@@ -419,21 +486,22 @@ ul.repo-list {
 
 .wrap {
         max-width: 960px;
+        min-width: 320px; 
 }
 
 /* offset the fixed position header for jump links */
-/*section:before {
+.anchor {
     display: block; 
-    content: ""; 
     height: 4.375em; 
-    margin: -4.375em 0 0;
-}*/
+    margin-top: -4.375em;
+    visibility: hidden;
+}
 
 .header {
     border-bottom: 4px solid #2CB34A;
     width: 100%;
     background-color: #fff;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     z-index: 99999;
 
@@ -441,10 +509,11 @@ ul.repo-list {
 
 .header h1 {
     color: #75787B;
-    margin-top: 0.54545454545455em;
-    font-size: 1.375em;
-    line-height: 1;
-    margin-bottom: 1.375em;
+    font-size: 1em;
+    line-height: 1.75em;
+    margin: 1em;
+    margin-left: .75em;
+    float: left;
 }
 
 .header h1 span {
@@ -453,23 +522,67 @@ ul.repo-list {
 }
 
 .header .logo {
-    /*display: block;
-    width: 151px;
-    float: right;
-    margin-top: 0.2em;
-    margin-bottom: 0.5em;*/
+    width: 100px;
     display: block;
-    margin: 1em 0;
+    margin: 1.25em 1em;
+}
+
+.page-title {
+    margin: 1em .5em .5em .5em;
+    font-size: 1.5em;
+}
+
+.page-title br {
+    display: none;
+}
+
+.intro {
+    margin:.75em;
+    margin-bottom: 1.375em;
+}
+
+.main-content {
+    margin: 1em .75em;
+}
+
+.main-content ul, ol {
+    padding: 0;
+    list-style-position: inside;
 }
 
 .content { /* only here to keep footer sticky */
     margin-top: 0;
-    margin-bottom: 150px;
+    /*margin-left: 1em;*/
+    /*margin-right: 1em;*/
     overflow: auto;
 }
 
+.options .toggleOperation {
+    display: none;
+}
+
+
+/* REPO LIST*/
+
+    .repo-list li {
+        list-style: none;
+        display: table-cell;
+        vertical-align:middle;
+        padding: .5em;
+        background-color: #E7E7E6;
+        border-left: 1px solid #BABBBD;
+    }
+
+    .repo-list li:first-child {
+        border-left: none;
+    }
+
+    .repo-list h4 {
+        margin-bottom: .25em;
+    }
+
 footer {
-    padding: 2em 0;
+    padding: 0;
     border-top: 2px solid #BABBBD;
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
@@ -482,24 +595,36 @@ footer {
 .footer section {
     display: inline-block;
     vertical-align: top;
-    margin-right: -0.26em;
-    margin-left: 2%;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.footer-links {
+    float:left;
+}
+
+.footer-oss {
+    float:right;
 }
 
 .footer-links ul {
     list-style: none;
+    margin: 1em .5em;
 }
 
 .footer h4 {
-    margin-bottom: 0.75em;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    margin-left: .25em;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.5em;
     text-transform: uppercase;
 }
 
 .footer p {
     font-size: 0.875em;
     line-height: 1.42857142857143;
+    margin-left: .25em;
 }
 
 footer a,
@@ -513,18 +638,99 @@ footer a:hover {
 }
 
 
-/* DESKTOP STYLES */
+/* MOBILE PORTRAIT 480px */
+
+@media only screen and (min-width: 30em) {
+    .header .logo {
+        float: right;
+        margin: 1.25em 1em;
+    }
+    .header h1 {
+        float: left;
+    }
+
+    .wrap {
+    margin: 0 auto;
+    }
+
+}
+
+
+/* SMALL TABLET 600px */
+
+@media only screen and (min-width: 37.5em) {
+
+    body {
+        padding-bottom: 13.5em;
+    }
+
+    footer {
+    padding-top: .75em;
+    padding-bottom: 1em;
+    border-top: 2px solid #BABBBD;
+    background: #F1F2F2;
+    font-family: "Avenir Next", Arial, sans-serif;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    }
+
+    .footer h4 {
+        margin: 1em 0 .5em 0;
+    }
+
+    .footer p {
+        margin: .75em 0;
+    }
+
+    .footer section {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: .5em;
+        margin-left: .5em;
+
+    }
+    .footer .footer-links {
+        margin: 0 .5em .5em 1em;
+        float: left;
+    }
+
+    .footer-links ul, li {
+        margin-left: 0;
+    }
+
+    .footer .footer-oss {
+        width: 60%;
+        float: right;
+    }
+
+} 
+
+
+/* DESKTOP STYLES 640px */
+
+@media only screen and (min-width: 40em) {
+    body {
+        padding-bottom: 12em;
+    }
+}
+
+@media screen and (min-width: 40.5em) and (min-height: 50em) {
+    /* Only fix sidebar position if the screen has enough height (800px) */
+    aside {
+        position: fixed;
+    }
+}
 
 @media screen and (min-width: 40.5em) and (min-height: 32.5em) {
 
     /* LAYOUT */
 
     aside {
-        position: fixed;
+        position: absolute;
         width: 220px;
         margin-right: 10px;
         margin: 0;
-        height: 100%;
         margin-top: 7.188em;
         color: #75787B;
     }
@@ -532,7 +738,7 @@ footer a:hover {
     footer {
        padding: 2em 0;
        border-top: 2px solid #BABBBD;
-       background: #F1F2F2
+       background: #F1F2F2;
        font-family: "Avenir Next", Arial, sans-serif;
     }
 
@@ -559,85 +765,61 @@ footer a:hover {
         border-left: none;
     }
 
-}
-
-
-/* MOBILE PORTRAIT */
-
-@media only screen and (min-width: 30em) {
-    .header .logo {
-        float: right;
-        margin: 1.25em 0;
+    header {
+        position: fixed;
     }
-    .header h1 {
-        margin-top: 1.5em;
-        float: left;
-    }
-
-    .wrap {
-    margin: 0 auto;
-}
 
 }
 
 
-/* SMALL TABLET */
 
-@media only screen and (min-width: 37.5em) {
-
-    body {
-        padding-bottom: 13.5em;
-    }
-
-    .footer section {
-        display: inline-block;
-        vertical-align: top;
-        margin-right: -0.26em;
-        margin-left: 2%;
-
-    }
-    .footer .footer-links {
-        width: 32%;
-        margin-left: 0;
-    }
-
-    .footer-links ul, li {
-        margin-left: 0;
-    }
-
-    .footer .footer-oss {
-        width: 66%;
-    }
-
-} 
-
-@media only screen and (min-width: 40em) {
-    body {
-        padding-bottom: 12em;
-    }
-}
-
-
-/* TABLET/NETBOOK */
+/* TABLET/NETBOOK 744px */
 @media only screen and (min-width: 46.5em) {
     nav {
         text-align: left;
+    } 
+
+    .footer .footer-oss {
+        width: 67%;
     }
 
 } 
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024PX) */
+/* full header design */
 
 @media only screen and (min-width: 64em) {
     .content {
         overflow: hidden;
     }
+
+    .header h1 {
+    color: #75787B;
+    margin-top: 1.375em;
+    font-size: 1.375em;
+    line-height: 1;
+    margin-bottom: 1.375em;
+    margin-left: 0;
+    }  
+
+    .header .logo {
+    float: right;
+    /*margin: 1.25em 1em;*/
+    width: 210px;
+    display: block;
+    }
+
+    .options .toggleOperation {
+    display: block;
+    }
+
 } 
 
 
+@media only screen and (min-width: 80em) {
 
-@media only screen and (min-width: 80em) {}
-/* DESKTOP */
+}
+/* DESKTOP 
 
 
 /*    W I D E S C R E E N    */
@@ -754,13 +936,14 @@ figure {
 }
 
 img, object, embed, video {
-    /* fluid images */
-    max-width: 100%;
-    _width: 100%;
+    /* fluid images disabled */
+    /*max-width: 100%;
+    _width: 100%;*/
 }
 
 img {
     border: 0;
+    float: right;
     /* improve IE's resizing of images */
     -ms-interpolation-mode: bicubic;
 }
@@ -898,7 +1081,7 @@ del {
 
 .expandable {
   margin-bottom: 5px;
-  font-family: "Avenir Next Medium", Arial, sans-serif;
+  font-family: "Avenir Next", Arial, sans-serif;
 }
 
 .expandable a {

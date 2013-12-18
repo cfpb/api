@@ -33,6 +33,19 @@ time, mark, audio, video {
 
 /* NEW STUFF */
 
+@media only screen and (min-width: 30em) {
+    body ul#resources li.resource div.heading ul.options {
+        float: left;
+        clear: none;
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+}
+
 .console-footer {
     display: none;
 }
@@ -423,6 +436,7 @@ body ul#resources li.resource div.heading h2 {
     float: left;
     font-family: "Avenir Next", Arial, sans-serif;
     font-size: .85em;
+    margin-bottom: .5em;
 }
 
 body ul#resources li.resource div.heading h2 a {
@@ -465,7 +479,7 @@ ul.options li{
 body ul#resources li.resource div.heading ul.options li {
     float: left;
     clear: none;
-    margin: 0;
+    margin-bottom: .5em;
     padding: 0px 5px;
     border-right: 1px solid #75787B;
 }
@@ -710,8 +724,8 @@ body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operatio
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.path {
-    padding-left: .64em;
-    font-size: .64em;
+    padding-left: .5em;
+    font-size: .5em;
 }
 
 body ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.path a {
