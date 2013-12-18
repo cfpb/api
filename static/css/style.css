@@ -84,6 +84,7 @@ h3 {
 
 h3:first-child {
     margin-top: 0;
+    margin-bottom: .75em;
 }
 
 h4 {
@@ -485,6 +486,7 @@ ul.repo-list.no-padding {
 
 .wrap {
         max-width: 960px;
+        min-width: 320px; 
 }
 
 /* offset the fixed position header for jump links */
@@ -524,12 +526,57 @@ ul.repo-list.no-padding {
     margin: 1.25em 1em;
 }
 
+.page-title {
+    margin: 1em .5em .5em .5em;
+    font-size: 1.5em;
+}
+
+.page-title br {
+    display: none;
+}
+
+.intro {
+    margin:.75em;
+    margin-bottom: 1.375em;
+}
+
+.main-content {
+    margin: 1em .75em;
+}
+
+.main-content ul, ol {
+    padding: 0;
+    list-style-position: inside;
+}
+
 .content { /* only here to keep footer sticky */
     margin-top: 0;
     /*margin-left: 1em;*/
     /*margin-right: 1em;*/
     overflow: auto;
 }
+
+/* REPO LIST*/
+
+    .repo-list li {
+        list-style: none;
+        display: table-cell;
+        vertical-align:middle;
+        padding: 1em;
+        background-color: #E7E7E6;
+        border-left: 1px solid #BABBBD;
+    }
+
+    .repo-list li:first-child {
+        border-left: none;
+    }
+
+    .repo-list h4 {
+        margin-bottom: .25em;
+    }
+
+
+
 
 footer {
     padding: 2em 0;
@@ -845,9 +892,9 @@ figure {
 }
 
 img, object, embed, video {
-    /* fluid images */
-    max-width: 100%;
-    _width: 100%;
+    /* fluid images disabled */
+    /*max-width: 100%;
+    _width: 100%;*/
 }
 
 img {
