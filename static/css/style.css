@@ -512,6 +512,7 @@ ul.repo-list.no-padding {
     font-size: 1em;
     line-height: 1.75em;
     margin: 1em;
+    margin-left: .75em;
     float: left;
 }
 
@@ -562,7 +563,7 @@ ul.repo-list.no-padding {
         list-style: none;
         display: table-cell;
         vertical-align:middle;
-        padding: 1em;
+        padding: .5em;
         background-color: #E7E7E6;
         border-left: 1px solid #BABBBD;
     }
@@ -575,11 +576,8 @@ ul.repo-list.no-padding {
         margin-bottom: .25em;
     }
 
-
-
-
 footer {
-    padding: 2em 0;
+    padding: 0;
     border-top: 2px solid #BABBBD;
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
@@ -592,24 +590,36 @@ footer {
 .footer section {
     display: inline-block;
     vertical-align: top;
-    margin-right: -0.26em;
-    margin-left: 2%;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.footer-links {
+    float:left;
+}
+
+.footer-oss {
+    float:right;
 }
 
 .footer-links ul {
     list-style: none;
+    margin: 1em .5em;
 }
 
 .footer h4 {
-    margin-bottom: 0.75em;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    margin-left: .25em;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.5em;
     text-transform: uppercase;
 }
 
 .footer p {
     font-size: 0.875em;
     line-height: 1.42857142857143;
+    margin-left: .25em;
 }
 
 footer a,
@@ -623,7 +633,7 @@ footer a:hover {
 }
 
 
-/* MOBILE PORTRAIT */
+/* MOBILE PORTRAIT 480px */
 
 @media only screen and (min-width: 30em) {
     .header .logo {
@@ -641,7 +651,7 @@ footer a:hover {
 }
 
 
-/* SMALL TABLET */
+/* SMALL TABLET 600px */
 
 @media only screen and (min-width: 37.5em) {
 
@@ -649,16 +659,35 @@ footer a:hover {
         padding-bottom: 13.5em;
     }
 
+    footer {
+    padding-top: .75em;
+    padding-bottom: 1em;
+    border-top: 2px solid #BABBBD;
+    background: #F1F2F2;
+    font-family: "Avenir Next", Arial, sans-serif;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    }
+
+    .footer h4 {
+        margin: 1em 0 .5em 0;
+    }
+
+    .footer p {
+        margin: .75em 0;
+    }
+
     .footer section {
         display: inline-block;
         vertical-align: top;
-        margin-right: -0.26em;
-        margin-left: 2%;
+        margin-right: .5em;
+        margin-left: .5em;
 
     }
     .footer .footer-links {
-        width: 32%;
-        margin-left: 0;
+        margin: 0 .5em .5em 1em;
+        float: left;
     }
 
     .footer-links ul, li {
@@ -666,13 +695,14 @@ footer a:hover {
     }
 
     .footer .footer-oss {
-        width: 66%;
+        width: 60%;
+        float: right;
     }
 
 } 
 
 
-/* DESKTOP STYLES */
+/* DESKTOP STYLES 640px */
 
 @media only screen and (min-width: 40em) {
     body {
@@ -738,11 +768,15 @@ footer a:hover {
 
 
 
-/* TABLET/NETBOOK */
+/* TABLET/NETBOOK 744px */
 @media only screen and (min-width: 46.5em) {
     nav {
         text-align: left;
     } 
+
+    .footer .footer-oss {
+        width: 67%;
+    }
 
 } 
 
