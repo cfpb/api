@@ -210,8 +210,7 @@ table {
     border-radius: 0.250em;
     overflow-x: auto;
     padding: 0.125em 0.250em;
-    white-space: pre;
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 
 th {
