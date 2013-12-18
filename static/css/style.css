@@ -519,11 +519,6 @@ ul.repo-list.no-padding {
 }
 
 .header .logo {
-    /*display: block;
-    width: 151px;
-    float: right;
-    margin-top: 0.2em;
-    margin-bottom: 0.5em;*/
     width: 100px;
     display: block;
     margin: 1.25em 1em;
@@ -589,7 +584,6 @@ footer a:hover {
         margin: 1.25em 1em;
     }
     .header h1 {
-        /*margin-top: 1.5em;*/
         float: left;
     }
 
@@ -719,11 +713,12 @@ footer a:hover {
     font-size: 1.375em;
     line-height: 1;
     margin-bottom: 1.375em;
+    margin-left: 0;
     }  
 
     .header .logo {
     float: right;
-    margin: 1.25em 1em;
+    /*margin: 1.25em 1em;*/
     width: 210px;
     display: block;
     }
@@ -733,7 +728,7 @@ footer a:hover {
 @media only screen and (min-width: 80em) {
 
 }
-/* DESKTOP */
+/* DESKTOP 
 
 
 /*    W I D E S C R E E N    */
