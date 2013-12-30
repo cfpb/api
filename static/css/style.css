@@ -527,17 +527,18 @@ ul.repo-list.no-padding {
 }
 
 .page-title {
-    margin: .5em 0 .5em 0;
-    /*font-size: 1.5em;*/
+    margin: .5em .25em .5em .25em;
 }
 
 .page-title br {
-    /*display: none;*/
+    display: none;
 }
 
 .intro {
     margin-top:.75em;
     margin-bottom: 1.375em;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .main-content {
@@ -603,7 +604,7 @@ footer {
 
 .footer-links ul {
     list-style: none;
-    margin: 1em .5em;
+    margin: 1em .5em 1em .25em;
 }
 
 .footer h4 {
@@ -711,9 +712,9 @@ footer a:hover {
 
 @media screen and (min-width: 40.5em) and (min-height: 50em) {
     /* Only fix sidebar position if the screen has enough height (800px) */
-    aside {
+    /*aside {
         position: fixed;
-    }
+    }*/
 }
 
 @media screen and (min-width: 40.5em) and (min-height: 32.5em) {
@@ -722,10 +723,10 @@ footer a:hover {
 
     aside {
         position: absolute;
-        width: 220px;
-        margin-right: 10px;
-        margin: 0;
-        margin-top: 6em;
+        width: 11em;
+        margin-right: .75em;
+        margin-left: .75em;
+        margin-top: 5em;
         color: #75787B;
     }
 
@@ -740,7 +741,7 @@ footer a:hover {
         width: 66%;
         float: right;
         margin-bottom: 7.5em;
-        margin-top: 7.5em;
+        margin-top: 7em;
         margin-left: 2%;
     }
 
@@ -777,12 +778,46 @@ footer a:hover {
         width: 67%;
     }
 
+    aside {
+        margin-top: 5em;
+        width: 13em;
+        position: fixed;
+    }
+
+    .main-content {
+        margin-top: 6.75em;
+    }
+
+    .page-title {
+    margin: .5em 0em .5em 0em;
+    }
+
+    .intro {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .page-title br {
+    display: block;
+    }
 } 
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024PX) */
 /* full header design */
 
 @media only screen and (min-width: 64em) {
+    aside {
+        margin-top: 6.25em;
+        width: 13.75em;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .main-content {
+        margin-top: 8em;
+        margin-left: 0;
+    }
+
     .content {
         overflow: hidden;
     }
