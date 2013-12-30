@@ -1,4 +1,4 @@
-@import "normalize.css";
+©@import "normalize.css";
 @import "fonts.css";
 
 /*
@@ -527,7 +527,7 @@ ul.repo-list.no-padding {
 }
 
 .page-title {
-    margin: 1em .5em .5em .5em;
+    margin: 1em 0 .5em 0;
     font-size: 1.5em;
 }
 
@@ -536,7 +536,7 @@ ul.repo-list.no-padding {
 }
 
 .intro {
-    margin:.75em;
+    margin-top:.75em;
     margin-bottom: 1.375em;
 }
 
@@ -725,7 +725,7 @@ footer a:hover {
         width: 220px;
         margin-right: 10px;
         margin: 0;
-        margin-top: 7.188em;
+        margin-top: 6em;
         color: #75787B;
     }
 
