@@ -1,4 +1,4 @@
-©@import "normalize.css";
+@import "normalize.css";
 @import "fonts.css";
 
 /*
@@ -632,6 +632,14 @@ footer a:hover {
     border-bottom: 1px dotted #0072CE;
 }
 
+.mobile-warning {
+        display:block;
+        background-color: #f6d9d3;
+        padding: .85em;
+        margin: .5em 0;
+        font-size: .75em;
+    }
+
 
 /* MOBILE PORTRAIT 480px */
 
@@ -646,6 +654,10 @@ footer a:hover {
 
     .wrap {
     margin: 0 auto;
+    }
+
+    .mobile-warning {
+        display:none;
     }
 
 }
