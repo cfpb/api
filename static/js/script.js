@@ -17,7 +17,7 @@ $(function() {
     var $body = $(this);
 
     var ajax = $.ajax({
-      url: "/api/static/hmda_lar.json",
+      url: "../static/hmda_lar.json",
       dataType: "json"
     });
 
