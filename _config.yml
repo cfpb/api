@@ -2,5 +2,5 @@ name: CFPB API Docs
 markdown: maruku
 pygments: true
 safe: true
-baseurl: /api/
+baseurl: /api/hmda/
 exclude: ['.ruby-version', 'node_modules', 'package.json', 'bower.json']
