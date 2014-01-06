@@ -17,7 +17,7 @@ $(function() {
     var $body = $(this);
 
     var ajax = $.ajax({
-      url: "static/hmda_lar.json",
+      url: "/api/static/hmda_lar.json",
       dataType: "json"
     });
 
@@ -30,9 +30,9 @@ $(function() {
         var $row = $("<tr></tr>");
         $row.
           append("<td><code>" + fieldName + "</code></td>").
+          append("<td>" + info['description'] + "</td>").
           append("<td>" + info['type'] + "</td>").
           append("<td>" + (info['indexed'] ? "true" : "false") + "</td>");
-          append("<td>" + info['description'] + "</td>").
         $body.append($row);
       });
     });
