@@ -32,7 +32,7 @@ Qu is the first CFPB project built from the beginning on [GitHub](https://github
 <ul class="repo-list">
   <li class="list-icon">
     <p class="image-wrap">
-      <img src="/api/static/img/octocat.png" width="25px" title="Github">
+      <img src="../static/img/octocat.png" width="25px" title="Github">
     </p>
   </li>
   <li>
