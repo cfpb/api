@@ -529,7 +529,6 @@ ul.repo-list.no-padding {
 
 .page-title {
     margin: 1em .5em .5em .5em;
-    font-size: 1.5em;
 }
 
 .page-title br {
@@ -537,7 +536,8 @@ ul.repo-list.no-padding {
 }
 
 .intro {
-    margin:.75em;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 1.375em;
 }
 
@@ -782,6 +782,10 @@ footer a:hover {
     .footer .footer-oss {
         width: 67%;
     }
+
+    .page-title br {
+    display: block;
+}
 
 } 
 
