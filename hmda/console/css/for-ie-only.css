@@ -541,7 +541,8 @@ body {
 }
 
 .intro {
-    margin-top:.75em;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 1.375em; 
 }
 

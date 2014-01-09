@@ -528,8 +528,7 @@ ul.repo-list.no-padding {
 }
 
 .page-title {
-    margin: 1em .5em .5em .5em;
-    font-size: 1.5em;
+    margin: .5em 0em .5em 0em;
 }
 
 .page-title br {
@@ -537,7 +536,8 @@ ul.repo-list.no-padding {
 }
 
 .intro {
-    margin:.75em;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 1.375em;
 }
 
@@ -731,7 +731,7 @@ footer a:hover {
         width: 220px;
         margin-right: 10px;
         margin: 0;
-        margin-top: 7.188em;
+        margin-top: 6.25em;
         color: #75787B;
     }
 
@@ -746,7 +746,7 @@ footer a:hover {
         width: 66%;
         float: right;
         margin-bottom: 7.5em;
-        margin-top: 7.5em;
+        margin-top: 8em;
         margin-left: 2%;
     }
 
@@ -782,6 +782,10 @@ footer a:hover {
     .footer .footer-oss {
         width: 67%;
     }
+
+    .page-title br {
+    display: block;
+}
 
 } 
 
