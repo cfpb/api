@@ -66,7 +66,7 @@ This clause supports a mini-language for writing queries. It's a subset of SQL <
 support. A ```$where``` clause is made up of one or more comparisons, joined by boolean operators.
 
 <!--[if IE]>
-<h4>Possible comparisons</h4>
+<h5>Possible comparisons</h5>
 <table class="table-code">
 <thead>
 <tr>
@@ -129,7 +129,7 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 </tbody>
 </table>
 
-<h4>Possible boolean comparisons</h4>
+<h5>Possible boolean comparisons</h5>
 <table class="table-code">
 <thead>
 <tr>
