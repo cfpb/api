@@ -974,5 +974,5 @@ del {
 
 /* custom class as .hidden is already used in the guide */
 .expandable-hidden {
-  display: none;
+  display: block;
 }
