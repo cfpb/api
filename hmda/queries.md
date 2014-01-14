@@ -19,6 +19,7 @@ for you too. This section explains the ins and outs of how to gain more insight 
 
 Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore.html) section of our HMDA page.
 
+
 <table class="table-code">
 <thead>
 <tr>
@@ -64,6 +65,9 @@ Use these clauses to filter through millions of records to get only the data you
 This clause supports a mini-language for writing queries. It's a subset of SQL <code>WHERE</code> clauses, with the addition of function 
 support. A ```$where``` clause is made up of one or more comparisons, joined by boolean operators.
 
+<!--[if IE]> This is IE! <![endif]-->
+
+<!--[if !IE]><!-->
 <div class="expandable expandable">
     <header class="expandable-header">
         <span class="expandable-text">Show</span><h4> a list of possible comparisons</h4><a class="expandable-button" href="#"> </a>
@@ -176,6 +180,7 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 </table>
     </div><!-- /.expandable-content -->
 </div>
+<!--<![endif]-->
 
 <span class="anchor" id="aggregating"> </span>
 ### Summarizing and aggregating data
