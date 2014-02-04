@@ -19,6 +19,7 @@ for you too. This section explains the ins and outs of how to gain more insight 
 
 Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore.html) section of our HMDA page.
 
+
 <table class="table-code">
 <thead>
 <tr>
@@ -64,12 +65,112 @@ Use these clauses to filter through millions of records to get only the data you
 This clause supports a mini-language for writing queries. It's a subset of SQL <code>WHERE</code> clauses, with the addition of function 
 support. A ```$where``` clause is made up of one or more comparisons, joined by boolean operators.
 
+<!--[if IE]>
+<h5>Possible comparisons</h5>
+<table class="table-code">
+<thead>
+<tr>
+<th>Operator</th>
+<th>What it means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>equality</td>
+<td><code>name = "Phillip"</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>inequality</td>
+<td><code>state != "Alaska"</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>greater than</td>
+<td><code>age &gt; 18</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>greater than or equal</td>
+<td><code>square_miles &gt;= 1000</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>less than</td>
+<td><code>age &lt; 65</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>less than or equal</td>
+<td><code>square_miles &lt;= 1000</code></td>
+</tr>
+<tr>
+<td><code>LIKE</code></td>
+<td>matches strings</td>
+<td><code>name LIKE = "Pete%"</code> would match "Pete, "Peter," or anything that starts with "Pete"</td>
+</tr>
+<tr>
+<td><code>ILIKE</code></td>
+<td>matches case-insensitive strings</td>
+<td><code>name ILIKE = "%rick"</code> would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it</td>
+</tr>
+<tr>
+<td><code>IS NULL</code></td>
+<td>existence of a value</td>
+<td><code>city is NULL</code></td>
+</tr>
+<tr>
+<td><code>IS NOT NULL</code></td>
+<td>non-existence of a value</td>
+<td><code>city IS NOT NULL</code></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Possible boolean comparisons</h5>
+<table class="table-code">
+<thead>
+<tr>
+<th>Operator</th>
+<th>What it means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AND</code></td>
+<td>logical AND of two comparisons</td>
+<td><code>state = "Alaska" AND age &gt; 18</code></td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td>logical OR of two comparisons</td>
+<td><code>state = "Alaksa" OR state = "Hawaii"</code></td>
+</tr>
+<tr>
+<td><code>NOT</code></td>
+<td>negation of a comparison</td>
+<td><code>NOT (state = "Alaska" OR state = "Hawaii"</code></td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td>grouping or order of operations</td>
+<td><code>(state = "Alaska" OR state = "Hawaii") AND age &gt; 18</code></td>
+</tr>
+</tbody>
+</table>
+
+<![endif]-->
+
+<!--[if !IE]><!-->
 <div class="expandable expandable">
     <header class="expandable-header">
         <span class="expandable-text">Show</span><h4> a list of possible comparisons</h4><a class="expandable-button" href="#"> </a>
     </header>
 
-<div class="expandable-content expandable-hidden">
+<div class="expandable-content expandable-hidden" style="display:none;">
 
 <table class="table-code">
 <thead>
@@ -176,6 +277,7 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 </table>
     </div><!-- /.expandable-content -->
 </div>
+<!--<![endif]-->
 
 <span class="anchor" id="aggregating"> </span>
 ### Summarizing and aggregating data
