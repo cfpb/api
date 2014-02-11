@@ -350,13 +350,12 @@ When summarizing and aggregating data, take care to know the order in which the 
 Then, when you want to use aggregated fields for grouping, name them according to the function you used following
 this format:
 
-```
-function_field_name
-```
+```function_field_name```
 
-```
-sum_number_of_owner_occupied_units
-```
+and
+
+```sum_number_of_owner_occupied_units```
+
 
 ##### That's everything!
 
