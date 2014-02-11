@@ -17,7 +17,7 @@ for you. This section explains the ins and outs of how to gain more insight into
 
 ### Querying data
 
-Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [Explore the data](http://consumerfinance.gov/hmda/explore.html) section of our HMDA page.
+Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [explore the data](http://consumerfinance.gov/hmda/explore.html) section of our HMDA page.
 
 
 <table class="table-code">
