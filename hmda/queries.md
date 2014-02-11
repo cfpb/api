@@ -350,14 +350,18 @@ When summarizing and aggregating data, take care to know the order in which the 
 Then, when you want to use aggregated fields for grouping, name them according to the function you used following
 this format:
 
-```function_field_name```
+```
+function_field_name
+```
 
-```sum_number_of_owner_occupied_units```
+```
+sum_number_of_owner_occupied_units
+```
 
 ##### That's everything!
 
 You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
 
-Get familiar with the information contained in the LAR at the [field reference](fields.html) page, and head on over to the [API calls](console/) page to test out your queries in the console.
+Get familiar with the information contained in HMDA LAR data on the [field reference](fields.html) page, and head on over to [API calls](console/) to test out your queries in the console.
 
 <body id="queries"></body>
