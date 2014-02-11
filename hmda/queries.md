@@ -6,18 +6,18 @@ nav: queries
 
 ### Query Language
 
-Our query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
-learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on our [field reference page](fields.html), or by using the [metadata endpoints](console/#!/hmda/getSliceMetadataHmda_get_3) on our console. Otherwise, we have organized this page into two sections to familiarize yourself:
+The query language is based on Socrata's [SoQL language](http://dev.socrata.com/consumers/getting-started#queryingwithsoql). If you're already comfortable with the basics you can
+learn how to construct more advanced queries by familiarizing yourself with all the HMDA fields on the [field reference](fields.html) page, or by using the [metadata endpoints](console/#!/hmda/getSliceMetadataHmda_get_3) on the interactive console. Otherwise, we have organized this page into two sections to familiarize yourself:
 
-**Querying data** - An overview of the clauses you can specify what you want returned and what you don't in a slice. If our API was a 
-barista at your favorite coffee shop, it could handle even a really complex drink order, no sweat.  
+**Querying data** - An overview of the clauses you can use to specify what you want and do not want returned in a slice. If our API was the 
+barista at your favorite coffee shop, it could handle even the most persnickety of drink orders.  
 
 **Summarizing or aggregating data** - Once you have the data you need to work with, our API can crunch all the numbers 
-for you too. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
+for you. This section explains the ins and outs of how to gain more insight into large and overwhelming data.
 
 ### Querying data
 
-Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [filtering data](http://consumerfinance.gov/hmda/explore.html) section of our HMDA page.
+Use these clauses to filter through millions of records to get only the data you want in a matter of seconds. See the API in action on the [Explore the data](http://consumerfinance.gov/hmda/explore.html) section of our HMDA page.
 
 
 <table class="table-code">
@@ -38,7 +38,7 @@ Use these clauses to filter through millions of records to get only the data you
 </tr>
 <tr>
 <td><code>$orderBy</code></td>
-<td>Fields to order by, separated by commas, or <code>ASC</code> and <code>DESC</code>. If not specified, the order will be consistent, but unspecified. <a href="#orderby">Learn more.</a>.</td>
+<td>Fields to order by, separated by commas, or <code>ASC</code> and <code>DESC</code>. If not specified, the order will be consistent, but unspecified. <a href="#orderby">Learn more</a>.</td>
 </tr>
 <tr>
 <td><code>$group</code></td>
@@ -358,6 +358,6 @@ this format:
 
 You're ready to start building your own queries, and bring HMDA data into your own apps and tools!
 
-Get familiar with the information contained in the LAR on our [field reference](fields.html) page, and head on over to the [API calls](console/) page to test out your queries in our console.
+Get familiar with the information contained in the LAR at the [field reference](fields.html) page, and head on over to the [API calls](console/) page to test out your queries in the console.
 
 <body id="queries"></body>
