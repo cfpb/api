@@ -109,12 +109,12 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 <tr>
 <td><code>LIKE</code></td>
 <td>matches strings</td>
-<td><code>name LIKE = "Pete%"</code> would match "Pete, "Peter," or anything that starts with "Pete"</td>
+<td><code>name LIKE "Pete%"</code> would match "Pete, "Peter," or anything that starts with "Pete"</td>
 </tr>
 <tr>
 <td><code>ILIKE</code></td>
 <td>matches case-insensitive strings</td>
-<td><code>name ILIKE = "%rick"</code> would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it</td>
+<td><code>name ILIKE "%rick"</code> would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it</td>
 </tr>
 <tr>
 <td><code>IS NULL</code></td>
@@ -214,12 +214,12 @@ support. A ```$where``` clause is made up of one or more comparisons, joined by 
 <tr>
 <td><code>LIKE</code></td>
 <td>matches strings</td>
-<td><code>name LIKE = "Pete%"</code> would match "Pete, "Peter," or anything that starts with "Pete"</td>
+<td><code>name LIKE "Pete%"</code> would match "Pete, "Peter," or anything that starts with "Pete"</td>
 </tr>
 <tr>
 <td><code>ILIKE</code></td>
 <td>matches case-insensitive strings</td>
-<td><code>name ILIKE = "%rick"</code> would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it</td>
+<td><code>name ILIKE "%rick"</code> would match "Rick" as well as "Yorick," "Harrick," or anything else with "rick" in it</td>
 </tr>
 <tr>
 <td><code>IS NULL</code></td>
