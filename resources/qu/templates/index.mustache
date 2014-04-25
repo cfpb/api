@@ -1,0 +1,18 @@
+{{< qu/templates/layout}}
+
+{{%body}}
+<h1>{{api_name}}</h1>
+
+<p>Welcome to this data API. To get started, click on one of the datasets below.</p>
+
+<h2>Datasets</h2>
+
+<ul id="dataset-list">
+  {{#datasets}}
+  <li>
+    <a href="{{href}}">{{properties.name}}</a>
+    <small>{{properties.description}}</small>
+  </li>
+  {{/datasets}}
+</ul>
+{{/body}}

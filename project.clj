@@ -3,7 +3,7 @@
   :url "http://api.consumerfinance.gov/"
   :license {:name "Public Domain"}
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [qu/qu-core "1.1.1-SNAPSHOT"]]
+                 [qu/qu-core "1.1.1"]]
   :main ^:skip-aot cfpb.api.core
   :target-path "target/%s"
   :jar-exclusions [#"(^|/)\." #"datasets/.*" ]
