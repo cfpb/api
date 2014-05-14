@@ -1,0 +1,6 @@
+{:http {:port 3000
+        :ip "127.0.0.1"
+        :threads 50
+        :view {:api_name "CFPB Public Data API (Dev)"}}
+ :mongo {:conn {:host "127.0.0.1"
+                :port 27017}}}
