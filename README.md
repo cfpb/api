@@ -1,11 +1,18 @@
 Public Data Platform
 ====================
 
-This is the documentation repository for the Public Data Platform API. It is a separate effort from Qu, the software that powers this API. That documentation lives [here](http://cfpb.github.io/qu/).
 
-Check out the [gh-pages view](https://github.com/pages/data-platform/public-data-platform.io/). 
 
-Thanks to the eregs team and their documentation work for starting us off with a great codebase.
+This is the documentation repository for the Public Data Platform API.
+Check out this API documentation at https://cfpb.github.io/api/hmda/
+
+It is a separate effort from Qu, the software that powers this API.
+That documentation lives [here](http://cfpb.github.io/qu/).
+
+Thanks to the [eRegs](https://github.com/cfpb/regulations-core) team and their documentation work for
+starting us off with a great codebase.
+
+You can use [DOCter](https://github.com/cfpb/DOCter) to build documentation sites similar to this one.
 
 ## Using JavaScript and Bower
 
