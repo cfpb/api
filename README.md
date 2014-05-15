@@ -3,11 +3,11 @@ Public Data Platform
 
 
 
-This is the documentation repository for the Public Data Platform API.
+This is the documentation repository for the Home Mortgage Disclosure Act (HMDA) dataset served by the Public Data Platform API.
 Check out this API documentation at https://cfpb.github.io/api/hmda/
 
-It is a separate effort from Qu, the software that powers this API.
-That documentation lives [here](http://cfpb.github.io/qu/).
+It is a separate effort from [Qu](https://github.com/cfpb/qu), the software that powers this API.
+Qu's documentation lives at http://cfpb.github.io/qu/.
 
 Thanks to the [eRegs](https://github.com/cfpb/regulations-core) team and their documentation work for
 starting us off with a great codebase.
