@@ -3,6 +3,14 @@ CFPB Public Data API
 
 This is the source project for the CFPB public data API at http://api.consumerfinance.gov.
 
+## Create a config file
+
+```sh
+cp sample_config.edn config.edn
+```
+
+Edit that file with appropriate values, including MongoDB connection information.
+
 ## Loading data
 
 To load the HMDA dataset, run `lein repl` and enter the following:
