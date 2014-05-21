@@ -6,15 +6,19 @@ nav: basics
 
 ### API basics
 
-HMDA is a GET API which supports three main operations, each designed to save you time and allow you to focus only on
-the parts of the data you need. It lives at ```https://api.consumerfinance.gov/data/hmda```.
+HMDA is a GET API that lives at ```https://api.consumerfinance.gov/data/hmda```.
 
-You can query an entire dataset, but you can also take advantage of different pre-loaded views, or perspectives on a dataset. 
-When you're ready to get into the weeds, you can query the nitty-gritty details of a dataset you are interested in.
+- You can query an entire **dataset**.
+- You can query dataset **slices**, which are pre-loaded views we think are interesting.
+- You can query **concepts**, which describe types of information found in the dataset.
 
 ##### Datasets
-The endpoint for getting all data begins with ```/data```. Each dataset has an endpoint at ```/data/{dataset-name}```. This endpoint gives 
-all information about a dataset needed to query it. These different views of a dataset are called slices. 
+The endpoint for querying all data begins with ```/data/```. 
+
+| Endpoint | What it does |
+| ------------- | -------------|
+| ```/data/{dataset-name}``` | Gives all information about a dataset 
+| [```/data/hmda```](https://api.consumerfinance.gov/data/hmda) | Gives mortgage data from 2007-2012.
 
 <a href="console/#!/data/getDataset_get_1" class="action-arrow">Try it out <i class="icon-right"> </i></a>
 
