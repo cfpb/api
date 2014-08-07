@@ -52,7 +52,7 @@ convert_ts_to_csv() [python]
         csvout.writerow(row)
 
 link()
-  ln -f $INPUT $OUTPUT
+  ln -f -s $INPUT $OUTPUT
 
 gaz_counties.zip <- [-timecheck]
   curl http://www.census.gov/geo/maps-data/data/docs/gazetteer/Gaz_counties_national.zip > $OUTPUT
