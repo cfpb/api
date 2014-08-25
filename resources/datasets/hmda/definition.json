@@ -703,6 +703,7 @@
       "slice": "hmda_lar",
       "dimensions": [
         "state_code",
+        "county_code",
         "msamd",
         "census_tract_number"
       ],
