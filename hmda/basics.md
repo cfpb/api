@@ -18,7 +18,7 @@ The endpoint for querying all data begins with ```/data/```.
 | Endpoint | What it does |
 | ------------- | -------------|
 | ```/data/{dataset-name}``` | Gives all information about a dataset 
-| [```/data/hmda```](https://api.consumerfinance.gov/data/hmda) | Gives mortgage data from 2007-2012.
+| [```/data/hmda```](https://api.consumerfinance.gov/data/hmda) | Gives mortgage data from 2007-2013.
 
 <a href="console/#!/data/getDataset_get_1" class="action-arrow">Try it out <i class="icon-right"> </i></a>
 
