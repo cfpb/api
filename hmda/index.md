@@ -3,10 +3,7 @@ published: true
 layout: default
 
 ---
-
 ### Overview
-
-<p class="callout">The API is currently down for maintenance. We'll be back up shortly. Thanks for stopping by!</p>
 
 Each year thousands of banks and other financial institutions report data about mortgages to the public as part of the [Home Mortgage Disclosure Act (HMDA)](http://www.consumerfinance.gov/hmda/#video). This data is important because:
 
