@@ -21,7 +21,28 @@ To load the HMDA dataset, run `lein repl` and enter the following:
 (in-ns 'qu.loader)
 (load-dataset "hmda")
 ```
-
 Then close your REPL, using `Ctrl-D`.
-
 This does start the web server, so you may want to use a different configuration that starts it on an unpublished port.
+
+## Speeding up data load
+You can take advantage of more CPU and Ram by concurrently loading chunks of data by splitting the large data file 
+into smaller files with 1 million records each. 
+
+```./hmda_split_csv.sh hmda_lar_all_2012.csv split_hmda_2012_``` 
+
+Then update the definition.json file to load these split files instead of the single CSV. Edit the hmda_lar sources 
+section and replace it with a list of all the split files for the year you're targeting. 
+
+For example, for 2012, it looks like this:
+```
+   "sources": [
+"split_hmda_2012_aa",
+"split_hmda_2012_ab",
+"split_hmda_2012_ac",
+"split_hmda_2012_ad",
+"split_hmda_2012_ae"
+]
+```
+
+
+
