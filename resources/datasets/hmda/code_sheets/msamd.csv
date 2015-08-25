@@ -2351,3 +2351,396 @@ year,code,name
 2010,49740,Yuma - AZ
 2011,49740,Yuma - AZ
 2012,49740,Yuma - AZ
+2013,10180,Abilene - TX
+2013,10380,"Aguadilla, Isabela, San Sebastian - PR"
+2013,10420,Akron - OH
+2013,10500,Albany - GA
+2013,10580,"Albany, Schenectady, Troy - NY"
+2013,10740,Albuquerque - NM
+2013,10780,Alexandria - LA
+2013,10900,"Allentown, Bethlehem, Easton - PA, NJ"
+2013,11020,Altoona - PA
+2013,11100,Amarillo - TX
+2013,11180,Ames - IA
+2013,11260,Anchorage - AK
+2013,11300,Anderson - IN
+2013,11340,Anderson - SC
+2013,11460,Ann Arbor - MI
+2013,11500,"Anniston, Oxford - AL"
+2013,11540,Appleton - WI
+2013,11700,Asheville - NC
+2013,12020,"Athens, Clarke County - GA"
+2013,12060,"Atlanta, Sandy Springs, Marietta - GA"
+2013,12100,"Atlantic City, Hammonton - NJ"
+2013,12220,"Auburn, Opelika - AL"
+2013,12260,"Augusta, Richmond County - GA, SC"
+2013,12420,"Austin, Round Rock, San Marcos - TX"
+2013,12540,"Bakersfield, Delano - CA"
+2013,12580,"Baltimore, Towson - MD"
+2013,12620,Bangor - ME
+2013,12700,Barnstable Town - MA
+2013,12940,Baton Rouge - LA
+2013,12980,Battle Creek - MI
+2013,13020,Bay City - MI
+2013,13140,"Beaumont, Port Arthur - TX"
+2013,13380,Bellingham - WA
+2013,13460,Bend - OR
+2013,13644,"Bethesda, Rockville, Frederick - MD"
+2013,13740,Billings - MT
+2013,13780,Binghamton - NY
+2013,13820,"Birmingham, Hoover - AL"
+2013,13900,Bismarck - ND
+2013,13980,"Blacksburg, Christiansburg, Radford - VA"
+2013,14020,Bloomington - IN
+2013,14060,"Bloomington, Normal - IL"
+2013,14260,"Boise City, Nampa - ID"
+2013,14484,"Boston, Quincy - MA"
+2013,14500,Boulder - CO
+2013,14540,Bowling Green - KY
+2013,14740,"Bremerton, Silverdale - WA"
+2013,14860,"Bridgeport, Stamford, Norwalk - CT"
+2013,15180,"Brownsville, Harlingen - TX"
+2013,15260,Brunswick - GA
+2013,15380,"Buffalo, Niagara Falls - NY"
+2013,15500,Burlington - NC
+2013,15540,"Burlington, South Burlington - VT"
+2013,15764,"Cambridge, Newton, Framingham - MA"
+2013,15804,Camden - NJ
+2013,15940,"Canton, Massillon - OH"
+2013,15980,"Cape Coral, Fort Myers - FL"
+2013,16020,"Cape Girardeau, Jackson - MO, IL"
+2013,16180,Carson City - NV
+2013,16220,Casper - WY
+2013,16300,Cedar Rapids - IA
+2013,16580,"Champaign, Urbana - IL"
+2013,16620,Charleston - WV
+2013,16700,"Charleston, North Charleston, Summerville - SC"
+2013,16740,"Charlotte, Gastonia, Rock Hill - NC, SC"
+2013,16820,Charlottesville - VA
+2013,16860,"Chattanooga - TN, GA"
+2013,16940,Cheyenne - WY
+2013,16974,"Chicago, Joliet, Naperville - IL"
+2013,17020,Chico - CA
+2013,17140,"Cincinnati, Middletown - OH, KY, IN"
+2013,17300,"Clarksville - TN, KY"
+2013,17420,Cleveland - TN
+2013,17460,"Cleveland, Elyria, Mentor - OH"
+2013,17660,Coeur D'Alene - ID
+2013,17780,"College Station, Bryan - TX"
+2013,17820,Colorado Springs - CO
+2013,17860,Columbia - MO
+2013,17900,Columbia - SC
+2013,17980,"Columbus - GA, AL"
+2013,18020,Columbus - IN
+2013,18140,Columbus - OH
+2013,18580,Corpus Christi - TX
+2013,18700,Corvallis - OR
+2013,18880,"Crestview, Fort Walton Beach, Destin - FL"
+2013,19060,"Cumberland - MD, WV"
+2013,19124,"Dallas, Plano, Irving - TX"
+2013,19140,Dalton - GA
+2013,19180,Danville - IL
+2013,19260,Danville - VA
+2013,19340,"Davenport, Moline, Rock Island - IA, IL"
+2013,19380,Dayton - OH
+2013,19460,Decatur - AL
+2013,19500,Decatur - IL
+2013,19660,"Deltona, Daytona Beach, Ormond Beach - FL"
+2013,19740,"Denver, Aurora, Broomfield - CO"
+2013,19780,"Des Moines, West Des Moines - IA"
+2013,19804,"Detroit, Livonia, Dearborn - MI"
+2013,20020,Dothan - AL
+2013,20100,Dover - DE
+2013,20220,Dubuque - IA
+2013,20260,"Duluth - MN, WI"
+2013,20500,"Durham, Chapel Hill - NC"
+2013,20740,Eau Claire - WI
+2013,20764,"Edison, New Brunswick - NJ"
+2013,20940,El Centro - CA
+2013,21060,Elizabethtown - KY
+2013,21140,"Elkhart, Goshen - IN"
+2013,21300,Elmira - NY
+2013,21340,El Paso - TX
+2013,21500,Erie - PA
+2013,21660,"Eugene, Springfield - OR"
+2013,21780,"Evansville - IN, KY"
+2013,21820,Fairbanks - AK
+2013,21940,Fajardo - PR
+2013,22020,"Fargo - ND, MN"
+2013,22140,Farmington - NM
+2013,22180,Fayetteville - NC
+2013,22220,"Fayetteville, Springdale, Rogers - AR, MO"
+2013,22380,Flagstaff - AZ
+2013,22420,Flint - MI
+2013,22500,Florence - SC
+2013,22520,"Florence, Muscle Shoals - AL"
+2013,22540,Fond du Lac - WI
+2013,22660,"Fort Collins, Loveland - CO"
+2013,22744,"Fort Lauderdale, Pompano Beach, Deerfield Beach - FL"
+2013,22900,"Fort Smith - AR, OK"
+2013,23060,Fort Wayne - IN
+2013,23104,"Fort Worth, Arlington - TX"
+2013,23420,Fresno - CA
+2013,23460,Gadsden - AL
+2013,23540,Gainesville - FL
+2013,23580,Gainesville - GA
+2013,23844,Gary - IN
+2013,24020,Glens Falls - NY
+2013,24140,Goldsboro - NC
+2013,24220,"Grand Forks - ND, MN"
+2013,24300,Grand Junction - CO
+2013,24340,"Grand Rapids, Wyoming - MI"
+2013,24500,Great Falls - MT
+2013,24540,Greeley - CO
+2013,24580,Green Bay - WI
+2013,24660,"Greensboro, High Point - NC"
+2013,24780,Greenville - NC
+2013,24860,"Greenville, Mauldin, Easley - SC"
+2013,25020,Guayama - PR
+2013,25060,"Gulfport, Biloxi - MS"
+2013,25180,"Hagerstown, Martinsburg - MD, WV"
+2013,25260,"Hanford, Corcoran - CA"
+2013,25420,"Harrisburg, Carlisle - PA"
+2013,25500,Harrisonburg - VA
+2013,25540,"Hartford, West Hartford, East Hartford - CT"
+2013,25620,Hattiesburg - MS
+2013,25860,"Hickory, Lenoir, Morganton - NC"
+2013,25980,"Hinesville, Fort Stewart - GA"
+2013,26100,"Holland, Grand Haven - MI"
+2013,26180,Honolulu - HI
+2013,26300,Hot Springs - AR
+2013,26380,"Houma, Bayou Cane, Thibodaux - LA"
+2013,26420,"Houston, Sugar Land, Baytown - TX"
+2013,26580,"Huntington, Ashland - WV, KY, OH"
+2013,26620,Huntsville - AL
+2013,26820,Idaho Falls - ID
+2013,26900,"Indianapolis, Carmel - IN"
+2013,26980,Iowa City - IA
+2013,27060,Ithaca - NY
+2013,27100,Jackson - MI
+2013,27140,Jackson - MS
+2013,27180,Jackson - TN
+2013,27260,Jacksonville - FL
+2013,27340,Jacksonville - NC
+2013,27500,Janesville - WI
+2013,27620,Jefferson City - MO
+2013,27740,Johnson City - TN
+2013,27780,Johnstown - PA
+2013,27860,Jonesboro - AR
+2013,27900,Joplin - MO
+2013,28020,"Kalamazoo, Portage - MI"
+2013,28100,"Kankakee, Bradley - IL"
+2013,28140,"Kansas City - MO, KS"
+2013,28420,"Kennewick, Pasco, Richland - WA"
+2013,28660,"Killeen, Temple, Fort Hood - TX"
+2013,28700,"Kingsport, Bristol, Bristol - TN, VA"
+2013,28740,Kingston - NY
+2013,28940,Knoxville - TN
+2013,29020,Kokomo - IN
+2013,29100,"La Crosse - WI, MN"
+2013,29140,Lafayette - IN
+2013,29180,Lafayette - LA
+2013,29340,Lake Charles - LA
+2013,29404,"Lake County, Kenosha County - IL, WI"
+2013,29420,"Lake Havasu City, Kingman - AZ"
+2013,29460,"Lakeland, Winter Haven - FL"
+2013,29540,Lancaster - PA
+2013,29620,"Lansing, East Lansing - MI"
+2013,29700,Laredo - TX
+2013,29740,Las Cruces - NM
+2013,29820,"Las Vegas, Paradise - NV"
+2013,29940,Lawrence - KS
+2013,30020,Lawton - OK
+2013,30140,Lebanon - PA
+2013,30300,"Lewiston - ID, WA"
+2013,30340,"Lewiston, Auburn - ME"
+2013,30460,"Lexington, Fayette - KY"
+2013,30620,Lima - OH
+2013,30700,Lincoln - NE
+2013,30780,"Little Rock, North Little Rock, Conway - AR"
+2013,30860,"Logan - UT, ID"
+2013,30980,Longview - TX
+2013,31020,Longview - WA
+2013,31084,"Los Angeles, Long Beach, Glendale - CA"
+2013,31140,"Louisville, Jefferson County - KY, IN"
+2013,31180,Lubbock - TX
+2013,31340,Lynchburg - VA
+2013,31420,Macon - GA
+2013,31460,"Madera, Chowchilla - CA"
+2013,31540,Madison - WI
+2013,31700,"Manchester, Nashua - NH"
+2013,31740,Manhattan - KS
+2013,31860,"Mankato, North Mankato - MN"
+2013,31900,Mansfield - OH
+2013,32420,Mayaguez - PR
+2013,32580,"McAllen, Edinburg, Mission - TX"
+2013,32780,Medford - OR
+2013,32820,"Memphis - TN, MS, AR"
+2013,32900,Merced - CA
+2013,33124,"Miami, Miami Beach, Kendall - FL"
+2013,33140,"Michigan City, La Porte - IN"
+2013,33260,Midland - TX
+2013,33340,"Milwaukee, Waukesha, West Allis - WI"
+2013,33460,"Minneapolis, St. Paul, Bloomington - MN, WI"
+2013,33540,Missoula - MT
+2013,33660,Mobile - AL
+2013,33700,Modesto - CA
+2013,33740,Monroe - LA
+2013,33780,Monroe - MI
+2013,33860,Montgomery - AL
+2013,34060,Morgantown - WV
+2013,34100,Morristown - TN
+2013,34580,"Mount Vernon, Anacortes - WA"
+2013,34620,Muncie - IN
+2013,34740,"Muskegon, Norton Shores - MI"
+2013,34820,"Myrtle Beach, North Myrtle Beach, Conway - SC"
+2013,34900,Napa - CA
+2013,34940,"Naples, Marco Island - FL"
+2013,34980,"Nashville, Davidson, Murfreesboro, Franklin - TN"
+2013,35004,"Nassau, Suffolk - NY"
+2013,35084,"Newark, Union - NJ, PA"
+2013,35300,"New Haven, Milford - CT"
+2013,35380,"New Orleans, Metairie, Kenner - LA"
+2013,35644,"New York, White Plains, Wayne - NY, NJ"
+2013,35660,"Niles, Benton Harbor - MI"
+2013,35840,"North Port, Bradenton, Sarasota - FL"
+2013,35980,"Norwich, New London - CT"
+2013,36084,"Oakland, Fremont, Hayward - CA"
+2013,36100,Ocala - FL
+2013,36140,Ocean City - NJ
+2013,36220,Odessa - TX
+2013,36260,"Ogden, Clearfield - UT"
+2013,36420,Oklahoma City - OK
+2013,36500,Olympia - WA
+2013,36540,"Omaha, Council Bluffs - NE, IA"
+2013,36740,"Orlando, Kissimmee, Sanford - FL"
+2013,36780,"Oshkosh, Neenah - WI"
+2013,36980,Owensboro - KY
+2013,37100,"Oxnard, Thousand Oaks, Ventura - CA"
+2013,37340,"Palm Bay, Melbourne, Titusville - FL"
+2013,37380,Palm Coast - FL
+2013,37460,"Panama City, Lynn Haven, Panama City Beach - FL"
+2013,37620,"Parkersburg, Marietta, Vienna - WV, OH"
+2013,37700,Pascagoula - MS
+2013,37764,Peabody - MA
+2013,37860,"Pensacola, Ferry Pass, Brent - FL"
+2013,37900,Peoria - IL
+2013,37964,Philadelphia - PA
+2013,38060,"Phoenix, Mesa, Glendale - AZ"
+2013,38220,Pine Bluff - AR
+2013,38300,Pittsburgh - PA
+2013,38340,Pittsfield - MA
+2013,38540,Pocatello - ID
+2013,38660,Ponce - PR
+2013,38860,"Portland, South Portland, Biddeford - ME"
+2013,38900,"Portland, Vancouver, Hillsboro - OR, WA"
+2013,38940,Port St. Lucie - FL
+2013,39100,"Poughkeepsie, Newburgh, Middletown - NY"
+2013,39140,Prescott - AZ
+2013,39300,"Providence, New Bedford, Fall River - RI, MA"
+2013,39340,"Provo, Orem - UT"
+2013,39380,Pueblo - CO
+2013,39460,Punta Gorda - FL
+2013,39540,Racine - WI
+2013,39580,"Raleigh, Cary - NC"
+2013,39660,Rapid City - SD
+2013,39740,Reading - PA
+2013,39820,Redding - CA
+2013,39900,"Reno, Sparks - NV"
+2013,40060,Richmond - VA
+2013,40140,"Riverside, San Bernardino, Ontario - CA"
+2013,40220,Roanoke - VA
+2013,40340,Rochester - MN
+2013,40380,Rochester - NY
+2013,40420,Rockford - IL
+2013,40484,"Rockingham County, Strafford County - NH"
+2013,40580,Rocky Mount - NC
+2013,40660,Rome - GA
+2013,40900,"Sacramento, Arden, Arcade, Roseville - CA"
+2013,40980,"Saginaw, Saginaw Township North - MI"
+2013,41060,St. Cloud - MN
+2013,41100,St. George - UT
+2013,41140,"St. Joseph - MO, KS"
+2013,41180,"St. Louis - MO, IL"
+2013,41420,Salem - OR
+2013,41500,Salinas - CA
+2013,41540,Salisbury - MD
+2013,41620,Salt Lake City - UT
+2013,41660,San Angelo - TX
+2013,41700,"San Antonio, New Braunfels - TX"
+2013,41740,"San Diego, Carlsbad, San Marcos - CA"
+2013,41780,Sandusky - OH
+2013,41884,"San Francisco, San Mateo, Redwood City - CA"
+2013,41900,"San German, Cabo Rojo - PR"
+2013,41940,"San Jose, Sunnyvale, Santa Clara - CA"
+2013,41980,"San Juan, Caguas, Guaynabo - PR"
+2013,42020,"San Luis Obispo, Paso Robles - CA"
+2013,42044,"Santa Ana, Anaheim, Irvine - CA"
+2013,42060,"Santa Barbara, Santa Maria, Goleta - CA"
+2013,42100,"Santa Cruz, Watsonville - CA"
+2013,42140,Santa Fe - NM
+2013,42220,"Santa Rosa, Petaluma - CA"
+2013,42340,Savannah - GA
+2013,42540,"Scranton, Wilkes, Barre - PA"
+2013,42644,"Seattle, Bellevue, Everett - WA"
+2013,42680,"Sebastian, Vero Beach - FL"
+2013,43100,Sheboygan - WI
+2013,43300,"Sherman, Denison - TX"
+2013,43340,"Shreveport, Bossier City - LA"
+2013,43580,"Sioux City - IA, NE, SD"
+2013,43620,Sioux Falls - SD
+2013,43780,"South Bend, Mishawaka - IN, MI"
+2013,43900,Spartanburg - SC
+2013,44060,Spokane - WA
+2013,44100,Springfield - IL
+2013,44140,Springfield - MA
+2013,44180,Springfield - MO
+2013,44220,Springfield - OH
+2013,44300,State College - PA
+2013,44600,"Steubenville, Weirton - OH, WV"
+2013,44700,Stockton - CA
+2013,44940,Sumter - SC
+2013,45060,Syracuse - NY
+2013,45104,Tacoma - WA
+2013,45220,Tallahassee - FL
+2013,45300,"Tampa, St. Petersburg, Clearwater - FL"
+2013,45460,Terre Haute - IN
+2013,45500,"Texarkana, TX - Texarkana, AR"
+2013,45780,Toledo - OH
+2013,45820,Topeka - KS
+2013,45940,"Trenton, Ewing - NJ"
+2013,46060,Tucson - AZ
+2013,46140,Tulsa - OK
+2013,46220,Tuscaloosa - AL
+2013,46340,Tyler - TX
+2013,46540,"Utica, Rome - NY"
+2013,46660,Valdosta - GA
+2013,46700,"Vallejo, Fairfield - CA"
+2013,47020,Victoria - TX
+2013,47220,"Vineland, Millville, Bridgeton - NJ"
+2013,47260,"Virginia Beach, Norfolk, Newport News - VA, NC"
+2013,47300,"Visalia, Porterville - CA"
+2013,47380,Waco - TX
+2013,47580,Warner Robins - GA
+2013,47644,"Warren, Troy, Farmington Hills - MI"
+2013,47894,"Washington, Arlington, Alexandria - DC, VA, MD, WV"
+2013,47940,"Waterloo, Cedar Falls - IA"
+2013,48140,Wausau - WI
+2013,48300,"Wenatchee, East Wenatchee - WA"
+2013,48424,"West Palm Beach, Boca Raton, Boynton Beach - FL"
+2013,48540,"Wheeling - WV, OH"
+2013,48620,Wichita - KS
+2013,48660,Wichita Falls - TX
+2013,48700,Williamsport - PA
+2013,48864,"Wilmington - DE, MD, NJ"
+2013,48900,Wilmington - NC
+2013,49020,"Winchester - VA, WV"
+2013,49180,"Winston, Salem - NC"
+2013,49340,Worcester - MA
+2013,49420,Yakima - WA
+2013,49500,Yauco - PR
+2013,49620,"York, Hanover - PA"
+2013,49660,"Youngstown, Warren, Boardman - OH, PA"
+2013,49700,Yuba City - CA
+2013,49740,Yuma - AZ
+2013,99999,NA (Outside of MSA/MD)
