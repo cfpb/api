@@ -126,6 +126,9 @@ sed_tweaks='
   # remove "CBSA" from MSA codes, if present
   s/CBSA\([0-9]\{5\}\)/\1/;
 
+  # Replaces UTF-8 Characters with ascii equivalent
+  s/[ÀÂÄÁ]/A/g; s/[ÉÈÊË]/E/g; s/[ÎÏ]/I/g; s/[Ü]/U/g
+
   # lowercase words (2+ chars), but keep the first letter capitalized
   s/\b\([[:alpha:]]\)\([[:alpha:]]\+\)\b/\u\1\L\2/g;
 
@@ -140,6 +143,10 @@ sed_tweaks='
 
   # remove quotes from lines without commas
   s/"\([^,]\+\)"/\1/;
+
+  # Captialization Exceptions
+  s/Fond Du Lac/Fond du Lac/g;
+  s/Mcallen/McAllen/g;
 '
 
 if [ $INPUT_TYPE = 'xlsx' ]; then
