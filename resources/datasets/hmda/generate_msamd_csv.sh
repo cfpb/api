@@ -120,8 +120,10 @@ sed_tweaks='
   s/, / - /;
 
   # replace hyphens between citys with comma and a space
-  # also match -- and / as separators to be more flexible
-  s/\([A-Z]\)\(-\|--\|\/\)\([A-Z]\)/\1, \3/g;
+  # first, replace both - or / with ", " unless -- appears in the string
+  /--/!s/\([A-Z]\)\(-\|\/\)\([A-Z]\)/\1, \3/g;
+  # for lines that have --, replace -- with , but leave - as is
+  s/\([A-Z]\)--\([A-Z]\)/\1, \2/g;
 
   # remove "CBSA" from MSA codes, if present
   s/CBSA\([0-9]\{5\}\)/\1/;
