@@ -19,17 +19,31 @@
 #     sed (Mac users: install a newer version of sed: `brew install gnu-sed`)
 #
 
+# NOTE - if using OSX, you'll need to install a newer version of sed to support these queries.
+# for OSX (old BSD sed) --version flag doesn't exist;
+# use --version to detect when you need to install gsed
+sed_bin='sed'
+command -v gsed 2> /dev/null && {
+  sed_bin='gsed'
+}
+$sed_bin --version > /dev/null
+if [ $? != 0 ]; then
+    echo 'Please install gsed with `brew install gnu-sed` in order to use this script'
+    echo 'exiting'
+    exit 1
+fi
+
+
 CSV_APPEND_FILE=
 CODE_COLUMN=1
 NAME_COLUMN=2
 INPUT_TYPE=csv
 PREPEND_YEAR=
-
-OPTIONS_GUIDE="Usage: convert-msalsx-to-html.sh [-c code-column] [-n name-column] [-a csv-append-file] [-t input-type] [-y year] input-file
+OPTIONS_GUIDE="Usage: $0 [-c code-column] [-n name-column] [-a csv-append-file] [-t input-type] [-y year] input-file
     -c	Default: $CODE_COLUMN
     -n	Default: $NAME_COLUMN
     -a	Append results to provided filename
-    -t  Options: csv, xlsx	Default: $INPUT_TYPE
+    -t  Options: csv, xlsx, tab	Default: $INPUT_TYPE
     -y  Prepend year as first column of csv
 "
 
@@ -47,7 +61,7 @@ while getopts ":c:n:a:t:y:h" opt; do
             ;;
         t)
             case "$OPTARG" in
-                csv|xlsx)
+                csv|xlsx|tab)
                     INPUT_TYPE=$OPTARG
                     ;;
                 *)
@@ -79,6 +93,7 @@ if [ $# -ne 1 ]; then
      echo "$OPTIONS_GUIDE" >&2
      exit 1
 fi
+INPUT_FILE=$1
 
 if [[ -n "$CSV_APPEND_FILE" && -z "$PREPEND_YEAR" ]] ; then
     echo "If appending to an existing CSV file, please define the year"
@@ -96,13 +111,6 @@ Note that root access may be required to run pip commands. Aborting.";
         exit 1;
     }
 fi
-
-# NOTE - if using OSX, you'll need to install a newer version of sed to support these queries.
-# `brew install gnu-sed` will create the gsed executable
-sed_bin='sed'
-command -v gsed 2> /dev/null && {
-  sed_bin='gsed'
-}
 
 sed_tweaks='
   # sed input format       47894,"WASHINGTON-ARLINGTON-ALEXANDRIA, DC-VA-MD-WV",
@@ -147,16 +155,23 @@ sed_tweaks='
   # Captialization Exceptions
   s/Fond Du Lac/Fond du Lac/g;
   s/Mcallen/McAllen/g;
+
+  # DOS/Windows formatted text files have \r for endline delimiters that 
+  # unix has trouble interpretting
+  s/\r//g;
 '
 
 if [ $INPUT_TYPE = 'xlsx' ]; then
     # xlsx2csv gracefully handles unicode nastiness, thankfully.
-    dump_cmd="xlsx2csv -d '|' \"$1\""
+    dump_cmd="xlsx2csv -d '|' \"$INPUT_FILE\""
+elif [ $INPUT_TYPE = 'tab' ]; then
+    # replace tab with a | 
+    dump_cmd="cat \"$INPUT_FILE\" |$sed_bin  's/\t/|/'"
 else
     # To make the output match xlsx2csv...
     # replace only the first comma with a |
     # remove any quotes and end-of-line commas
-    dump_cmd="cat \"$1\" | $sed_bin 's/,/|/' | $sed_bin 's/,$//' | tr -d '\"'"
+    dump_cmd="cat \"$INPUT_FILE\" | $sed_bin 's/,/|/' | $sed_bin 's/,$//' | tr -d '\"'"
 fi
 
 OUTPUT_REDIRECT="cat"
@@ -174,6 +189,7 @@ if [ -n "$CSV_APPEND_FILE" ]; then
     fi
 fi
 
+
 # main procedure:
 # 1 - Dump the input file as a pipe (|) delimited CSV.  Since there are commas
 #     in some msa names, this makes it easier for us to have selectable columns
@@ -183,7 +199,7 @@ fi
 # 4 - Output to stdout or optionally append to the specified file
 eval \
     $dump_cmd | \
-    awk -F '|' '{print $'$CODE_COLUMN'",\""$'$NAME_COLUMN'"\""}' | \
+    awk -F'|' '{print $'$CODE_COLUMN'",\""$'$NAME_COLUMN'"\""}' | \
     $sed_bin "$sed_tweaks" | \
     awk '{if ("'$PREPEND_YEAR'") printf "'$PREPEND_YEAR',"; print $0}' | \
     eval $OUTPUT_REDIRECT
