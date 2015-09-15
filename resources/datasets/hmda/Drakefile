@@ -77,7 +77,7 @@ hmda_lar_all_2011_no_fips.csv <- hmda_lar_2011.zip [method:add_headers_and_unzip
 hmda_lar_all_2010_no_fips.csv <- hmda_lar_2010.zip [method:add_headers_and_unzip]
 hmda_lar_all_2009_no_fips.csv <- hmda_lar_2009.zip [method:add_headers_and_unzip]
 hmda_lar_all_2008_no_fips.csv <- hmda_lar_2008.zip [method:add_headers_and_unzip]
-hmda_lar_all_2007_no_fips.csv <- hmda_lar_2007.zip [method:add_headers_and_7unzip]
+hmda_lar_all_2007_no_fips.csv <- hmda_lar_2007.zip [method:add_headers_and_unzip]
 
 hmda_lar_all_2014.csv <- hmda_lar_all_2014_no_fips.csv [method:add_fips_column]
 hmda_lar_all_2013.csv <- hmda_lar_all_2013_no_fips.csv [method:add_fips_column]
