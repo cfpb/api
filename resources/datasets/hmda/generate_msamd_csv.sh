@@ -19,6 +19,21 @@
 #     sed (Mac users: install a newer version of sed: `brew install gnu-sed`)
 #
 
+# NOTE - if using OSX, you'll need to install a newer version of sed to support these queries.
+# for OSX (old BSD sed) --version flag doesn't exist;
+# use --version to detect when you need to install gsed
+sed_bin='sed'
+command -v gsed 2> /dev/null && {
+  sed_bin='gsed'
+}
+$sed_bin --version > /dev/null
+if [ $? != 0 ]; then
+    echo 'Please install gsed with `brew install gnu-sed` in order to use this script'
+    echo 'exiting'
+    exit 1
+fi
+
+
 CSV_APPEND_FILE=
 CODE_COLUMN=1
 NAME_COLUMN=2
@@ -97,13 +112,6 @@ Note that root access may be required to run pip commands. Aborting.";
     }
 fi
 
-# NOTE - if using OSX, you'll need to install a newer version of sed to support these queries.
-# `brew install gnu-sed` will create the gsed executable
-sed_bin='sed'
-command -v gsed 2> /dev/null && {
-  sed_bin='gsed'
-}
-
 sed_tweaks='
   # sed input format       47894,"WASHINGTON-ARLINGTON-ALEXANDRIA, DC-VA-MD-WV",
   # sed output format      47894,"Washington, Arlington, Alexandria - DC, VA, MD, WV"
@@ -159,12 +167,6 @@ elif [ $INPUT_TYPE = 'tab' ]; then
     dos2unix $INPUT_FILE
     if [ $? -ne 0 ]; then
         echo 'install dos2unix with `brew install dos2unix` in order to use tab-delimited files'
-        echo 'exiting'
-        exit 1
-    fi
-    # Must use gsed to properly detect tab characters (on OSX at least)
-    if [ $sed_bin != 'gsed' ]; then
-        echo 'install gsed with `brew install gnu-sed` in order to use tab-delimited files'
         echo 'exiting'
         exit 1
     fi
