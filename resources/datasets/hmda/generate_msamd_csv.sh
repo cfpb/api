@@ -155,23 +155,18 @@ sed_tweaks='
   # Captialization Exceptions
   s/Fond Du Lac/Fond du Lac/g;
   s/Mcallen/McAllen/g;
+
+  # DOS/Windows formatted text files have \r for endline delimiters that 
+  # unix has trouble interpretting
+  s/\r//g;
 '
 
 if [ $INPUT_TYPE = 'xlsx' ]; then
     # xlsx2csv gracefully handles unicode nastiness, thankfully.
     dump_cmd="xlsx2csv -d '|' \"$INPUT_FILE\""
 elif [ $INPUT_TYPE = 'tab' ]; then
-    # this was specifically made for FFIEC files https://www.ffiec.gov/hmda/hmdaflat.htm 
-    # (https://www.ffiec.gov/hmdarawdata/OTHER/2007HMDAMSADescription.zip)
-    # Convert DOS end of line characters with characters awk will properly handle
-    dos2unix $INPUT_FILE
-    if [ $? -ne 0 ]; then
-        echo 'install dos2unix with `brew install dos2unix` in order to use tab-delimited files'
-        echo 'exiting'
-        exit 1
-    fi
+    # replace tab with a | 
     dump_cmd="cat \"$INPUT_FILE\" |$sed_bin  's/\t/|/'"
-    
 else
     # To make the output match xlsx2csv...
     # replace only the first comma with a |
