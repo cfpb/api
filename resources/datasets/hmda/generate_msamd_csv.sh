@@ -24,12 +24,11 @@ CODE_COLUMN=1
 NAME_COLUMN=2
 INPUT_TYPE=csv
 PREPEND_YEAR=
-
-OPTIONS_GUIDE="Usage: convert-msalsx-to-html.sh [-c code-column] [-n name-column] [-a csv-append-file] [-t input-type] [-y year] input-file
+OPTIONS_GUIDE="Usage: $0 [-c code-column] [-n name-column] [-a csv-append-file] [-t input-type] [-y year] input-file
     -c	Default: $CODE_COLUMN
     -n	Default: $NAME_COLUMN
     -a	Append results to provided filename
-    -t  Options: csv, xlsx	Default: $INPUT_TYPE
+    -t  Options: csv, xlsx, tab	Default: $INPUT_TYPE
     -y  Prepend year as first column of csv
 "
 
@@ -47,7 +46,7 @@ while getopts ":c:n:a:t:y:h" opt; do
             ;;
         t)
             case "$OPTARG" in
-                csv|xlsx)
+                csv|xlsx|tab)
                     INPUT_TYPE=$OPTARG
                     ;;
                 *)
@@ -79,6 +78,7 @@ if [ $# -ne 1 ]; then
      echo "$OPTIONS_GUIDE" >&2
      exit 1
 fi
+INPUT_FILE=$1
 
 if [[ -n "$CSV_APPEND_FILE" && -z "$PREPEND_YEAR" ]] ; then
     echo "If appending to an existing CSV file, please define the year"
@@ -151,12 +151,30 @@ sed_tweaks='
 
 if [ $INPUT_TYPE = 'xlsx' ]; then
     # xlsx2csv gracefully handles unicode nastiness, thankfully.
-    dump_cmd="xlsx2csv -d '|' \"$1\""
+    dump_cmd="xlsx2csv -d '|' \"$INPUT_FILE\""
+elif [ $INPUT_TYPE = 'tab' ]; then
+    # this was specifically made for FFIEC files https://www.ffiec.gov/hmda/hmdaflat.htm 
+    # (https://www.ffiec.gov/hmdarawdata/OTHER/2007HMDAMSADescription.zip)
+    # Convert DOS end of line characters with characters awk will properly handle
+    dos2unix $INPUT_FILE
+    if [ $? -ne 0 ]; then
+        echo 'install dos2unix with `brew install dos2unix` in order to use tab-delimited files'
+        echo 'exiting'
+        exit 0
+    fi
+    # Must use gsed to properly detect tab characters (on OSX at least)
+    if [ $sed_bin != 'gsed' ]; then
+        echo 'install gsed with `brew install gnu-sed` in order to use tab-delimited files'
+        echo 'exiting'
+        exit 0
+    fi
+    dump_cmd="cat \"$INPUT_FILE\" |$sed_bin  's/\t/|/'"
+    
 else
     # To make the output match xlsx2csv...
     # replace only the first comma with a |
     # remove any quotes and end-of-line commas
-    dump_cmd="cat \"$1\" | $sed_bin 's/,/|/' | $sed_bin 's/,$//' | tr -d '\"'"
+    dump_cmd="cat \"$INPUT_FILE\" | $sed_bin 's/,/|/' | $sed_bin 's/,$//' | tr -d '\"'"
 fi
 
 OUTPUT_REDIRECT="cat"
@@ -174,6 +192,7 @@ if [ -n "$CSV_APPEND_FILE" ]; then
     fi
 fi
 
+
 # main procedure:
 # 1 - Dump the input file as a pipe (|) delimited CSV.  Since there are commas
 #     in some msa names, this makes it easier for us to have selectable columns
@@ -183,7 +202,7 @@ fi
 # 4 - Output to stdout or optionally append to the specified file
 eval \
     $dump_cmd | \
-    awk -F '|' '{print $'$CODE_COLUMN'",\""$'$NAME_COLUMN'"\""}' | \
+    awk -F'|' '{print $'$CODE_COLUMN'",\""$'$NAME_COLUMN'"\""}' | \
     $sed_bin "$sed_tweaks" | \
     awk '{if ("'$PREPEND_YEAR'") printf "'$PREPEND_YEAR',"; print $0}' | \
     eval $OUTPUT_REDIRECT
