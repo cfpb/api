@@ -160,13 +160,13 @@ elif [ $INPUT_TYPE = 'tab' ]; then
     if [ $? -ne 0 ]; then
         echo 'install dos2unix with `brew install dos2unix` in order to use tab-delimited files'
         echo 'exiting'
-        exit 0
+        exit 1
     fi
     # Must use gsed to properly detect tab characters (on OSX at least)
     if [ $sed_bin != 'gsed' ]; then
         echo 'install gsed with `brew install gnu-sed` in order to use tab-delimited files'
         echo 'exiting'
-        exit 0
+        exit 1
     fi
     dump_cmd="cat \"$INPUT_FILE\" |$sed_bin  's/\t/|/'"
     
