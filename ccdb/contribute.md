@@ -3,6 +3,7 @@ layout: default
 title: Contribute
 nav: contribute
 ---
+
 ### API documentation
 
 The Consumer Complaint Database's application programming interface (API) allows you to filter and download complaint data in machine-readable formats. The API uses the following base url:
