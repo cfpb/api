@@ -1,5 +1,5 @@
 name: CFPB API Docs
-markdown: maruku
+markdown: kramdown
 pygments: true
 safe: true
 baseurl: /api/
