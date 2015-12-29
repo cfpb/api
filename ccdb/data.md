@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: ccdb
 title: Release data
 nav: data
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: ccdb
 title: API documentation
 nav: documentation
 ---

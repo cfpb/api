@@ -1,6 +1,6 @@
 ---
 published: true
-layout: default
+layout: ccdb
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: ccdb
 title: Contribute
 nav: contribute
 ---
