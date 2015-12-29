@@ -388,47 +388,14 @@ nav li {
     padding-left: 4px;
 }
 
+#basics a.basics,
+#console a.console, 
+#queries a.queries,
+#fields a.fields,
+#contribute a.contribute,
+#data a.data,
+#documentation a.documentation,
 #overview a.overview {
-    color: #101820;
-    border-bottom: none;
-    border-left: 4px solid #2CB34A;
-    background-color: transparent;
-    margin-left: -4px;
-}
-
-#basics a.basics {
-    color: #101820;
-    border-bottom: none;
-    border-left: 4px solid #2CB34A;
-    background-color: transparent;
-    margin-left: -4px;
-}
-
-#console a.console {
-    color: #101820;
-    border-bottom: none;
-    border-left: 4px solid #2CB34A;
-    background-color: transparent;
-    margin-left: -4px;
-}
-
-#queries a.queries {
-    color: #101820;
-    border-bottom: none;
-    border-left: 4px solid #2CB34A;
-    background-color: transparent;
-    margin-left: -4px;
-}
-
-#fields a.fields {
-    color: #101820;
-    border-bottom: none;
-    border-left: 4px solid #2CB34A;
-    background-color: transparent;
-    margin-left: -4px;
-}
-
-#contribute a.contribute {
     color: #101820;
     border-bottom: none;
     border-left: 4px solid #2CB34A;
