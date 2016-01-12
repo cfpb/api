@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import "fonts.css";
+@import ""
 
 /*
 Normalize the box model - Thanks, Paul Irish!
@@ -607,6 +608,63 @@ footer a:hover {
         font-size: .75em;
     }
 
+@font-face {
+  font-family: 'CFPB Minicons';
+  src: url('../fonts/cf-icons.eot');
+  src: url('../fonts/cf-icons.eot?#iefix') format('embedded-opentype'), url('../fonts/cf-icons.woff') format('woff'), url('../fonts/cf-icons.ttf') format('truetype'), url('../fonts/cf-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.cf-icon,
+.cf-icon {
+  font-family: 'CFPB Minicons';
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cf-icon-pdf:before {
+  content: "\e402";
+}
+.lt-ie8 .cf-icon-pdf {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e402');
+}
+.cf-icon-pdf-round:before {
+  content: "\e403";
+}
+.lt-ie8 .cf-icon-pdf-round {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e403');
+}
+
+.icon-link {
+  border-bottom-width: 0;
+  position: relative;
+}
+.icon-link_text {
+  border-bottom-width: 1px;
+  border-bottom-style: inherit;
+}
+.icon-link:before,
+.icon-link:after {
+  font-family: 'CFPB Minicons';
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+.icon-link__pdf:after,
+.icon-link__pdf.icon-link__before:before {
+  content: "\e402";
+}
+.icon-link__pdf:after,
+.icon-link__pdf.icon-link__before:before {
+  content: "\e402";
+}
 
 /* MOBILE PORTRAIT 480px */
 
@@ -1139,3 +1197,4 @@ del {
 .expandable-hidden {
   display: none;
 }
+
