@@ -792,6 +792,10 @@ footer a:hover {
         display:none;
     }
 
+    .page-title {
+        font-size: 2em;
+    }
+
 }
 
 
