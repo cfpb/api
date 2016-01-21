@@ -19,7 +19,7 @@ nav: notes
     </button>
     <div class="expandable_content">
         <p>
-            This release expands the database to include two new columns to identify if a consumer opted to publish their complaint narrative and to identify if a complaint is related to a Servicemember or older American.
+            This release expands the database to include two new columns to identify if a consumer opted to publish their complaint narrative and to identify if a complaint is related to a Servicemember or Older American.
         </p>
     </div>
 </div>
