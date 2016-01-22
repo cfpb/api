@@ -17,7 +17,7 @@ Each week we send thousands of consumers' complaints about financial products an
 We don’t verify all the facts alleged in these complaints, but we take steps to confirm a commercial relationship between the consumer and the company. We may remove complaints if they don’t meet all of the publication criteria as defined in our 
 <a class="icon-link icon-link__pdf icon-link__no-wrap" href="http://files.consumerfinance.gov/f/201303_cfpb_Final-Policy-Statement-Disclosure-of-Consumer-Complaint-Data.pdf">
     <span class="icon-link_text">policy statement</span>
-</a>. Data is generally refreshed nightly.
+</a>. Data is generally refreshed nightly. Company level information should be considered in context of company size and/or market share.
 
 The Consumer Complaint Database contains complaints we've received about consumer financial products and services, including:
 
