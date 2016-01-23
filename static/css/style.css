@@ -610,13 +610,7 @@ footer a:hover {
         font-size: .75em;
     }
 
-@font-face {
-  font-family: 'CFPB Minicons';
-  src: url('../fonts/cf-icons.eot');
-  src: url('../fonts/cf-icons.eot?#iefix') format('embedded-opentype'), url('../fonts/cf-icons.woff') format('woff'), url('../fonts/cf-icons.ttf') format('truetype'), url('../fonts/cf-icons.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 .cf-icon,
 .cf-icon {
   font-family: 'CFPB Minicons';
@@ -649,7 +643,7 @@ footer a:hover {
   border-bottom-style: inherit;
 }
 .icon-link:before,
-.icon-link:after {40.
+.icon-link:after {
   font-family: 'CFPB Minicons';
   display: inline-block;
   font-style: normal;
