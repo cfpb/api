@@ -1031,8 +1031,6 @@ button.expandable_header {
     }
     .main-content {
         min-height: 500px;
-        height:auto !important; 
-        height: 500px;
     }
 }
 
@@ -1091,6 +1089,12 @@ button.expandable_header {
     }
 
 }
+
+.main-content {
+    height:auto !important\9; 
+    height: 500px\9;
+}
+
 
 
 
