@@ -9,13 +9,6 @@ nav: fields
 <p>The following fields are currently included in the database.</p>
 
 <table class="table__stack-on-small">
-	<!-- <colgroup>
-		<col span="1" style="width: 20%;">
-		<col span="1" style="width: 35%;">
-		<col span="1" style="width: 20%;">
-		<col span="1" style="width: 35%;">
-	</colgroup> -->
-
 	<thead>
 		<tr>
 			<th>Field name</th>
@@ -95,6 +88,34 @@ nav: fields
 			<td data-label="Indexed?">Mailing ZIP code provided by the consumer. This field may: i) include the first five digits of a ZIP code; ii) include the first three digits of a ZIP code (if the consumer consented to publication of their complaint narrative); or iii) be blank (if ZIP codes have been submitted with non-numeric values, if there are less than 20,000 people in a given ZIP code, or if the complaint has an address outside of the United States).</td>
 		</tr>
 		<tr>
+			<td data-label="Field name">Tags</td>
+			<td data-label="Description">Concepts found in complaint narrative to support easier searching and sorting of complaints.</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Indexed?"></td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Consumer consent provided?</td>
+
+			<td data-label="Description">Identifies whether the consumer opted in to publish their complaint narrative.  We do not publish the narrative unless the consumer consents and consumers can opt-out at any time.</td>
+
+			<td data-label="Data type">plain text</td>
+
+			<td data-label="Indexed?">This field shows whether a consumer provided consent to publish their complaint narrative, as listed below:
+				<br/>
+				<br/>
+				Consent provided: Consumer opted in to share their complaint narrative.
+				<br/>
+				<br/>
+				Data populates in this field 60 days after the complaint was sent to the company for response or after the company provides an optional company public response – whichever comes first, and after steps have been taken to scrub personal information from the complaint narrative.  
+				<br/>
+				<br/>
+				Consent not provided: Consumer did not opt-in to publish their complaint narrative.  Data populates in this field 60 days after the complaint was sent to the company for response or after the company provides an optional company public response – whichever comes first.
+				<br/>
+				<br/>
+				Consent withdrawn: Consumer opted in to publish their complaint narrative and later withdrew their consent. N/A: Consumers did not have the option to publish their consumer complaint narrative before March 19, 2015. Data populates in this field immediately.
+			</td>
+		</tr>
+		<tr>
 			<td data-label="Field name">Submitted via</td>
 			<td data-label="Description">How the complaint was submitted to CFPB</td>
 			<td data-label="Data type">plain text</td>
@@ -128,36 +149,6 @@ nav: fields
 			<td data-label="Field name">Complaint ID</td>
 			<td data-label="Description">The unique identification number for a complaint</td>
 			<td data-label="Data type">number</td>
-			<td data-label="Indexed?"></td>
-		</tr>
-
-		<tr>
-			<td data-label="Field name">Consumer consent provided?</td>
-
-			<td data-label="Description">Identifies whether the consumer opted in to publish their complaint narrative.  We do not publish the narrative unless the consumer consents and consumers can opt-out at any time.</td>
-
-			<td data-label="Data type">plain text</td>
-
-			<td data-label="Indexed?">This field shows whether a consumer provided consent to publish their complaint narrative, as listed below:
-				<br/>
-				<br/>
-				Consent provided: Consumer opted in to share their complaint narrative.
-				<br/>
-				<br/>
-				Data populates in this field 60 days after the complaint was sent to the company for response or after the company provides an optional company public response – whichever comes first, and after steps have been taken to scrub personal information from the complaint narrative.  
-				<br/>
-				<br/>
-				Consent not provided: Consumer did not opt-in to publish their complaint narrative.  Data populates in this field 60 days after the complaint was sent to the company for response or after the company provides an optional company public response – whichever comes first.
-				<br/>
-				<br/>
-				Consent withdrawn: Consumer opted in to publish their complaint narrative and later withdrew their consent. N/A: Consumers did not have the option to publish their consumer complaint narrative before March 19, 2015. Data populates in this field immediately.
-			</td>
-		</tr>
-
-		<tr>
-			<td data-label="Field name">Tags</td>
-			<td data-label="Description">Concepts found in complaint narrative to support easier searching and sorting of complaints.</td>
-			<td data-label="Data type">plain text</td>
 			<td data-label="Indexed?"></td>
 		</tr>
 	</tbody>
