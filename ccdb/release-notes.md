@@ -9,11 +9,11 @@ nav: release-notes
 <div class="expandable">
     <button class="expandable_target" title="Expand content">
         <span class="expandable_cue-open">
-            <h4>Show Release 11 - January 2016</h4>
+            <h4>Show Release 11 - February 2016</h4>
             <span class="cf-icon cf-icon-plus-round"></span>
         </span>
         <span class="expandable_cue-close">
-            <h4>Hide Release 11 - January 2016</h4>
+            <h4>Hide Release 11 - February 2016</h4>
             <span class="cf-icon cf-icon-minus-round"></span>
         </span>
     </button>
