@@ -28,6 +28,7 @@ The Consumer Complaint Database contains complaints we've received about consume
 - Debt collection
 - Money transfers
 - Mortgages
+- Prepaid cards
 - Private student loans
 - Payday loans
 - Other consumer loan (such as pawn and title loans)
