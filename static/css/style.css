@@ -1090,6 +1090,10 @@ button.expandable_header {
 
 }
 
+#fields .main-content {
+    height:auto !important\9; 
+}
+
 
 
 
