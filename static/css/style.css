@@ -1094,6 +1094,10 @@ button.expandable_header {
     height:auto !important\9; 
 }
 
+#documentation .main-content {
+    height: 500px\9;
+}
+
 
 
 
