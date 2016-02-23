@@ -1,0 +1,171 @@
+---
+layout: ccdb
+title: Field reference
+nav: fields
+---
+
+<h3>Field reference</h3>
+
+<p>The following fields are currently included in the database.</p>
+
+<table class="table__stack-on-small">
+	<thead>
+		<tr>
+			<th>Field name</th>
+			<th>Description</th>
+			<th>Data type</th>
+			<th>Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td data-label="Field name">Date received</td>
+			<td data-label="Description">The date the CFPB received the complaint</td>
+			<td data-label="Data type">date & time</td>
+			<td data-label="Notes"></td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Product</td>
+			<td data-label="Description">The type of product the consumer identified in the complaint</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Sub-product</td>
+			<td data-label="Description">The type of sub-product the consumer identified in the complaint</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable. Not all Products have Sub-products.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Issue</td>
+			<td data-label="Description">The issue the consumer identified in the complaint</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable. Possible values are dependent on Product. On December 18, 2013 the issues for student loan complaints were revised. “Repaying your loan” and “Problems when you are unable to pay” were removed and “Can’t pay my loan” and “Dealing with my lender or servicer” were added. Complaints received beginning on that date reflect this change. Complaints received before that date remain unchanged.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Sub-issue</td>
+			<td data-label="Description">The sub-issue the consumer identified in the complaint</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable.
+			<br/>
+			<br/>
+			Possible values are dependent on product and issue.
+			<br/>
+			<br/>
+			Not all Issues have corresponding Sub-issues.
+			<br/>
+			<br/>
+			On December 18, 2013, sub-issues were added for student loan complaints. Previously, sub-issues were not used for this type of complaint. Complaints received beginning on that date reflect this change. Complaints received before that date remain unchanged.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Consumer complaint narrative</td>
+			<td data-label="Description">Consumer complaint narrative is the consumer-submitted description of "what happened" from the complaint. Consumers must opt-in to share their narrative. We will not publish the narrative unless the consumer consents, and consumers can opt-out at any time. The CFPB takes reasonable steps to scrub personal information from each complaint that could be used to identify the consumer.</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">Consumers' descriptions of what happened are included if consumers consent to publishing the description and after we take steps to remove personal information.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Company public response</td>
+			<td data-label="Description">The company's optional, public-facing response to a consumer's complaint. Companies provide a public response to the CFPB, for posting on the public database, by selecting a response from a set list of options.</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">Companies' public-facing responses to complaints are included if companies choose to publish one. Companies may select a public response from a set list of options as soon as they respond to the complaint, but no later than 180 days after the complaint was sent to the company for response.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Company</td>
+			<td data-label="Description">The complaint is about this company</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">State</td>
+			<td data-label="Description">The consumer’s reported mailing state for the complaint</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">ZIP code</td>
+			<td data-label="Description">The consumer’s reported mailing ZIP code for the complaint</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">Mailing ZIP code provided by the consumer. This field may: i) include the first five digits of a ZIP code; ii) include the first three digits of a ZIP code (if the consumer consented to publication of their complaint narrative); or iii) be blank (if ZIP codes have been submitted with non-numeric values, if there are less than 20,000 people in a given ZIP code, or if the complaint has an address outside of the United States).</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Tags</td>
+			<td data-label="Description">
+			Data that supports easier searching and sorting of complaints submitted by or on behalf of consumers.   
+			<br/>
+			<br/>
+			For example, complaints where the submitter reports the age of the consumer as 62 years or older are tagged, &lsquo;Older American.&rsquo;  Complaints submitted by or on behalf of a servicemember or the spouse or dependent of a servicemember are tagged, &lsquo;Servicemember.&rsquo;  Servicemember includes anyone who is active duty, National Guard, or Reservist, as well as anyone who previously served and is a Veteran or retiree.</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes"></td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Consumer consent provided?</td>
+
+			<td data-label="Description">Identifies whether the consumer opted in to publish their complaint narrative.  We do not publish the narrative unless the consumer consents and consumers can opt-out at any time.</td>
+
+			<td data-label="Data type">plain text</td>
+
+			<td data-label="Notes">
+			This field shows whether a consumer provided consent to publish their complaint narrative, as listed below:
+			<br/>
+			<br/>
+			<strong>Consent provided:</strong> Consumer opted in to share their complaint narrative.
+			<br/> 
+			<br/>
+			Data populates in this field 60 days after the complaint was sent to the company for response or after the company provides an optional company public response – whichever comes first, and after steps have been taken to scrub personal information from the complaint narrative.
+			<br/>
+			<br/>
+			<strong>Consent not provided:</strong> Consumer did not opt-in to publish their complaint narrative.  Data populates in this field 60 days after the complaint was sent to the company for response or after the company provides an optional company public response – whichever comes first.
+			<br/>
+			<br/>
+			<strong>Consent withdrawn:</strong> Consumer opted in to publish their complaint narrative and later withdrew their consent.
+			<br/>
+			<br/>
+			<strong>N/A:</strong> Consumers did not have the option to publish their consumer complaint narrative or the complaint was received before March 19, 2015.  Data populates in this field immediately.
+			<br/>
+			<br/>
+			<strong>Other:</strong> Complaint does not meet criteria for narrative publication.
+			<br/> 
+			<br/> 
+			Blanks appear until at least 60 days after the complaint is sent to the company for response or until the company provides an optional company public response – whichever comes first.
+			</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Submitted via</td>
+			<td data-label="Description">How the complaint was submitted to CFPB</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Date sent to company</td>
+			<td data-label="Description">The date the CFPB sent the complaint to the company</td>
+			<td data-label="Data type">date & time</td>
+			<td data-label="Notes"></td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Company response to consumer</td>
+			<td data-label="Description">This is how the company responded to the complaint</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">This field is a categorical variable.</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Timely response?</td>
+			<td data-label="Description">Whether the company gave a timely response</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">yes/no</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Consumer disputed?</td>
+			<td data-label="Description">Whether the consumer disputed the company’s response</td>
+			<td data-label="Data type">plain text</td>
+			<td data-label="Notes">yes/no</td>
+		</tr>
+		<tr>
+			<td data-label="Field name">Complaint ID</td>
+			<td data-label="Description">The unique identification number for a complaint</td>
+			<td data-label="Data type">number</td>
+			<td data-label="Notes"></td>
+		</tr>
+	</tbody>
+</table>
+
+<body id="fields"></body>
