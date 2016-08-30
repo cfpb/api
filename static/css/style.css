@@ -1492,23 +1492,4 @@ del {
     h2, h3{page-break-after: avoid}
 }
 
-.expandable {
-  margin-bottom: 15px;
-}
 
-.expandable:hover {
-}
-
-.open {}
-
-
-.expandable h4 {
-  display: inline;
-  font-size: 1em;
-  line-height: 1.25em;
-  text-transform: none;
-}
-
-.u-visually-hidden {
-
-}
