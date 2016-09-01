@@ -29,8 +29,9 @@ The Consumer Complaint Database contains complaints we've received about consume
 - Money transfers
 - Mortgages
 - Prepaid cards
-- Private student loans
 - Payday loans
+- Student loans (private student loans and federal student loan servicing)
+- Virtual currency
 - Other consumer loan (such as pawn and title loans)
 - Other financial service (such as credit repair and debt settlement)
 

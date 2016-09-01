@@ -732,7 +732,7 @@ footer a:hover {
     display: none;
   }
   .table__stack-on-small td[data-label]:before {
-    font-family: Arial, Arial, sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     display: block;
@@ -778,7 +778,7 @@ footer a:hover {
   cursor: pointer;
 }
 .expandable_target:focus {
-  outline: 1px dotted #046b99;
+  outline: 1px dotted #101820;
   outline-offset: 1px;
 }
 .expandable_content:after {
@@ -790,8 +790,8 @@ footer a:hover {
   zoom: 1;
 }
 .expandable_label {
-  color: #046b99;
-  font-family: Arial, Arial, sans-serif;
+  color: #101820;
+  font-family: "Avenir Next Medium", Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
 }
@@ -799,8 +799,8 @@ footer a:hover {
   font-weight: normal !important;
 }
 .expandable_link {
-  color: #046b99;
-  font-family: Arial, Arial, sans-serif;
+  color: #0072ce;
+  font-family: "Avenir Next", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 0.875em;
@@ -808,7 +808,7 @@ footer a:hover {
 }
 .expandable_link em,
 .expandable_link i {
-  font-family: Arial, Arial, sans-serif;
+  font-family: "Avenir Next", Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
@@ -818,7 +818,7 @@ footer a:hover {
 }
 .expandable_link strong,
 .expandable_link b {
-  font-family: Arial, Arial, sans-serif;
+  font-family: "Avenir Next Demi", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
@@ -865,11 +865,11 @@ button.expandable_header {
 }
 .expandable__padded {
   margin-bottom: 1.875em;
-  background: #e1f3f8;
+  background: #e7e8e9;
 }
 .expandable__padded:hover,
 .expandable__padded.expandable__expanded {
-  background: #edf8fb;
+  background: #d2d3d5;
 }
 .expandable__padded .expandable_header {
   padding: 0.625em 1em;
@@ -882,17 +882,17 @@ button.expandable_header {
   display: block;
   height: 1px;
   margin-bottom: 1em;
-  background: #ccebf3;
+  background: #babbbd;
 }
 .expandable-group {
   margin-bottom: 1.875em;
 }
 .expandable-group_header {
   padding: 0.35714286em 1.14285714em;
-  border-bottom: 1px solid #046b99;
-  background: #d6d7d9;
-  color: #212121;
-  font-family: Arial, Arial, sans-serif;
+  border-bottom: 1px solid #babbbd;
+  background: #e7e8e9;
+  color: #5a5d61;
+  font-family: "Avenir Next Demi", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   margin-bottom: 1.07142857em;
@@ -906,12 +906,12 @@ button.expandable_header {
   font-weight: normal !important;
 }
 .expandable-group .expandable {
-  border-bottom: 1px solid #046b99;
+  border-bottom: 1px solid #babbbd;
   margin-bottom: 0;
   background: #fff;
 }
 .expandable-group .expandable_label {
-  font-family: Arial, Arial, sans-serif;
+  font-family: "Avenir Next Medium", Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   margin-bottom: 0.83333333em;
@@ -924,6 +924,66 @@ button.expandable_header {
 }
 .expandable-group .expandable_content {
   margin-bottom: 0;
+}
+
+@media only all and (max-width:37.5em) {
+    .expandable_header__jump-link {
+        display: block;
+        width: 100%;
+        padding: .625em 0;
+        border: dotted #0072ce;
+        border-width: 1px 0;
+    }
+
+    .expandable_header__jump-link .expandable_label,.expandable_header__jump-link .expandable_link {
+        color: #0072ce;
+    }
+
+    .expandable_header__jump-link:hover,.expandable_header__jump-link.hover {
+        border-style: solid;
+        border-color: #7eb7e8;
+    }
+
+    .expandable_header__jump-link:hover .expandable_label,.expandable_header__jump-link.hover .expandable_label,.expandable_header__jump-link:hover .expandable_link,.expandable_header__jump-link.hover .expandable_link {
+        color: #7eb7e8;
+    }
+
+    .expandable_header__jump-link:focus,.expandable_header__jump-link.focus {
+        border-style: solid;
+        outline: thin dotted;
+    }
+
+    .expandable_header__jump-link:active,.expandable_header__jump-link.active {
+        border-style: solid;
+        border-color: #254b87;
+    }
+
+    .expandable_header__jump-link:active .expandable_label,.expandable_header__jump-link.active .expandable_label,.expandable_header__jump-link:active .expandable_link,.expandable_header__jump-link.active .expandable_link {
+        color: #254b87;
+    }
+}
+
+.expandable_header-left {
+    width: 78%;
+}
+
+.expandable_header-right {
+    width: 22%;
+    text-align: right;
+}
+
+@media only all and (min-width:37.5625em) {
+    .expandable__mobile-only .expandable_header {
+        display: none;
+    }
+}
+
+.expandable-group_header {
+    border-bottom: none;
+}
+
+.expandable-group_items .expandable:first-child {
+    border-top: 1px solid #babbbd;
 }
 
 .cf-icon-plus-round:before {
@@ -939,12 +999,8 @@ button.expandable_header {
   *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e111');
 }
 
-.expandable .cf-icon {
-  color: #0072CE;
-}
-.expandable_target {
-  color: #0072CE;
-}
+
+
 
 /* MOBILE PORTRAIT 480px */
 
@@ -1436,19 +1492,4 @@ del {
     h2, h3{page-break-after: avoid}
 }
 
-.expandable {
-  margin-bottom: 15px;
-}
 
-.expandable:hover {
-}
-
-.open {}
-
-
-.expandable h4 {
-  display: inline;
-  font-size: 1em;
-  line-height: 1.25em;
-  text-transform: none;
-}
