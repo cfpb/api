@@ -1,7 +1,7 @@
 CFPB Public Data API
 ====================
 
-This is the source project for the CFPB public data API at http://api.consumerfinance.gov.
+This is the source project for the CFPB public data API at http://api.consumerfinance.gov. It contains up-to-date load scripts for populating data in that API. Note, however, that the `resources/static/` directory is a work in progress; refer to https://github.com/cfpb/qu/tree/master/resources/static for the current static resources.
 
 ## Create a config file
 
