@@ -21,6 +21,19 @@ We don’t verify all the facts alleged in these complaints, but we take steps t
 
 The Consumer Complaint Database contains complaints we’ve received about consumer financial products and services. In Spring 2017, we made some changes to how we present the products and services in response to feedback from consumers and stakeholders. The changes included streamlining and reorganizing how things were grouped, as well as making some plain language improvements. As a result, you’ll see both old and new values in the Database, depending on whether the complaint was submitted before or after these changes.
 
+<ul class="list list__links">
+  <li class="list_item">
+    <a class="icon-link icon-link__pdf icon-link__no-wrap" href="#">
+      <span class="icon-link_text">Learn more about changes to products and issues</span>
+    </a>
+  </li>
+  <li class="list_item">
+    <a class="icon-link icon-link__pdf icon-link__no-wrap" href="#">
+      <span class="icon-link_text">View full list of products, sub-products, issues, and sub-issues</span>
+    </a>
+  </li>
+</ul>
+
 #### Financial products and services in the Consumer Complaint Database
 
 - Checking or savings account
