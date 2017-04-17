@@ -25,10 +25,13 @@ nav: release-notes
             </button>
             <div class="expandable_content">
                 <p>
-                    This release reflects changes to the consumer complaint web form and to the Bureau’s case management system, including changes to products, sub-products, issues and sub-issues, and a change to the format of company names for complaints received on or after April 24, 2017. Complaints received before that date do not reflect such changes. For specific details on the changes, please refer to
-                    <a class="icon-link icon-link__pdf icon-link__no-wrap" href="#">
-                        <span class="icon-link_text">the Executive summary</span>
-                    </a>.
+                    This release reflects updates made to the form consumers use to submit complaints on April 24, 2017, including reorganizing how products, sub-products, issues, and sub-issues are grouped and making some plain language improvements.
+                </p>
+                <p>
+                    The Consumer Complaint Database shows the consumer’s original product, sub-product, issue, and sub-issue selections consistent with the options available on the form at the time the consumer submitted the complaint.
+                </p>
+                <p>
+                    This release also includes formatting updates of company names and reflects the discontinuation of the consumer dispute process.
                 </p>
             </div>
         </div>
