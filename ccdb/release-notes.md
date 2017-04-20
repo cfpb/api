@@ -25,7 +25,7 @@ nav: release-notes
             </button>
             <div class="expandable_content">
                 <p>
-                    This release reflects updates made to the form consumers use to submit complaints on April 24, 2017, including reorganizing how products, sub-products, issues, and sub-issues are grouped and making some plain language improvements.
+                    This release reflects updates made on April 24, 2017 to the form consumers use to submit complaints, including reorganizing how products, sub-products, issues, and sub-issues are grouped and making some plain language improvements.
                 </p>
                 <p>
                     The Consumer Complaint Database shows the consumer’s original product, sub-product, issue, and sub-issue selections consistent with the options available on the form at the time the consumer submitted the complaint.
