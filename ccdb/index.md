@@ -25,12 +25,12 @@ The Consumer Complaint Database shows the consumer’s original product, sub-pro
 
 <ul class="list list__links">
   <li class="list_item">
-    <a class="icon-link icon-link__pdf icon-link__no-wrap" href="#">
+    <a class="icon-link icon-link__pdf icon-link__no-wrap" href="http://files.consumerfinance.gov/f/documents/201704_cfpb_Summary_of_Product_and_Sub-product_Changes.pdf">
       <span class="icon-link_text">Learn more about complaint form changes to products and sub-products</span>
     </a>
   </li>
   <li class="list_item">
-    <a class="icon-link icon-link__pdf icon-link__no-wrap" href="#">
+    <a class="icon-link icon-link__pdf icon-link__no-wrap" href="http://files.consumerfinance.gov/f/documents/201704_cfpb_Consumer_Complaint_Form_Product_and_Issue_Options.pdf">
       <span class="icon-link_text">View full list of complaint form products, sub-products, issues and sub-issues</span>
     </a>
   </li>
