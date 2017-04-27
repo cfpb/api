@@ -10,7 +10,7 @@ nav: release-notes
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
-                    Release 13 – April 2017
+                    Release 13 – May 2017
                 </span>
                 <span class="expandable_header-right expandable_link">
                     <span class="expandable_cue-open">
@@ -31,7 +31,7 @@ nav: release-notes
                     The Consumer Complaint Database shows the consumer’s original product, sub-product, issue, and sub-issue selections consistent with the options available on the form at the time the consumer submitted the complaint.
                 </p>
                 <p>
-                    This release also includes formatting updates of company names and reflects the discontinuation of the consumer dispute process.
+                    This release also includes formatting updates of company names, reflects the discontinuation of the consumer dispute process, and displays U.S. territories in the State field.
                 </p>
             </div>
         </div>
