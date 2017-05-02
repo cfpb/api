@@ -19,7 +19,7 @@ We don’t verify all the facts alleged in these complaints, but we take steps t
     <span class="icon-link_text">policy statement</span>
 </a>. Data is generally refreshed daily. Company level information should be considered in context of company size and/or market share.
 
-The Consumer Complaint Database contains complaints we’ve received about consumer financial products and services. In April 2017 we updated the form consumers use to submit complaints. The changes include reorganizing how products, sub-products, issues, and sub-issues are grouped and making some plain language improvements.
+The Consumer Complaint Database contains complaints we’ve received about consumer financial products and services. In April 2017 we updated the form consumers use to submit complaints. The changes include making some plain language improvements and reorganizing how products, sub-products, issues, and sub-issues are grouped.
 
 The Consumer Complaint Database shows the consumer’s original product, sub-product, issue, and sub-issue selections consistent with the options available on the form at the time the consumer submitted the complaint.
 
