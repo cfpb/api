@@ -10,6 +10,34 @@ nav: release-notes
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
+                    Release 13 – May 2017
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>
+                    This release reflects updates made on April 24, 2017 to the form consumers use to submit complaints, including reorganizing how products, sub-products, issues, and sub-issues are grouped and making some plain language improvements.
+                </p>
+                <p>
+                    The Consumer Complaint Database shows the consumer’s original product, sub-product, issue, and sub-issue selections consistent with the options available on the form at the time the consumer submitted the complaint.
+                </p>
+                <p>
+                    This release also includes formatting updates of company names, reflects the discontinuation of the consumer dispute process, and displays U.S. territories in the State field.
+                </p>
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
                     Release 12 - September 2016
                 </span>
                 <span class="expandable_header-right expandable_link">
@@ -171,7 +199,7 @@ nav: release-notes
                   <li>The issues consumers can select on the student loan complaint form were revised. “Repaying your loan” and “Problems when you are unable to pay” were removed and “Can’t pay my loan” and “Dealing with my lender or servicer” were added.</li>
                   <li>Consumers can now select a sub-issue for student loan complaints.</li>
                   <li>Consumers can now submit a credit reporting complaint about the issues “Incorrect information on my credit report” and “Credit reporting company’s investigation” without first filing a dispute with the credit reporting company.</li>
-                </ul> 
+                </ul>
                 Complaints we receive beginning December 18, 2013, will reflect these changes as they appear in the database. Complaints received before then will remain unchanged.
                 </p>
             </div>
