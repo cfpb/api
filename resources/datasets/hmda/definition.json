@@ -1,8 +1,8 @@
 {
   "info": {
     "url": "http://www.ffiec.gov/hmda/hmdaproducts.htm",
-    "name": "2007-2015 HMDA LAR",
-    "description": "Home Mortgage Disclosure Act Data for the years 2007-2015. To interpret HMDA results correctly, we recommend reviewing the <a href='http://www.federalreserve.gov/pubs/bulletin/'>Fed's annual article</a>, which discusses current trends and includes high-level record counts. Not interested in programming? Check out <a href='http://www.consumerfinance.gov/hmda/'>tools to explore the data</a>.",
+    "name": "2007-2016 HMDA LAR",
+    "description": "Home Mortgage Disclosure Act Data for the years 2007-2016. To interpret HMDA results correctly, we recommend reviewing the <a href='http://www.federalreserve.gov/pubs/bulletin/'>Fed's annual article</a>, which discusses current trends and includes high-level record counts. Not interested in programming? Check out <a href='http://www.consumerfinance.gov/hmda/'>tools to explore the data</a>.",
     "swagger_description": "LAR data"
   },
   "concepts": {
@@ -798,6 +798,7 @@
     },
     "institutions": {
       "sources": [
+	"hmda_ts_2016.csv",
 	"hmda_ts_2015.csv",
         "hmda_ts_2014.csv",
         "hmda_ts_2013.csv",
@@ -1072,6 +1073,7 @@
     },
     "hmda_lar": {
       "sources": [
+	"hmda_lar_2016.csv",
 	"hmda_lar_2015.csv",
         "hmda_lar_2014.csv",
         "hmda_lar_2013.csv",
