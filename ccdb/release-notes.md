@@ -10,6 +10,41 @@ nav: release-notes
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
+                    Release 14 – November 2017
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>This release enhances the searching and filtering capabilities within the Consumer Complaint Database. For instance, users can filter by more than one value within each filter type, view complaint counts for the values in each filter type, and see the number of matching search results. Search capabilities allow users to find specific words or phrases in a complaint, refine a search to display matches within only the company name or narrative text, and use advanced search functions to further refine search results. The API also supports the new capabilities.</p>
+
+                <h4>Users can still</h4>
+                <ul>
+                    <li>Filter and search on all database fields, except for ‘Consumer disputed?’</li>
+                    <li>Export search results from the database via CSV and JSON formats only</li>
+                    <li>“Toggle” back to the original Socrata interface</li>
+                </ul>
+                <h4>What Changed?</h4>
+                <ul>
+                    <li>Some filter labels were updated to be in better compliance with plain language standards. For instance, the “Submitted via” filter is now phrased “How did the consumer submit the complaint to the CFPB?” This does not affect how the data is labeled in the API or export.</li>
+                    <li>Users can click on a complaint ID number to see all the details associated with that complaint in a detail page that has a unique, shareable URL.</li>
+                    <li>“Consumer disputed?” is no longer a column that can be filtered; however, users will see the data in their search results and export files. The Bureau discontinued the consumer dispute option on April 24, 2017.</li>
+                    <li>“Complaint ID” is no longer a column that can be filtered; however, users can search for specific complaint IDs.</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
                     Release 13 – May 2017
                 </span>
                 <span class="expandable_header-right expandable_link">
