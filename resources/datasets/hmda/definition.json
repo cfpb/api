@@ -390,7 +390,7 @@
         "state_code",
         "state_abbr",
         ["as_of_year", "property_type", "action_taken", "owner_occupancy", "lien_status"],
-        ["as_of_year", "state_code", "action_taken"],
+        ["as_of_year", "action_taken", "state_code"],
         ["property_type", "owner_occupancy", "lien_status"],
         ["respondent_id", "agency_code"],
         ["state_code", "county_code"]
