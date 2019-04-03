@@ -3,6 +3,20 @@ published: true
 layout: default
 
 ---
+
+<div class="m-notification
+        m-notification__visible
+        m-notification__warning" style="position: relative; padding: 15px; border: 1px solid #b4b5b6; background: #fff0dd; border-color: #ff9e1b; display: block;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1200" class="cf-icon-svg" style="overflow: hidden; height: 1.1875em; vertical-align: text-top; max-width: 1em; position: absolute; fill: #ff9e1b;">
+    <path d="M500 105.2c-276.1 0-500 223.9-500 500s223.9 500 500 500 500-223.9 500-500-223.9-500-500-500zm-49.7 234.6c0-27.6 22.4-50 50-50s50 22.4 50 50v328.6c0 27.6-22.4 50-50 50s-50-22.4-50-50V339.8zm50 582.5c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7S572 811 572 850.6s-32.1 71.7-71.7 71.7z" /></svg>
+  <div class="m-notification_content" style="padding-left: 1.5625em;">
+    <div class="h4 m-notification_message" style="font-size: 1.125em; font-weight: 500; letter-spacing: initial; line-height: 1.25; text-transform: initial; margin-bottom: 0;">The HMDA API will sunset in the coming months.</div>
+    <p class="m-notification_explanation" style="margin: 1em 0; margin-bottom: 0; margin-top: .3125em;">
+      <a href="https://consumerfinance.gov/data-research/hmda-api-retirement/" style="background: 0 0; border-width: 0; border-style: dotted; border-color: #0072ce; color: #0072ce; text-decoration: none; border-bottom-width: 1px;">Learn more about what to expect</a>
+    </p>
+  </div>
+</div>
+
 ### Overview
 
 Each year thousands of banks and other financial institutions report data about mortgages to the public as part of the [Home Mortgage Disclosure Act (HMDA)](http://www.consumerfinance.gov/hmda/#video). This data is important because:
@@ -10,8 +24,6 @@ Each year thousands of banks and other financial institutions report data about 
 - It helps show whether lenders are serving the housing needs of their communities;
 - It gives public officials insight that helps them make informed decisions about policies; and
 - It sheds light on lending patterns that could be discriminatory
-
-The CFPB provides every year of the Loan Application Register (LAR) data since 2007. That adds up to about 15 to 20 million records every year, and we think that you could build something really cool with it. 
 
 ##### Get started
 We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized this site into four major areas.
@@ -25,7 +37,7 @@ We built the API to be as self-documenting as possible, but if you find yourself
 
 [HMDA](http://www.consumerfinance.gov/hmda) is the CFPB's first dataset to publish using [Qu](http://cfpb.github.io/qu/), an in-progress data platform created to serve public data.
 
-Qu is the first CFPB project built from the beginning on [GitHub](https://github.com/cfpb/), too. If you think you can make the API better–or just want to take a look under the hood–check it out, and learn about how you can host your own datasets or contribute to the project. 
+Qu is the first CFPB project built from the beginning on [GitHub](https://github.com/cfpb/), too. If you think you can make the API better–or just want to take a look under the hood–check it out, and learn about how you can host your own datasets or contribute to the project.
 
 <ul class="repo-list">
   <li class="list-icon">
