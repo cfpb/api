@@ -1,0 +1,562 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Consumer Complaint Database API"
+  description: >
+    This API provides programmatic search access to the CFPB's database of consumer complaints.
+    Search results can be returned in json or csv formats.
+  termsOfService: "https://cfpb.github.io/source-code-policy/"
+  contact:
+    email: "tech@consumerfinance.gov"
+  license:
+    name: "Licensed Creative Commons CC0"
+    url: "https://github.com/cfpb/ccdb5-api/blob/master/LICENSE"
+host: "consumerfinance.gov"
+basePath: "/data-research/consumer-complaints/search/api/v1/"
+schemes:
+- http
+- https
+paths:
+  /:
+    get:
+      tags:
+        - Complaints
+      summary: "Search consumer complaints"
+      description: "Search the contents of the consumer complaint database"
+      operationId: "getComplaints"
+      produces:
+      - "application/json"
+      - "text/csv"
+      parameters:
+      - $ref: "#/parameters/search_term"
+      - $ref: "#/parameters/field"
+      - $ref: "#/parameters/from"
+      - $ref: "#/parameters/size"
+      - $ref: "#/parameters/sort"
+      - $ref: "#/parameters/format"
+      - $ref: "#/parameters/no_aggs"
+      - $ref: "#/parameters/no_highlight"
+      - $ref: "#/parameters/company"
+      - $ref: "#/parameters/company_public_response"
+      - $ref: "#/parameters/company_received_max"
+      - $ref: "#/parameters/company_received_min"
+      - $ref: "#/parameters/company_response"
+      - $ref: "#/parameters/consumer_consent_provided"
+      - $ref: "#/parameters/consumer_disputed"
+      - $ref: "#/parameters/date_received_max"
+      - $ref: "#/parameters/date_received_min"
+      - $ref: "#/parameters/has_narrative"
+      - $ref: "#/parameters/issue"
+      - $ref: "#/parameters/product"
+      - $ref: "#/parameters/state"
+      - $ref: "#/parameters/submitted_via"
+      - $ref: "#/parameters/tag"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: '#/definitions/SearchResult'
+        400:
+          description: "Invalid status value"
+  /_suggest:
+    get:
+      tags:
+        - Typeahead
+      summary: "Suggest possible searches"
+      description: "The endpoint for the main search box in the UI"
+      parameters:
+      - $ref: "#/parameters/size"
+      - $ref: "#/parameters/suggest_text"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/SuggestResult"
+        400:
+          description: "Invalid input"
+  /_suggest_company:
+    get:
+      tags:
+        - Typeahead
+      summary: "Suggest possible companies"
+      description: "Provide a list of companies that match the input text"
+      parameters:
+      - $ref: "#/parameters/suggest_text"
+      - $ref: "#/parameters/size"
+      - $ref: "#/parameters/company_public_response"
+      - $ref: "#/parameters/company_received_max"
+      - $ref: "#/parameters/company_received_min"
+      - $ref: "#/parameters/company_response"
+      - $ref: "#/parameters/consumer_consent_provided"
+      - $ref: "#/parameters/consumer_disputed"
+      - $ref: "#/parameters/date_received_max"
+      - $ref: "#/parameters/date_received_min"
+      - $ref: "#/parameters/has_narrative"
+      - $ref: "#/parameters/issue"
+      - $ref: "#/parameters/product"
+      - $ref: "#/parameters/state"
+      - $ref: "#/parameters/submitted_via"
+      - $ref: "#/parameters/tag"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/SuggestResult"
+        400:
+          description: "Invalid input"
+  /_suggest_zip:
+    get:
+      tags:
+        - Typeahead
+      summary: "Suggest possible zip codes"
+      description: "Provide a list of zip codes that match the input text"
+      parameters:
+      - $ref: "#/parameters/suggest_text"
+      - $ref: "#/parameters/size"
+      - $ref: "#/parameters/company_public_response"
+      - $ref: "#/parameters/company_received_max"
+      - $ref: "#/parameters/company_received_min"
+      - $ref: "#/parameters/company_response"
+      - $ref: "#/parameters/consumer_consent_provided"
+      - $ref: "#/parameters/consumer_disputed"
+      - $ref: "#/parameters/date_received_max"
+      - $ref: "#/parameters/date_received_min"
+      - $ref: "#/parameters/has_narrative"
+      - $ref: "#/parameters/issue"
+      - $ref: "#/parameters/product"
+      - $ref: "#/parameters/state"
+      - $ref: "#/parameters/submitted_via"
+      - $ref: "#/parameters/tag"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/SuggestResult"
+        400:
+          description: "Invalid input"
+  /{complaintId}:
+    get:
+      tags:
+        - Complaints
+      summary: "Find comsumer complaint by ID"
+      description: "Get complaint details for a specific ID"
+      parameters:
+      - name: complaintId
+        in: path
+        description: ID of the complaint
+        required: true
+        type: integer
+        maximum: 9999999999
+        minimum: 0
+        format: int64
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Complaint"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Complaint not found"
+definitions:
+  Aggregation:
+    type: object
+    description: "An Elasticsearch aggregation"
+    parameters:
+      doc_count:
+        type: integer
+        description: "The total number of complaints covered in this aggregation"
+      "<field>":
+        type: object
+        description: "The name of the field being aggregated"
+        parameters:
+          buckets:
+            type: array
+            items:
+              $ref: "#/definitions/Bucket"
+          doc_count_error_upper_bound:
+            type: integer
+            description: "The number of possible errors that occurred when searching the shards"
+          sum_other_doc_count:
+            type: integer
+            description: "The number of complaints that were not included in this aggregation."
+  Bucket:
+    type: object
+    parameters:
+      doc_count:
+        type: integer
+        description: "The number of complaints that match this key"
+      key:
+        type: string
+  Complaint:
+    type: object
+    parameters:
+      company:
+        type: string
+        description: "The complaint is about this company"
+      company_public_response:
+        type: string
+        description: "The company's optional, public-facing response to a consumer's complaint"
+      company_response:
+        type: string
+        description: "The response from the company about this complaint"
+      complaint_id:
+        type: integer
+        description: "The unique identification number for a complaint"
+      complaint_what_happened:
+        type: string
+        description: "A description of the complaint provided by the consumer"
+      consumer_consent_provided:
+        type: string
+        description: "dentifies whether the consumer opted in to publish their complaint narrative"
+      consumer_disputed:
+        type: string
+        description: "Whether the consumer disputed the companyâ€™s response"
+      date_received:
+        type: string
+        format: date
+        description: "The date the CFPB received the complaint"
+      date_sent_to_company:
+        type: string
+        description: "The date the CFPB sent the complaint to the company"
+      has_narrative:
+        type: boolean
+        description: "Indicates this complaint has a narrative"
+      issue:
+        type: string
+        description: "The issue the consumer identified in the complaint"
+      product:
+        type: string
+        description: "The type of product the consumer identified in the complaint"
+      state:
+        type: string
+        description: "The state of the mailing address provided by the consumer"
+      sub_issue:
+        type: string
+        description: "The sub-issue the consumer identified in the complaint"
+      sub_product:
+        type: string
+        description: "The type of sub-product the consumer identified in the complaint"
+      submitted_via:
+        type: string
+        description: "How the complaint was submitted to the CFPB"
+      tags:
+        type: string
+        description: "Data that supports easier searching and sorting of complaints"
+      timely:
+        type: string
+        description: "Indicates whether the company gave a timely response or not"
+      zip_code:
+        type: string
+        description: "The mailing ZIP code provided by the consumer"
+  Hit:
+    type: object
+    description: "A single Elasticsearch result"
+    parameters:
+      _source:
+        $ref: "#/definitions/Complaint"
+  Hits:
+    type: object
+    description: "A set of complaints that matched the query"
+    parameters:
+      hits:
+        type: array
+        items:
+          $ref: "#/definitions/Hit"
+      max_score:
+        type: number
+        description: "The highest score in the results"
+        format: float
+      total:
+        type: integer
+        description: "The totol number of complaints that matched the query"
+  Meta:
+    type: object
+    parameters:
+      has_data_issue:
+        type: boolean
+        description: "Indicates there has been an issue with the most recent data load"
+      is_data_stale:
+        type: boolean
+        description: "Indicates the most recent data is over 5 business days old"
+      is_narrative_stale:
+        type: boolean
+        description: "Indicates the most recent narratives are over 5 busines days old"
+      last_indexed:
+        type: string
+        description: "The timestamp of the most recently indexed complaint"
+        format: dateTime
+      last_updated:
+        type: string
+        description: "The timestamp of the most recent complaint"
+        format: dateTime
+      license:
+        type: string
+        description: "The open source license under which the API operates"
+      total_record_count:
+        type: integer
+        description: "The total number of complaints currently indexed"
+  MultiLevelAggregation:
+    parameters:
+      doc_count:
+        type: integer
+        description: "The total number of complaints covered in this aggregation"
+      "<field>":
+        type: object
+        description: "The name of the field being aggregated"
+        parameters:
+          buckets:
+            type: array
+            items:
+              $ref: "#/definitions/MultiLevelBucket"
+          doc_count_error_upper_bound:
+            type: integer
+            description: "The number of possible errors that occurred when searching the shards"
+          sum_other_doc_count:
+            type: integer
+            description: "The number of complaints that were not included in this aggregation."
+  MultiLevelBucket:
+    type: object
+    parameters:
+      doc_count:
+        type: integer
+        description: "The number of complaints that match this key"
+      "<field.raw>":
+        type: object
+        description: "The next level of aggregations"
+        parameters:
+          buckets:
+            type: array
+            items:
+              $ref: "#/definitions/Aggregation"
+      key:
+        type: string
+  SearchResult:
+    type: object
+    parameters:
+      _meta:
+        $ref: "#/definitions/Meta"
+      aggregations:
+        type: object
+        parameters:
+          company_public_response:
+            $ref: "#/definitions/Aggregation"
+          company_response:
+            $ref: "#/definitions/Aggregation"
+          consumer_consent_provided:
+            $ref: "#/definitions/Aggregation"
+          consumer_disputed:
+            $ref: "#/definitions/Aggregation"
+          has_narrative:
+            $ref: "#/definitions/Aggregation"
+          issue:
+            $ref: "#/definitions/MultiLevelAggregation"
+          product:
+            $ref: "#/definitions/MultiLevelAggregation"
+          state:
+            $ref: "#/definitions/Aggregation"
+          submitted_via:
+            $ref: "#/definitions/Aggregation"
+          tags:
+            $ref: "#/definitions/Aggregation"
+          timely:
+            $ref: "#/definitions/Aggregation"
+          zip_code:
+            $ref: "#/definitions/Aggregation"
+      hits:
+        $ref: "#/definitions/Hits"
+  SuggestResult:
+    type: array
+    items:
+      type: string
+parameters:
+  company:  
+    name: company
+    in: query
+    description: Filter the results to only return these companies      
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+  company_public_response:
+    name: company_public_response
+    in: query
+    description: Filter the results to only return these types of public response by the company
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi        
+  company_received_max:
+    name: company_received_max
+    in: query
+    description: Return results with date < company_received_max (i.e. 2017-03-04)
+    type: string
+    format: date
+  company_received_min:
+    name: company_received_min
+    in: query
+    description: Return results with date >= company_received_min (i.e. 2017-03-04)
+    type: string
+    format: date
+  company_response:
+    name: company_response
+    in: query
+    description: Filter the results to only return these types of response by the company
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+  consumer_consent_provided:
+    name: consumer_consent_provided
+    in: query
+    description: Filter the results to only return these types of consent consumer provided
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi        
+  consumer_disputed:
+    name: consumer_disputed
+    in: query
+    description: Filter the results to only return the specified state of consumer disputed, i.e. yes, no
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+  date_received_max:
+    name: date_received_max
+    in: query
+    description: Return results with date < date_received_max (i.e. 2017-03-04)
+    type: string
+    format: date
+  date_received_min:
+    name: date_received_min
+    in: query
+    description: Return results with date >= date_received_min (i.e. 2017-03-04)
+    type: string
+    format: date
+  field:
+    name: "field"
+    in: "query"
+    description: "Search by particular field"
+    type: string
+    enum:
+    - "complaint_what_happened"
+    - "company_public_response"
+    - "all"
+    default: "complaint_what_happened"
+  format:
+    name: "format"
+    in: "query"
+    description: "Format to be returned, if this parameter is not specified, frm/size parameters can be used properly, but if a format is specified for exporting, frm/size will be ignored"
+    type: "string"
+    enum:
+    - "json"
+    - "csv"
+  from:
+    name: frm
+    in: "query"
+    description: "Return results starting from a specific index, only if format parameter is not specified, ignore otherwise"
+    type: "integer"
+    maximum: 100000
+    minimum: 1
+    format: "int64"
+    default: 0
+  has_narrative:
+    name: has_narrative
+    in: query
+    description: Filter the results to only return the specified state of whether it has narrative in the complaint or not, i.e. yes, no
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+  issue:
+    name: issue
+    in: query
+    description: "Filter the results to only return these types of issue and subissue, i.e. product-only: Getting a Loan, subproduct needs to include product, separated by '\u2022', Getting a Loan\u2022Can't qualify for a loan"
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+  no_aggs:
+    name: no_aggs
+    in: query
+    description: Include aggregations in result or not, True means no aggregations will be included, False means aggregations will be included.
+    type: boolean
+    default: False
+  no_highlight:
+    name: no_highlight
+    in: query
+    description: Include highlight of search term in result or not, True means no highlighting will be included, False means highlighting will be included.
+    type: boolean
+    default: False
+  product:
+    name: product
+    in: query
+    description: "Filter the results to only return these types of product and subproduct, i.e. product-only: Mortgage, subproduct needs to include product, separated by '\u2022', Mortgage\u2022FHA mortgage"
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+  search_term:
+    name: "search_term"
+    in: "query"
+    description: "Return results containing specific term"
+    type: "string"
+  size:
+    name: "size"
+    in: "query"
+    description: "Limit the size of the results"
+    type: "integer"
+    maximum: 100
+    minimum: 1
+    format: "int64"
+    default: 10
+  sort:
+    name: "sort"
+    in: "query"
+    description: "Return results sort in a particular order"
+    type: "string"
+    enum:
+    - "relevance_desc"
+    - "relevance_asc"
+    - "created_date_desc"
+    - "created_date_asc"
+    default: "relevance_desc"
+  state:
+    name: state
+    in: query
+    description: Filter the results to only return these states (use abbreviation, i.e. CA, VA)
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+  submitted_via:
+    name: submitted_via
+    in: query
+    description: Filter the results to only return these types of way consumers submitted their complaints
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi        
+  suggest_text:
+    name: text
+    in: query
+    description: "text to use for suggestions"
+    required: true
+    type: string
+  tag:
+    name: tag
+    in: query
+    description: Filter the results to only return these types of tag
+    type: array
+    items: 
+      type: string
+    collectionFormat: multi
+tags:
+  - name: Complaints
+    description: These endpoints provide access to consumer complaints
+  - name: Typeahead
+    description: These endpoints support the typeahead boxes in the UI
+externalDocs:
+  description: "Full documentation for the API"
+  url: "https://cfpb.github.io/api/ccdb/"
