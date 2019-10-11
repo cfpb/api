@@ -74,10 +74,9 @@ window.onload = function() {
   
   // Build a system
   const ui = SwaggerUIBundle({
-    url: "openapi-config.yaml",
+    url: "https://raw.githubusercontent.com/cfpb/ccdb5-api/master/swagger-config.yaml",
     dom_id: '#swagger-ui',
     deepLinking: true,
-    showMutatedRequest: false,
     presets: [
       SwaggerUIBundle.presets.apis,
       SwaggerUIStandalonePreset
@@ -85,7 +84,7 @@ window.onload = function() {
     plugins: [
       SwaggerUIBundle.plugins.DownloadUrl
     ],
-    layout: "StandaloneLayout"
+    layout: "BaseLayout"
   })
 
   window.ui = ui

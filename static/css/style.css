@@ -263,6 +263,19 @@ table.fullwidth tr:nth-child(even) {
     white-space: nowrap;
 }
 
+/* Navigation Field Updates */
+span.retiring-highlight {
+  vertical-align: super;
+  font-size: .6em;
+  color: #257675;
+}
+
+span.new-highlight {
+  vertical-align: super;
+  font-size: .6em;
+  color: #20aa3f;
+}
+
 /* LISTS */
 ul, ol {
     padding: 0;
