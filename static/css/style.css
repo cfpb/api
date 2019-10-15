@@ -265,14 +265,12 @@ table.fullwidth tr:nth-child(even) {
 
 /* Navigation Field Updates */
 span.retiring-highlight {
-  vertical-align: super;
-  font-size: .6em;
+  font-size: .9em;
   color: #257675;
 }
 
 span.new-highlight {
-  vertical-align: super;
-  font-size: .6em;
+  font-size: .9em;
   color: #20aa3f;
 }
 
