@@ -6,7 +6,7 @@ nav: documentation
 
 ### Updated API available now
 
-The CFPB is updating its API service to ensure seamless data availability for users and real time consistency with the Consumer Complaint Database. As a result, The Socrata platform will be retired on **01/06/2020**. Check out our [complaint search tool](https://www.consumerfinance.gov/data-research/consumer-complaints/search/) and the [new API service documentation](api.html) to learn more about upcoming changes to the Consumer Complaint Database API.
+The CFPB recently updated its Application Programming Interface (API) service to ensure seamless data availability for users and real-time consistency with the Consumer Complaint Database. The Socrata platform will be retired in early January 2020. Check out our [search tool](https://www.consumerfinance.gov/data-research/consumer-complaints/search/) and the new [API service](api.html) to learn more about consumer complaints.
 
 
 ### API documentation
