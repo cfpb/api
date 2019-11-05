@@ -21,7 +21,7 @@ paths:
     get:
       tags:
         - Complaints
-      summary: "Search consumer complaints"
+      summary: "Search consumer complaints database"
       description: "Search the contents of the consumer complaint database"
       operationId: "getComplaints"
       produces:
