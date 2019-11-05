@@ -263,6 +263,17 @@ table.fullwidth tr:nth-child(even) {
     white-space: nowrap;
 }
 
+/* Navigation Field Updates */
+span.retiring-highlight {
+  font-size: .9em;
+  color: #257675;
+}
+
+span.new-highlight {
+  font-size: .9em;
+  color: #20aa3f;
+}
+
 /* LISTS */
 ul, ol {
     padding: 0;
@@ -393,9 +404,11 @@ nav li {
 #console a.console, 
 #queries a.queries,
 #fields a.fields,
+#api-docs a.api-docs,
 #contribute a.contribute,
 #data a.data,
 #release-notes a.release-notes,
+#api-docs a.api-docs,
 #documentation a.documentation,
 #overview a.overview {
     color: #101820;

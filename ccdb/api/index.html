@@ -69,15 +69,17 @@
 
 <script src="./swagger-ui-bundle.js"> </script>
 <script src="./swagger-ui-standalone-preset.js"> </script>
+<!-- IE 11 requires a Promise polyfill -->
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
 <script>
 window.onload = function() {
   
   // Build a system
   const ui = SwaggerUIBundle({
-    url: "openapi-config.yaml",
+    url: "https://raw.githubusercontent.com/cfpb/ccdb5-api/master/swagger-config.yaml",
     dom_id: '#swagger-ui',
     deepLinking: true,
-    showMutatedRequest: false,
     presets: [
       SwaggerUIBundle.presets.apis,
       SwaggerUIStandalonePreset
@@ -85,7 +87,7 @@ window.onload = function() {
     plugins: [
       SwaggerUIBundle.plugins.DownloadUrl
     ],
-    layout: "StandaloneLayout"
+    layout: "BaseLayout"
   })
 
   window.ui = ui
