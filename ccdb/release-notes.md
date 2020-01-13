@@ -10,6 +10,26 @@ nav: release-notes
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
+                    Release 15 – January 2020
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>The CFPB recently updated its Application Programming Interface (API) service to ensure seamless data availability for users and real-time consistency with the Consumer Complaint Database. The Socrata platform has been retired. Check out our <a href="https://www.consumerfinance.gov/data-research/consumer-complaints/search/">search tool</a> and the new <a href="api.html">API service</a> to learn more about consumer complaints.</p>
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
                     Release 14 – November 2017
                 </span>
                 <span class="expandable_header-right expandable_link">
