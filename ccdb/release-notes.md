@@ -7,6 +7,41 @@ nav: release-notes
 ### Release notes
 <div class="expandable-group">
     <div class="expandable-group_items">
+         <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
+                    Release 16 – April 2020
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>This release adds a geospatial view to the Consumer Complaint Database. With this addition, database users will now be able to view complaints by state with a U.S. map visualization, including the ability to:</p>
+                <ul>
+                    <li>Select from pre-defined time frames (e.g., 3 years) to help users understand more recent marketplace conditions</li>
+                    <li>
+                        Map complaints per 1,000 population or total complaints by state
+                    </li>
+                    <li>
+                        View aggregate information about products and issues consumers submit complaints about
+                    </li>
+                    <li>
+                        Apply word searches and filters to update the interactive map
+                    </li>
+                    <li>
+                        'Toggle' back to the 'List' view to read complaints
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
