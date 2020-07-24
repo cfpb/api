@@ -7,7 +7,45 @@ nav: release-notes
 ### Release notes
 <div class="expandable-group">
     <div class="expandable-group_items">
-         <div class="expandable expandable__padded">
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
+                    Release 17 – July 2020
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>This release adds a Trends View and API endpoint to the Consumer Complaint Database. Database users are able to:</p>
+                <ul>
+                    <li>View overall complaints over time</li>
+                    <li>
+                        View trends for complaints for products or companies
+                    </li>
+                    <li>
+                        Apply word searches and filters to see trends
+                    </li>
+                    <li>
+                        View product or company complaint snapshots
+                    </li>
+                    <li>
+                        Toggle' between ‘Trends’, ‘Map’ and 'List' views to visualize and read complaints
+                    </li>
+                    <li>
+                        Print out selected visualizations
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
                     Release 16 – April 2020
