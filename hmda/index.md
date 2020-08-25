@@ -12,7 +12,7 @@ layout: default
   <div class="m-notification_content" style="padding-left: 1.5625em;">
     <div class="h4 m-notification_message" style="font-size: 1.125em; font-weight: 500; letter-spacing: initial; line-height: 1.25; text-transform: initial; margin-bottom: 0;">This tool will sunset on 9/25/2020.</div>
     <p class="m-notification_explanation" style="margin: 1em 0; margin-bottom: 0; margin-top: .3125em;">
-      <a href="https://www.consumerfinance.gov/data-research/hmda-api-retirement/">Learn more</a>.
+      <a href="https://www.consumerfinance.gov/data-research/hmda/hmda-explorer/">Learn more</a>.
       You can continue to analyze and download HMDA data using the following resources:
     </p>
     <ul style="margin-bottom: 0; margin-top: .3125em;">
