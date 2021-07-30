@@ -29,7 +29,8 @@ nav: release-notes
                     have little effect on users.
                 </p>
                 <p>
-                    The main change is refactoring the <a href="https://github.com/cfpb/ccdb5-api">complaint database API</a> to use version 7.9 of Elasticsearch, 
+                    The main change is refactoring the <a href="https://github.com/cfpb/ccdb5-api">complaint database API</a> 
+                    to use version 7.9 of Elasticsearch, 
                     which is the indexing engine supporting the CFPB's complaint-search operations.
                 </p>
                 <p>
