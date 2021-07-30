@@ -10,6 +10,37 @@ nav: release-notes
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
+                    Release 18 – August 2021
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>
+                    This release makes a significant upgrade to the technology behind complaint searches but should 
+                    have little effect on users.
+                </p>
+                <p>
+                    The main change is refactoring the <a href="https://github.com/cfpb/ccdb5-api">complaint database API</a> to use version 7.9 of Elasticsearch, 
+                    which is the indexing engine supporting the CFPB's complaint-search operations.
+                </p>
+                <p>
+                    The upgrade should improve search performance and accuracy and offer a more stable method 
+                    for exploring large sets of search results. 
+                </p>
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
                     Release 17 – July 2020
                 </span>
                 <span class="expandable_header-right expandable_link">
