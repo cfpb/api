@@ -273,7 +273,7 @@ definitions:
             value:
               type: integer
               description: "The count of matching hits, accurate in our code even above 10,000 hits"
-            relation: 
+            relation:
               type: string
               description: "Indicates the accuracy of the default ES response, whether the value is accurate (eq) or a lower bound (gte)"
   Meta:
