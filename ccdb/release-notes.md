@@ -10,6 +10,28 @@ nav: release-notes
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
+                    Release 19 – March 2022
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>
+                    This release reflects design updates to the navigational tabs and to the appearance of helper text and performance improvements within the Consumer Complaint Database. These updates enhance the usability of the database while maintaining all functionality and available information.
+                </p>
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
                     Release 18 – September 2021
                 </span>
                 <span class="expandable_header-right expandable_link">
