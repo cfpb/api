@@ -79,6 +79,7 @@ window.onload = function() {
   const ui = SwaggerUIBundle({
     url: "https://raw.githubusercontent.com/cfpb/ccdb5-api/main/swagger-config.yaml",
     dom_id: '#swagger-ui',
+    queryConfigEnabled: false,
     deepLinking: true,
     presets: [
       SwaggerUIBundle.presets.apis,
