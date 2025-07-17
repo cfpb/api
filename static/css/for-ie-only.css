@@ -20,7 +20,7 @@ body, html {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Avenir Next", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
     line-height: 1.375;
     color: #101820; /* CFPB black */
 
@@ -41,21 +41,21 @@ body {
 }
 /* IE7 and older can't resize px-based text */
 
-p, 
-blockquote, 
-q, 
-pre, 
-address, 
-hr, 
-code, 
-samp, 
-dl, 
-ol, 
-ul, 
-form, 
-table, 
-fieldset, 
-menu, 
+p,
+blockquote,
+q,
+pre,
+address,
+hr,
+code,
+samp,
+dl,
+ol,
+ul,
+form,
+table,
+fieldset,
+menu,
 img {
 
     margin:0;
@@ -65,20 +65,20 @@ img {
 h1 {
     margin-top: .5em;
     margin-bottom: .5em;
-    font: 400 2.125em/1.23529411764706 "Avenir Next", Arial, sans-serif;
+    font: 400 2.125em/1.23529411764706 "Source Sans 3 Variable", Arial, sans-serif;
     font-weight: normal;
 }
 
 h2 {
     margin: 0;
     margin-bottom: 1em;
-    font: 400 1.625em/1.23076923076923 "Avenir Next", Arial, sans-serif;
+    font: 400 1.625em/1.23076923076923 "Source Sans 3 Variable", Arial, sans-serif;
     font-weight: normal;
 }
 
 h3 {
     margin: 2em 0 1em 0;
-    font: 400 1.375em/1.27272727272727 "Avenir Next", Arial, sans-serif;
+    font: 400 1.375em/1.27272727272727 "Source Sans 3 Variable", Arial, sans-serif;
     font-weight: normal;
 }
 
@@ -90,13 +90,13 @@ h3:first-child {
 h4 {
     margin: 0;
     margin-bottom: 1em;
-    font: 500 1.125em/1.22222222222222 "Avenir Next Medium", Arial, sans-serif;
+    font: 500 1.125em/1.22222222222222 "Source Sans 3 Variable", Arial, sans-serif;
     font-weight: 500;
 }
 
 h5 {
     margin: 3em 0 1.25em 0;
-    font: 600 0.875em/1.57142857142857 "Avenir Next Demi", Arial, sans-serif;
+    font: 600 0.875em/1.57142857142857 "Source Sans 3 Variable", Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -105,7 +105,7 @@ h5 {
 h6 {
     margin: 0;
     margin-bottom: 1em;
-    font: 600 0.75em/1.83333333333333 "Avenir Next Demi", Arial, sans-serif;
+    font: 600 0.75em/1.83333333333333 "Source Sans 3 Variable", Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -137,7 +137,7 @@ small, p.small {
 }
 
 strong, b, dt {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
 }
 
 dfn {
@@ -215,7 +215,7 @@ table {
 
 th {
     text-align: left;
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
     background-color: #dbedd4;
 }
 
@@ -278,7 +278,7 @@ dl dd {
 }
 
 dt {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
 }
 
 /* LINKS */
@@ -314,11 +314,11 @@ a:active {
 }
 
 a.call-to-action {
-    font-family: "Avenir Next", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
 }
 
 a.action-arrow {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
     font-style: normal;
     font-size: 1em;
 }
@@ -485,7 +485,7 @@ ul.repo-list.no-padding {
 
 .wrap {
         max-width: 960px;
-        min-width: 320px; 
+        min-width: 320px;
 }
 
 body {
@@ -494,8 +494,8 @@ body {
 
 /* offset the fixed position header for jump links */
 .anchor {
-    display: block; 
-    height: 4.375em; 
+    display: block;
+    height: 4.375em;
     margin-top: -4.375em;
     visibility: hidden;
 }
@@ -521,7 +521,7 @@ body {
 }
 
 .header h1 span {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -543,7 +543,7 @@ body {
 .intro {
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 1.375em; 
+    margin-bottom: 1.375em;
 }
 
 aside {
@@ -602,7 +602,7 @@ footer {
     padding: 2em 0;
     border-top: 2px solid #BABBBD;
     background: #F1F2F2;
-    font-family: "Avenir Next", Arial, sans-serif;
+    font-family: "Source Sans 3 Variable", Arial, sans-serif;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -668,7 +668,7 @@ footer a:hover {
         padding: .85em;
         margin: .5em 0;
         font-size: .75em;
-    }   
+    }
 
 
 /* ALIGNMENT */
@@ -921,7 +921,7 @@ del {
 
 .expandable {
   margin-bottom: 5px;
-  font-family: "Avenir Next", Arial, sans-serif;
+  font-family: "Source Sans 3 Variable", Arial, sans-serif;
 }
 
 .expandable a {
