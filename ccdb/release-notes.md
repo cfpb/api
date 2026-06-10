@@ -10,6 +10,50 @@ nav: release-notes
         <div class="expandable expandable__padded">
             <button class="expandable_header expandable_target" title="Expand content">
                 <span class="expandable_header-left expandable_label">
+                    Release 22 – June 2026
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>
+                    Enhanced the data load process, improving efficiency and ensuring more timely availability of complaint data. Updated the export (CSV and JSON) to mirror the user interface, removing “Consumer disputed” and “Consumer consent provided”. The “Consumer disputed” filter was removed in November 2017 and the “Consumer consent” filter was removed in September 2025.
+                </p>
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
+                    Release 21 – April 2026
+                </span>
+                <span class="expandable_header-right expandable_link">
+                    <span class="expandable_cue-open">
+                        <span class="u-visually-hidden">Show</span>
+                        <span class="cf-icon cf-icon-plus-round"></span>
+                    </span>
+                    <span class="expandable_cue-close">
+                        Hide
+                        <span class="cf-icon cf-icon-minus-round"></span>
+                    </span>
+                </span>
+            </button>
+            <div class="expandable_content">
+                <p>
+                    Improved the user interface, ensuring a more intuitive user experience. Enhancements to the legend and data labels in the map, allowing for clearer interpretation and better readability. “Complaints per 1,000” removed from the map view.
+                </p>
+            </div>
+        </div>
+        <div class="expandable expandable__padded">
+            <button class="expandable_header expandable_target" title="Expand content">
+                <span class="expandable_header-left expandable_label">
                     Release 20 – May 2023
                 </span>
                 <span class="expandable_header-right expandable_link">
